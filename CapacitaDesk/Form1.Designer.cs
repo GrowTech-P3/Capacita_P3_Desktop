@@ -49,11 +49,11 @@ namespace CapacitaDesk {
             // LnkAlterarSenha
             // 
             this.LnkAlterarSenha.AutoSize = true;
-            this.LnkAlterarSenha.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LnkAlterarSenha.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LnkAlterarSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.LnkAlterarSenha.Location = new System.Drawing.Point(210, 300);
+            this.LnkAlterarSenha.Location = new System.Drawing.Point(214, 296);
             this.LnkAlterarSenha.Name = "LnkAlterarSenha";
-            this.LnkAlterarSenha.Size = new System.Drawing.Size(114, 16);
+            this.LnkAlterarSenha.Size = new System.Drawing.Size(132, 20);
             this.LnkAlterarSenha.TabIndex = 3;
             this.LnkAlterarSenha.TabStop = true;
             this.LnkAlterarSenha.Text = "Esqueceu a senha?";
@@ -63,9 +63,9 @@ namespace CapacitaDesk {
             // 
             this.BtnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.BtnEntrar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.BtnEntrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEntrar.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnEntrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnEntrar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BtnEntrar.Location = new System.Drawing.Point(378, 281);
             this.BtnEntrar.Name = "BtnEntrar";
@@ -78,22 +78,22 @@ namespace CapacitaDesk {
             // TxtSenha
             // 
             this.TxtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtSenha.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtSenha.ForeColor = System.Drawing.Color.DimGray;
-            this.TxtSenha.Location = new System.Drawing.Point(171, 232);
+            this.TxtSenha.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.TxtSenha.Location = new System.Drawing.Point(184, 229);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '*';
-            this.TxtSenha.Size = new System.Drawing.Size(327, 18);
+            this.TxtSenha.Size = new System.Drawing.Size(314, 20);
             this.TxtSenha.TabIndex = 1;
             // 
             // TxtUsuario
             // 
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.TxtUsuario.Location = new System.Drawing.Point(172, 159);
+            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.TxtUsuario.Location = new System.Drawing.Point(184, 156);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(327, 18);
+            this.TxtUsuario.Size = new System.Drawing.Size(315, 20);
             this.TxtUsuario.TabIndex = 0;
             // 
             // login

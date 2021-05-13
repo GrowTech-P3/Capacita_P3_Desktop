@@ -33,7 +33,13 @@ namespace CapacitaDesk {
         }
 
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
-            this.Dispose();
+            MessageBox.Show("Nova instituição cadastrada com sucesso!");
+            DialogResult Resp = MessageBox.Show("Deseja cadastrar uma nova instituição?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Resp == DialogResult.No) {
+
+                this.Dispose();
+            }
         }
     }
 }

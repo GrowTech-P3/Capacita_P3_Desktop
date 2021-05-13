@@ -31,5 +31,15 @@ namespace CapacitaDesk {
         private void NovoUsuarioPcd_Load(object sender, EventArgs e) {
 
         }
+
+        private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
+            MessageBox.Show("Usuário cadastrado com sucesso!");
+            DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Resp == DialogResult.No) {
+
+                this.Dispose();
+            }
+        }
     }
 }

@@ -313,6 +313,16 @@ namespace CapacitaDesk.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ImgCurso {
+            get {
+                object obj = ResourceManager.GetObject("ImgCurso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImgInsituicaoAzul {
             get {
                 object obj = ResourceManager.GetObject("ImgInsituicaoAzul", resourceCulture);

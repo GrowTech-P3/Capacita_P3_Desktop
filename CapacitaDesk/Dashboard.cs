@@ -24,8 +24,7 @@ namespace CapacitaDesk {
             
         }
 
-        private void button2_Click(object sender, EventArgs e) {
-
+        private void BtnNovoAdministrador_Click(object sender, EventArgs e) {
             NovoAdministrador home = new NovoAdministrador();
             home.ShowDialog();     
         }
@@ -36,15 +35,16 @@ namespace CapacitaDesk {
         }
 
         private void button4_Click(object sender, EventArgs e) {
-
+            ListaDeCurso listDeCurso = new ListaDeCurso();
+            listDeCurso.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e) {
-
+            RegistroDeNovoParceiro regNovoParceiro = new RegistroDeNovoParceiro();
+            regNovoParceiro.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e) {
-            
+        private void button1_Click(object sender, EventArgs e) {            
             NovoUsuarioPcd userPcd = new NovoUsuarioPcd();
             userPcd.ShowDialog();
         }
@@ -68,6 +68,36 @@ namespace CapacitaDesk {
             }
 
             
+        }
+
+        private void BtnGerenciarDenuncia_Click(object sender, EventArgs e) {
+            GerencDenuncia listDenunciaa = new GerencDenuncia();
+            listDenunciaa.ShowDialog();
+        }
+
+        private void BtnGerenciarNoticia_Click(object sender, EventArgs e) {
+            GerenciarNoticia listNoticia = new GerenciarNoticia();
+            listNoticia.ShowDialog();
+        }
+
+        private void BtnNovoUsuarioPcd_Click(object sender, EventArgs e) {
+            NovoUsuarioPcd userPcd = new NovoUsuarioPcd();
+            userPcd.ShowDialog();
+        }
+
+        private void BtnPostarNoticia_Click(object sender, EventArgs e) {
+            PostarNoticia postNoticia = new PostarNoticia();
+            postNoticia.ShowDialog();
+        }
+
+        private void BtnFinanceiro_Click(object sender, EventArgs e) {
+            RegistroFinanceiro financeiro = new RegistroFinanceiro();
+            financeiro.ShowDialog();
+        }
+
+        private void BtnLogDeAtividades_Click(object sender, EventArgs e) {
+            LogDeAtividaes log = new LogDeAtividaes();
+            log.ShowDialog();
         }
     }
 }

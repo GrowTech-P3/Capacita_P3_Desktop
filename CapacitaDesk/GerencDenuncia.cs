@@ -13,5 +13,15 @@ namespace CapacitaDesk {
         public GerencDenuncia() {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e) {
+
+        }
+
+        private void BtnExibirDenuncia_Click(object sender, EventArgs e) {
+            this.Close();
+            VisualizarDenuncia vDenuncia = new VisualizarDenuncia();
+            vDenuncia.ShowDialog();
+        }
     }
 }
