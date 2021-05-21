@@ -21,7 +21,7 @@ namespace CapacitaDesk {
         }
         public Dashboard(Usuario usuario) {
             InitializeComponent();
-            u = usuario;
+            this.u = usuario;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {

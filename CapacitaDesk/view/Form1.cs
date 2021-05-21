@@ -34,9 +34,9 @@ namespace CapacitaDesk {
 
             RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
-            if (respUsuario.token != null && respUsuario.usuario.tipo.Equals("3"))
+            if (respUsuario.token != null && respUsuario.administrador != null)
             {
-                MessageBox.Show(respUsuario.message);
+                MessageBox.Show("Login efetuado com sucesso!");
                 this.Hide();
                 Dashboard home = new Dashboard(respUsuario.usuario);
                 home.Show();
