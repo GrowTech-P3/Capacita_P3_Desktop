@@ -8,11 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class Dashboard : Form {
-        public Dashboard() {
+
+        Usuario u = new Usuario();
+
+        public Dashboard()
+        {
             InitializeComponent();
+        }
+        public Dashboard(Usuario usuario) {
+            InitializeComponent();
+            u = usuario;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
