@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapacitaDesk.model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,7 +27,6 @@ namespace CapacitaDesk.controller
                 // Classe WebRequest: Faz uma solicitaçao para um URL
                 var requisicaoWeb = WebRequest.CreateHttp(rota.ToLower());
                 requisicaoWeb.Method = "GET";
-
                 //GetResponse: obtem um objeto com a resposta do servidor
                 var resposta = requisicaoWeb.GetResponse();
 
@@ -67,7 +67,9 @@ namespace CapacitaDesk.controller
             {
                 // Classe WebRequest: Faz uma solicitaçao para um URL
                 var requisicaoWeb = WebRequest.CreateHttp(rota.ToLower());
+                
                 requisicaoWeb.Method = "POST";
+                
 
                 // Método ContentType: Define o tipo do conteudo dos dados que serao enviados
                 requisicaoWeb.ContentType = "application/json; charset=utf-8";

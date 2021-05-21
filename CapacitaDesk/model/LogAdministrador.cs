@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class RespUsuario
+    class LogAdministrador
     {
-        public String message { get; set; }
-        public Usuario usuario { get; set; }
-
+        public String idLog { get; set; }
         public Administrador administrador { get; set; }
-        public Instituicao instituicao { get; set; }
-     
-        public String token { get; set; }
+        public String logAtividade  { get; set; }
+        public String dataHora  { get; set; }
     }
 }
