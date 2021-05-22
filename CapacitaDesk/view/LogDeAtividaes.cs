@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class LogDeAtividaes : Form {
-        public LogDeAtividaes() {
+
+        AdminLogado administrador = new AdminLogado();
+        public LogDeAtividaes(AdminLogado admin) {
             InitializeComponent();
+            this.administrador = admin;
         }
     }
 }

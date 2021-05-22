@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class PostarNoticia : Form {
-        public PostarNoticia() {
+        AdminLogado administrador = new AdminLogado();
+        public PostarNoticia(AdminLogado admin) {
             InitializeComponent();
+            this.administrador = admin;
         }
 
         private void BtnPostar_Click(object sender, EventArgs e) {
