@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class RegistroFinanceiro : Form {
-        public RegistroFinanceiro() {
+        AdminLogado administrador = new AdminLogado();
+        public RegistroFinanceiro(AdminLogado admin) {
             InitializeComponent();
+            this.administrador = admin;
         }
     }
 }

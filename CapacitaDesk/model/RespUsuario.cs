@@ -11,8 +11,11 @@ namespace CapacitaDesk.model
         public String message { get; set; }
         public Usuario usuario { get; set; }
 
-        public Administrador administrador { get; set; }
+        public Administrador admin { get; set; }
+        public UsuarioPcd usuarioPCD { get; set; }
         public Instituicao instituicao { get; set; }
+
+        public AdminLogado administrador { get; set; }
      
         public String token { get; set; }
     }

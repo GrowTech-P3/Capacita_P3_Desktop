@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class ListaDeCurso : Form {
-        public ListaDeCurso() {
+        AdminLogado administrador = new AdminLogado();
+        public ListaDeCurso(AdminLogado admin) {
             InitializeComponent();
+            this.administrador = admin;
         }
 
         private void BtnExibirInstituicao_Click(object sender, EventArgs e) {

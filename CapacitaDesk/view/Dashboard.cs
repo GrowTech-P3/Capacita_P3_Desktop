@@ -13,15 +13,15 @@ using CapacitaDesk.model;
 namespace CapacitaDesk {
     public partial class Dashboard : Form {
 
-        Usuario u = new Usuario();
+        AdminLogado administrador = new AdminLogado();
 
         public Dashboard()
         {
             InitializeComponent();
         }
-        public Dashboard(Usuario usuario) {
+        public Dashboard(AdminLogado admin) {
             InitializeComponent();
-            this.u = usuario;
+            this.administrador = admin;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
@@ -34,27 +34,27 @@ namespace CapacitaDesk {
         }
 
         private void BtnNovoAdministrador_Click(object sender, EventArgs e) {
-            NovoAdministrador home = new NovoAdministrador();
+            NovoAdministrador home = new NovoAdministrador(administrador);
             home.ShowDialog();     
         }
 
         private void button3_Click(object sender, EventArgs e) {
-            NovaInstituicao novaInstituicao = new NovaInstituicao();
+            NovaInstituicao novaInstituicao = new NovaInstituicao(administrador);
             novaInstituicao.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e) {
-            ListaDeCurso listDeCurso = new ListaDeCurso();
+            ListaDeCurso listDeCurso = new ListaDeCurso(administrador);
             listDeCurso.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e) {
-            RegistroDeNovoParceiro regNovoParceiro = new RegistroDeNovoParceiro();
+            RegistroDeNovoParceiro regNovoParceiro = new RegistroDeNovoParceiro(administrador);
             regNovoParceiro.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e) {            
-            NovoUsuarioPcd userPcd = new NovoUsuarioPcd();
+            NovoUsuarioPcd userPcd = new NovoUsuarioPcd(administrador);
             userPcd.ShowDialog();
         }
 
@@ -80,32 +80,32 @@ namespace CapacitaDesk {
         }
 
         private void BtnGerenciarDenuncia_Click(object sender, EventArgs e) {
-            GerencDenuncia listDenunciaa = new GerencDenuncia();
+            GerencDenuncia listDenunciaa = new GerencDenuncia(administrador);
             listDenunciaa.ShowDialog();
         }
 
         private void BtnGerenciarNoticia_Click(object sender, EventArgs e) {
-            GerenciarNoticia listNoticia = new GerenciarNoticia();
+            GerenciarNoticia listNoticia = new GerenciarNoticia(administrador);
             listNoticia.ShowDialog();
         }
 
         private void BtnNovoUsuarioPcd_Click(object sender, EventArgs e) {
-            NovoUsuarioPcd userPcd = new NovoUsuarioPcd();
+            NovoUsuarioPcd userPcd = new NovoUsuarioPcd(administrador);
             userPcd.ShowDialog();
         }
 
         private void BtnPostarNoticia_Click(object sender, EventArgs e) {
-            PostarNoticia postNoticia = new PostarNoticia();
+            PostarNoticia postNoticia = new PostarNoticia(administrador);
             postNoticia.ShowDialog();
         }
 
         private void BtnFinanceiro_Click(object sender, EventArgs e) {
-            RegistroFinanceiro financeiro = new RegistroFinanceiro();
+            RegistroFinanceiro financeiro = new RegistroFinanceiro(administrador);
             financeiro.ShowDialog();
         }
 
         private void BtnLogDeAtividades_Click(object sender, EventArgs e) {
-            LogDeAtividaes log = new LogDeAtividaes();
+            LogDeAtividaes log = new LogDeAtividaes(administrador);
             log.ShowDialog();
         }
     }

@@ -24,21 +24,22 @@ namespace CapacitaDesk {
 
             String rota = "http://localhost:3000/usuario-login";
 
-            Usuario u1 = new Usuario();
-            u1.email = TxtUsuario.Text;
-            u1.senha = TxtSenha.Text;
+            AdminLogado admin = new AdminLogado();
+            admin.email = TxtUsuario.Text;
+            admin.senha = TxtSenha.Text;
 
-            String json = JsonConvert.SerializeObject(u1);
+            String json = JsonConvert.SerializeObject(admin);
 
-            Object objResponse = ConnectionAPI.post(rota, json);
+            Object objResponse = ConnectionAPI.login(rota, json);
 
             RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+          
 
-            if (respUsuario.token != null && respUsuario.administrador != null)
+            if (respUsuario.administrador != null)
             {
                 MessageBox.Show("Login efetuado com sucesso!");
                 this.Hide();
-                Dashboard home = new Dashboard(respUsuario.usuario);
+                Dashboard home = new Dashboard(respUsuario.administrador);
                 home.Show();
             } else
             {

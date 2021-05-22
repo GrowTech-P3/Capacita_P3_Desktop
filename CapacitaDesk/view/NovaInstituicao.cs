@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.model;
 
 namespace CapacitaDesk {
     public partial class NovaInstituicao : Form {
-        public NovaInstituicao() {
+        AdminLogado adminstrador = new AdminLogado();
+        public NovaInstituicao(AdminLogado admin) {
             InitializeComponent();
+            this.adminstrador = admin;
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e) {
