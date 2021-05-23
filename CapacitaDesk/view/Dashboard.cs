@@ -15,6 +15,8 @@ namespace CapacitaDesk {
 
         AdminLogado administrador = new AdminLogado();
 
+
+
         public Dashboard()
         {
             InitializeComponent();

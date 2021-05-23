@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class Estado
+    public class Estado
     {
-        public String idEstado { get; set; }
+        public String id { get; set; }
 
-        public String nome { get; set; }
+        public String label { get; set; }
+
+        public String createdAt { get; set; }
+        public String updatedAt { get; set; }
     }
 }

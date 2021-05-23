@@ -16,6 +16,8 @@ namespace CapacitaDesk.model
         public Instituicao instituicao { get; set; }
 
         public AdminLogado administrador { get; set; }
+
+        public Estado estados { get; set; }
      
         public String token { get; set; }
     }

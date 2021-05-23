@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapacitaDesk.model;
+using Newtonsoft.Json;
+using CapacitaDesk.controller;
 
 namespace CapacitaDesk {
     public partial class NovoAdministrador : Form {
@@ -32,7 +34,15 @@ namespace CapacitaDesk {
         }
 
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
-            MessageBox.Show("Usuário ADMINISTRADOR cadastrado com sucesso!");
+            Administrador administrador = new Administrador();
+            administrador.email = TxtBoxEmailUsuario.Text;
+            administrador.nome = TxtBoxNomeUsuario.Text;
+            administrador.password = TxtBoxSenhaUsuario.Text;
+            String rota = "http://localhost:3000/administrador";
+            String json = JsonConvert.SerializeObject(administrador);
+            Object objResponse = ConnectionAPI.post(rota,json, this.administrador.Token);
+            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+            MessageBox.Show(respUsuario.message);
             DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (Resp == DialogResult.No) {

@@ -28,35 +28,37 @@ namespace CapacitaDesk {
             this.label10 = new System.Windows.Forms.Label();
             this.TxtBoxBairroUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.TxtBoxCepUsuario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtBoxNumUsuario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtBoxEnderecoUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxEmailUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtBoxTelefoneUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtBoxCpfUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxNomeUsuario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNumero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelSenha = new System.Windows.Forms.Label();
+            this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
+            this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -70,7 +72,7 @@ namespace CapacitaDesk {
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label10.Location = new System.Drawing.Point(374, 101);
+            this.label10.Location = new System.Drawing.Point(190, 144);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 17);
             this.label10.TabIndex = 67;
@@ -80,10 +82,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxBairroUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxBairroUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxBairroUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxBairroUsuario.Location = new System.Drawing.Point(374, 119);
+            this.TxtBoxBairroUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxBairroUsuario.Location = new System.Drawing.Point(190, 164);
             this.TxtBoxBairroUsuario.Name = "TxtBoxBairroUsuario";
-            this.TxtBoxBairroUsuario.Size = new System.Drawing.Size(96, 15);
+            this.TxtBoxBairroUsuario.Size = new System.Drawing.Size(96, 20);
             this.TxtBoxBairroUsuario.TabIndex = 66;
             // 
             // label9
@@ -98,43 +100,23 @@ namespace CapacitaDesk {
             this.label9.Text = "Cidade";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // TxtBoxCepUsuario
-            // 
-            this.TxtBoxCepUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxCepUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCepUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxCepUsuario.Location = new System.Drawing.Point(190, 119);
-            this.TxtBoxCepUsuario.Name = "TxtBoxCepUsuario";
-            this.TxtBoxCepUsuario.Size = new System.Drawing.Size(150, 15);
-            this.TxtBoxCepUsuario.TabIndex = 64;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label7.Location = new System.Drawing.Point(344, 101);
+            this.label7.Location = new System.Drawing.Point(407, 112);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 17);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 63;
-            this.label7.Text = "UF";
-            // 
-            // TxtBoxNumUsuario
-            // 
-            this.TxtBoxNumUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxNumUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNumUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNumUsuario.Location = new System.Drawing.Point(344, 119);
-            this.TxtBoxNumUsuario.Name = "TxtBoxNumUsuario";
-            this.TxtBoxNumUsuario.Size = new System.Drawing.Size(24, 15);
-            this.TxtBoxNumUsuario.TabIndex = 62;
+            this.label7.Text = "Estado";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label8.Location = new System.Drawing.Point(190, 145);
+            this.label8.Location = new System.Drawing.Point(189, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 17);
             this.label8.TabIndex = 61;
@@ -144,10 +126,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEnderecoUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEnderecoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEnderecoUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxEnderecoUsuario.Location = new System.Drawing.Point(190, 164);
+            this.TxtBoxEnderecoUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEnderecoUsuario.Location = new System.Drawing.Point(184, 219);
             this.TxtBoxEnderecoUsuario.Name = "TxtBoxEnderecoUsuario";
-            this.TxtBoxEnderecoUsuario.Size = new System.Drawing.Size(293, 15);
+            this.TxtBoxEnderecoUsuario.Size = new System.Drawing.Size(293, 20);
             this.TxtBoxEnderecoUsuario.TabIndex = 60;
             // 
             // label5
@@ -155,7 +137,7 @@ namespace CapacitaDesk {
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label5.Location = new System.Drawing.Point(190, 188);
+            this.label5.Location = new System.Drawing.Point(189, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 57;
@@ -165,10 +147,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEmailUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEmailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEmailUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxEmailUsuario.Location = new System.Drawing.Point(190, 207);
+            this.TxtBoxEmailUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEmailUsuario.Location = new System.Drawing.Point(189, 262);
             this.TxtBoxEmailUsuario.Name = "TxtBoxEmailUsuario";
-            this.TxtBoxEmailUsuario.Size = new System.Drawing.Size(356, 15);
+            this.TxtBoxEmailUsuario.Size = new System.Drawing.Size(312, 20);
             this.TxtBoxEmailUsuario.TabIndex = 56;
             // 
             // label4
@@ -182,16 +164,6 @@ namespace CapacitaDesk {
             this.label4.TabIndex = 55;
             this.label4.Text = "Telefone";
             // 
-            // TxtBoxTelefoneUsuario
-            // 
-            this.TxtBoxTelefoneUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxTelefoneUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTelefoneUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxTelefoneUsuario.Location = new System.Drawing.Point(419, 73);
-            this.TxtBoxTelefoneUsuario.Name = "TxtBoxTelefoneUsuario";
-            this.TxtBoxTelefoneUsuario.Size = new System.Drawing.Size(127, 15);
-            this.TxtBoxTelefoneUsuario.TabIndex = 54;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -202,16 +174,6 @@ namespace CapacitaDesk {
             this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 53;
             this.label3.Text = "CNPJ";
-            // 
-            // TxtBoxCpfUsuario
-            // 
-            this.TxtBoxCpfUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxCpfUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCpfUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxCpfUsuario.Location = new System.Drawing.Point(190, 73);
-            this.TxtBoxCpfUsuario.Name = "TxtBoxCpfUsuario";
-            this.TxtBoxCpfUsuario.Size = new System.Drawing.Size(223, 15);
-            this.TxtBoxCpfUsuario.TabIndex = 52;
             // 
             // label2
             // 
@@ -228,10 +190,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(190, 33);
             this.TxtBoxNomeUsuario.Name = "TxtBoxNomeUsuario";
-            this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(356, 15);
+            this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(356, 14);
             this.TxtBoxNomeUsuario.TabIndex = 50;
             // 
             // label11
@@ -239,51 +201,51 @@ namespace CapacitaDesk {
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label11.Location = new System.Drawing.Point(476, 101);
+            this.label11.Location = new System.Drawing.Point(407, 144);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 17);
             this.label11.TabIndex = 69;
             this.label11.Text = "CEP";
             // 
-            // textBox1
+            // textBoxCidade
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(476, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 15);
-            this.textBox1.TabIndex = 68;
+            this.textBoxCidade.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCidade.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxCidade.Location = new System.Drawing.Point(190, 121);
+            this.textBoxCidade.Name = "textBoxCidade";
+            this.textBoxCidade.Size = new System.Drawing.Size(150, 20);
+            this.textBoxCidade.TabIndex = 68;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label12.Location = new System.Drawing.Point(493, 145);
+            this.label12.Location = new System.Drawing.Point(493, 199);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(38, 17);
             this.label12.TabIndex = 71;
             this.label12.Text = "Num";
             // 
-            // textBox2
+            // textBoxNumero
             // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(493, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(53, 15);
-            this.textBox2.TabIndex = 70;
+            this.textBoxNumero.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNumero.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNumero.Location = new System.Drawing.Point(499, 219);
+            this.textBoxNumero.Name = "textBoxNumero";
+            this.textBoxNumero.Size = new System.Drawing.Size(53, 20);
+            this.textBoxNumero.TabIndex = 70;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(260, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 33);
+            this.label1.Size = new System.Drawing.Size(289, 31);
             this.label1.TabIndex = 13;
             this.label1.Text = "NOVA INSTITUIÇÃO";
             // 
@@ -296,7 +258,7 @@ namespace CapacitaDesk {
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 59);
+            this.panel2.Size = new System.Drawing.Size(866, 59);
             this.panel2.TabIndex = 14;
             // 
             // panel3
@@ -307,17 +269,17 @@ namespace CapacitaDesk {
             this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 59);
+            this.panel3.Size = new System.Drawing.Size(866, 59);
             this.panel3.TabIndex = 15;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lato", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(260, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(265, 33);
+            this.label13.Size = new System.Drawing.Size(289, 31);
             this.label13.TabIndex = 13;
             this.label13.Text = "NOVA INSTITUIÇÃO";
             // 
@@ -338,19 +300,19 @@ namespace CapacitaDesk {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 69);
+            this.panel1.Size = new System.Drawing.Size(866, 69);
             this.panel1.TabIndex = 13;
             // 
-            // textBox3
+            // textBoxDescricao
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(113, 400);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(383, 135);
-            this.textBox3.TabIndex = 72;
+            this.textBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescricao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxDescricao.Location = new System.Drawing.Point(113, 457);
+            this.textBoxDescricao.Multiline = true;
+            this.textBoxDescricao.Name = "textBoxDescricao";
+            this.textBoxDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDescricao.Size = new System.Drawing.Size(383, 92);
+            this.textBoxDescricao.TabIndex = 72;
             // 
             // pictureBox1
             // 
@@ -367,7 +329,7 @@ namespace CapacitaDesk {
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(113, 378);
+            this.label6.Location = new System.Drawing.Point(113, 433);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 21);
             this.label6.TabIndex = 74;
@@ -380,7 +342,7 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(520, 491);
+            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(520, 505);
             this.BtnCadastrarUsuario.Name = "BtnCadastrarUsuario";
             this.BtnCadastrarUsuario.Size = new System.Drawing.Size(145, 44);
             this.BtnCadastrarUsuario.TabIndex = 76;
@@ -395,7 +357,7 @@ namespace CapacitaDesk {
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(520, 428);
+            this.BtnCancelar.Location = new System.Drawing.Point(520, 442);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(145, 44);
             this.BtnCancelar.TabIndex = 75;
@@ -404,46 +366,107 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxPassword);
+            this.groupBox1.Controls.Add(this.labelSenha);
+            this.groupBox1.Controls.Add(this.maskedTextBoxCnpj);
+            this.groupBox1.Controls.Add(this.maskedTextBoxTelefone);
+            this.groupBox1.Controls.Add(this.maskedTextBoxCep);
+            this.groupBox1.Controls.Add(this.comboBoxEstado);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxNumero);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxCidade);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.TxtBoxBairroUsuario);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.TxtBoxCepUsuario);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.TxtBoxNumUsuario);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.TxtBoxEnderecoUsuario);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtBoxEmailUsuario);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TxtBoxTelefoneUsuario);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.TxtBoxCpfUsuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.TxtBoxNomeUsuario);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox1.Location = new System.Drawing.Point(113, 136);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 237);
+            this.groupBox1.Size = new System.Drawing.Size(741, 288);
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da instituição";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassword.Location = new System.Drawing.Point(499, 259);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(138, 20);
+            this.textBoxPassword.TabIndex = 79;
+            // 
+            // labelSenha
+            // 
+            this.labelSenha.AutoSize = true;
+            this.labelSenha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSenha.Location = new System.Drawing.Point(499, 239);
+            this.labelSenha.Name = "labelSenha";
+            this.labelSenha.Size = new System.Drawing.Size(45, 17);
+            this.labelSenha.TabIndex = 78;
+            this.labelSenha.Text = "Senha";
+            // 
+            // maskedTextBoxCnpj
+            // 
+            this.maskedTextBoxCnpj.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBoxCnpj.Location = new System.Drawing.Point(190, 72);
+            this.maskedTextBoxCnpj.Mask = "99.999.999/9999-99";
+            this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
+            this.maskedTextBoxCnpj.Size = new System.Drawing.Size(150, 22);
+            this.maskedTextBoxCnpj.TabIndex = 77;
+            // 
+            // maskedTextBoxTelefone
+            // 
+            this.maskedTextBoxTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(419, 75);
+            this.maskedTextBoxTelefone.Mask = "(00) 00000-0000";
+            this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(141, 22);
+            this.maskedTextBoxTelefone.TabIndex = 76;
+            // 
+            // maskedTextBoxCep
+            // 
+            this.maskedTextBoxCep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBoxCep.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.maskedTextBoxCep.Location = new System.Drawing.Point(407, 167);
+            this.maskedTextBoxCep.Mask = "00.000-000";
+            this.maskedTextBoxCep.Name = "maskedTextBoxCep";
+            this.maskedTextBoxCep.Size = new System.Drawing.Size(94, 20);
+            this.maskedTextBoxCep.TabIndex = 75;
+            // 
+            // comboBoxEstado
+            // 
+            this.comboBoxEstado.DropDownHeight = 50;
+            this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxEstado.FormattingEnabled = true;
+            this.comboBoxEstado.IntegralHeight = false;
+            this.comboBoxEstado.Location = new System.Drawing.Point(493, 107);
+            this.comboBoxEstado.Name = "comboBoxEstado";
+            this.comboBoxEstado.Size = new System.Drawing.Size(200, 28);
+            this.comboBoxEstado.TabIndex = 74;
             // 
             // NovaInstituicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(866, 561);
             this.Controls.Add(this.BtnCadastrarUsuario);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxDescricao);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
@@ -469,28 +492,24 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox TxtBoxBairroUsuario;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtBoxCepUsuario;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtBoxNumUsuario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtBoxEnderecoUsuario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtBoxEmailUsuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtBoxTelefoneUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtBoxCpfUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtBoxNomeUsuario;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxCidade;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNumero;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxDescricao;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnCadastrarUsuario;
@@ -498,5 +517,11 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCnpj;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label labelSenha;
     }
 }

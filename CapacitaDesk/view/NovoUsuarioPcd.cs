@@ -14,11 +14,28 @@ using CapacitaDesk.controller;
 
 namespace CapacitaDesk {
     public partial class NovoUsuarioPcd : Form {
-
+       
         Usuario admin = new Usuario();
+        
+        public void estadoComboBox() {
+
+            String rota = "http://localhost:3000/estados";
+
+            Object objResponse = ConnectionAPI.getLista(rota);
+            
+
+            List<Estado> estados = JsonConvert.DeserializeObject<List<Estado>>(objResponse.ToString());
+
+
+            for (int i = 0; i < estados.Count; i++)
+            {
+                comboBoxEstado.Items.Add(estados[i].label);
+            }
+        }
         public NovoUsuarioPcd(Usuario adminUser) {
             InitializeComponent();
             this.admin = adminUser;
+            estadoComboBox();
         }
 
         private void label1_Click(object sender, EventArgs e) {
@@ -44,16 +61,16 @@ namespace CapacitaDesk {
 
             String rota = "http://localhost:3000/usuarioPcd";
 
-            usuarioPcd.id_estado = "1" ;
-            usuarioPcd.cidade = "Testando";
+            usuarioPcd.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
+            usuarioPcd.cidade = textBoxCidade.Text;
             usuarioPcd.email = TxtBoxEmailUsuario.Text;
             usuarioPcd.password = TxtBoxSenhaUsuario.Text;
-            usuarioPcd.cpf = TxtBoxCpfUsuario.Text;
+            usuarioPcd.cpf = maskedTextBoxCPF.Text;
             usuarioPcd.bairro = TxtBoxBairroUsuario.Text;
-            usuarioPcd.cep = TxtBoxCepUsuario.Text;
+            usuarioPcd.cep = maskedTextBoxCep.Text;
             usuarioPcd.endereco = TxtBoxEnderecoUsuario.Text;
             usuarioPcd.numero = TxtBoxNumUsuario.Text;
-            usuarioPcd.telefone = TxtBoxTelefoneUsuario.Text;
+            usuarioPcd.telefone = maskedTextBoxTelefone.Text;
             usuarioPcd.nome = TxtBoxNomeUsuario.Text;
             usuarioPcd.deficiencias[0] = checkBoxAuditivo.Checked ? "1" : "0";
             usuarioPcd.deficiencias[1] = checkBoxFisico.Checked ? "2" : "0";
@@ -74,6 +91,31 @@ namespace CapacitaDesk {
 
                 this.Dispose();
             }
+        }
+
+        private void maskedTextBoxCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void TxtBoxEmailUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxSenhaUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
