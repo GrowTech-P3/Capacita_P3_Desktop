@@ -18,7 +18,7 @@ namespace CapacitaDesk.controller
         /// </summary>
         /// <param name="rota"></param>
         /// <returns>objResponse</returns>
-        public static Object getLista(String rota)
+        public static Object getLista(String rota, String Token)
         {
             Object objResponse = null;
 
@@ -27,7 +27,8 @@ namespace CapacitaDesk.controller
                 // Classe WebRequest: Faz uma solicitaçao para um URL
                 var requisicaoWeb = WebRequest.CreateHttp(rota.ToLower());
                 requisicaoWeb.Method = "GET";
-                
+                requisicaoWeb.Headers.Add("Authorization", "Bearer " + Token);
+
                 //GetResponse: obtem um objeto com a resposta do servidor
                 var resposta = requisicaoWeb.GetResponse();
 

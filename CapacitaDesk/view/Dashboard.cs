@@ -110,5 +110,15 @@ namespace CapacitaDesk {
             LogDeAtividaes log = new LogDeAtividaes(administrador);
             log.ShowDialog();
         }
+
+        private void Dashboard_Leave(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

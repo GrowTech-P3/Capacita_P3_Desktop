@@ -21,7 +21,7 @@ namespace CapacitaDesk {
 
             String rota = "http://localhost:3000/estados";
 
-            Object objResponse = ConnectionAPI.getLista(rota);
+            Object objResponse = ConnectionAPI.getLista(rota, admin.Token);
             
 
             List<Estado> estados = JsonConvert.DeserializeObject<List<Estado>>(objResponse.ToString());

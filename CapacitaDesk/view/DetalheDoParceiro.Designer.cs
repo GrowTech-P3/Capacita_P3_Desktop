@@ -122,6 +122,7 @@ namespace CapacitaDesk {
             this.TxtBoxDescricaoParceiro.Location = new System.Drawing.Point(6, 22);
             this.TxtBoxDescricaoParceiro.Multiline = true;
             this.TxtBoxDescricaoParceiro.Name = "TxtBoxDescricaoParceiro";
+            this.TxtBoxDescricaoParceiro.ReadOnly = true;
             this.TxtBoxDescricaoParceiro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtBoxDescricaoParceiro.Size = new System.Drawing.Size(475, 141);
             this.TxtBoxDescricaoParceiro.TabIndex = 105;
@@ -141,10 +142,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNum.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNum.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNum.Enabled = false;
+            this.TxtBoxNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNum.Location = new System.Drawing.Point(443, 119);
             this.TxtBoxNum.Name = "TxtBoxNum";
-            this.TxtBoxNum.Size = new System.Drawing.Size(41, 15);
+            this.TxtBoxNum.Size = new System.Drawing.Size(41, 14);
             this.TxtBoxNum.TabIndex = 126;
             // 
             // label11
@@ -162,10 +164,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxCep.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxCep.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCep.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxCep.Enabled = false;
+            this.TxtBoxCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxCep.Location = new System.Drawing.Point(336, 119);
             this.TxtBoxCep.Name = "TxtBoxCep";
-            this.TxtBoxCep.Size = new System.Drawing.Size(101, 15);
+            this.TxtBoxCep.Size = new System.Drawing.Size(101, 14);
             this.TxtBoxCep.TabIndex = 124;
             // 
             // label10
@@ -183,10 +186,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxBairroParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxBairroParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxBairroParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxBairroParceiro.Enabled = false;
+            this.TxtBoxBairroParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxBairroParceiro.Location = new System.Drawing.Point(234, 119);
             this.TxtBoxBairroParceiro.Name = "TxtBoxBairroParceiro";
-            this.TxtBoxBairroParceiro.Size = new System.Drawing.Size(96, 15);
+            this.TxtBoxBairroParceiro.Size = new System.Drawing.Size(96, 14);
             this.TxtBoxBairroParceiro.TabIndex = 122;
             // 
             // label9
@@ -204,10 +208,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxCidadeParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxCidadeParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCidadeParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxCidadeParceiro.Enabled = false;
+            this.TxtBoxCidadeParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxCidadeParceiro.Location = new System.Drawing.Point(6, 119);
             this.TxtBoxCidadeParceiro.Name = "TxtBoxCidadeParceiro";
-            this.TxtBoxCidadeParceiro.Size = new System.Drawing.Size(182, 15);
+            this.TxtBoxCidadeParceiro.Size = new System.Drawing.Size(182, 14);
             this.TxtBoxCidadeParceiro.TabIndex = 120;
             // 
             // label7
@@ -225,10 +230,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxUfParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxUfParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxUfParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxUfParceiro.Enabled = false;
+            this.TxtBoxUfParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxUfParceiro.Location = new System.Drawing.Point(194, 119);
             this.TxtBoxUfParceiro.Name = "TxtBoxUfParceiro";
-            this.TxtBoxUfParceiro.Size = new System.Drawing.Size(34, 15);
+            this.TxtBoxUfParceiro.Size = new System.Drawing.Size(34, 14);
             this.TxtBoxUfParceiro.TabIndex = 118;
             // 
             // label8
@@ -246,10 +252,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEnderecoParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEnderecoParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEnderecoParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEnderecoParceiro.Enabled = false;
+            this.TxtBoxEnderecoParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEnderecoParceiro.Location = new System.Drawing.Point(6, 83);
             this.TxtBoxEnderecoParceiro.Name = "TxtBoxEnderecoParceiro";
-            this.TxtBoxEnderecoParceiro.Size = new System.Drawing.Size(363, 15);
+            this.TxtBoxEnderecoParceiro.Size = new System.Drawing.Size(363, 14);
             this.TxtBoxEnderecoParceiro.TabIndex = 116;
             // 
             // label5
@@ -267,10 +274,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEmailParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEmailParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEmailParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEmailParceiro.Enabled = false;
+            this.TxtBoxEmailParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEmailParceiro.Location = new System.Drawing.Point(6, 156);
             this.TxtBoxEmailParceiro.Name = "TxtBoxEmailParceiro";
-            this.TxtBoxEmailParceiro.Size = new System.Drawing.Size(478, 15);
+            this.TxtBoxEmailParceiro.Size = new System.Drawing.Size(478, 14);
             this.TxtBoxEmailParceiro.TabIndex = 114;
             // 
             // label4
@@ -288,10 +296,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxTelefoneParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTelefoneParceiro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTelefoneParceiro.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTelefoneParceiro.Enabled = false;
+            this.TxtBoxTelefoneParceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTelefoneParceiro.Location = new System.Drawing.Point(375, 83);
             this.TxtBoxTelefoneParceiro.Name = "TxtBoxTelefoneParceiro";
-            this.TxtBoxTelefoneParceiro.Size = new System.Drawing.Size(109, 15);
+            this.TxtBoxTelefoneParceiro.Size = new System.Drawing.Size(109, 14);
             this.TxtBoxTelefoneParceiro.TabIndex = 112;
             // 
             // label3
@@ -309,10 +318,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxCnpj.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxCnpj.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCnpj.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxCnpj.Enabled = false;
+            this.TxtBoxCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxCnpj.Location = new System.Drawing.Point(320, 48);
             this.TxtBoxCnpj.Name = "TxtBoxCnpj";
-            this.TxtBoxCnpj.Size = new System.Drawing.Size(164, 15);
+            this.TxtBoxCnpj.Size = new System.Drawing.Size(164, 14);
             this.TxtBoxCnpj.TabIndex = 110;
             // 
             // label2
@@ -330,10 +340,11 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeInstituicao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeInstituicao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeInstituicao.Enabled = false;
+            this.TxtBoxNomeInstituicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeInstituicao.Location = new System.Drawing.Point(6, 48);
             this.TxtBoxNomeInstituicao.Name = "TxtBoxNomeInstituicao";
-            this.TxtBoxNomeInstituicao.Size = new System.Drawing.Size(308, 15);
+            this.TxtBoxNomeInstituicao.Size = new System.Drawing.Size(308, 14);
             this.TxtBoxNomeInstituicao.TabIndex = 108;
             // 
             // BtnRecusarParceiro
@@ -350,6 +361,7 @@ namespace CapacitaDesk {
             this.BtnRecusarParceiro.TabIndex = 129;
             this.BtnRecusarParceiro.Text = "RECUSAR";
             this.BtnRecusarParceiro.UseVisualStyleBackColor = false;
+            this.BtnRecusarParceiro.Click += new System.EventHandler(this.BtnRecusarParceiro_Click);
             // 
             // BtnAceitarParceiro
             // 
@@ -365,6 +377,7 @@ namespace CapacitaDesk {
             this.BtnAceitarParceiro.TabIndex = 128;
             this.BtnAceitarParceiro.Text = "ACEITAR";
             this.BtnAceitarParceiro.UseVisualStyleBackColor = false;
+            this.BtnAceitarParceiro.Click += new System.EventHandler(this.BtnAceitarParceiro_Click);
             // 
             // groupBox2
             // 

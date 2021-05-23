@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class UsuarioPcd
+    public class UsuarioPcd
     {
         public UsuarioPcd() {
             this.usuario = new Usuario();

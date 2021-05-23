@@ -47,7 +47,7 @@ namespace CapacitaDesk {
             this.label4 = new System.Windows.Forms.Label();
             this.TxtDataFinal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ListViewParceiro = new System.Windows.Forms.ListView();
+            this.listViewParceiro = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.Data = new System.Windows.Forms.ColumnHeader();
             this.Hora = new System.Windows.Forms.ColumnHeader();
@@ -144,15 +144,16 @@ namespace CapacitaDesk {
             this.BtnBuscarParceiro.TabIndex = 107;
             this.BtnBuscarParceiro.Text = "BUSCAR";
             this.BtnBuscarParceiro.UseVisualStyleBackColor = false;
+            this.BtnBuscarParceiro.Click += new System.EventHandler(this.BtnBuscarParceiro_Click);
             // 
             // TxtBoxNomedaInstitucao
             // 
             this.TxtBoxNomedaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomedaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(31, 42);
             this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
-            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(508, 15);
+            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(508, 14);
             this.TxtBoxNomedaInstitucao.TabIndex = 98;
             // 
             // label5
@@ -192,30 +193,30 @@ namespace CapacitaDesk {
             // 
             this.TxtDataInicial.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtDataInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataInicial.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtDataInicial.Location = new System.Drawing.Point(220, 88);
             this.TxtDataInicial.Name = "TxtDataInicial";
-            this.TxtDataInicial.Size = new System.Drawing.Size(74, 15);
+            this.TxtDataInicial.Size = new System.Drawing.Size(74, 14);
             this.TxtDataInicial.TabIndex = 72;
             // 
             // TxtBoxHoraFinal
             // 
             this.TxtBoxHoraFinal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxHoraFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxHoraFinal.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxHoraFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxHoraFinal.Location = new System.Drawing.Point(465, 88);
             this.TxtBoxHoraFinal.Name = "TxtBoxHoraFinal";
-            this.TxtBoxHoraFinal.Size = new System.Drawing.Size(74, 15);
+            this.TxtBoxHoraFinal.Size = new System.Drawing.Size(74, 14);
             this.TxtBoxHoraFinal.TabIndex = 96;
             // 
             // TxtBoxEstado
             // 
             this.TxtBoxEstado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEstado.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEstado.Location = new System.Drawing.Point(31, 88);
             this.TxtBoxEstado.Name = "TxtBoxEstado";
-            this.TxtBoxEstado.Size = new System.Drawing.Size(53, 15);
+            this.TxtBoxEstado.Size = new System.Drawing.Size(53, 14);
             this.TxtBoxEstado.TabIndex = 74;
             // 
             // label14
@@ -244,20 +245,20 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxHoraInicial.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxHoraInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxHoraInicial.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxHoraInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxHoraInicial.Location = new System.Drawing.Point(384, 88);
             this.TxtBoxHoraInicial.Name = "TxtBoxHoraInicial";
-            this.TxtBoxHoraInicial.Size = new System.Drawing.Size(74, 15);
+            this.TxtBoxHoraInicial.Size = new System.Drawing.Size(74, 14);
             this.TxtBoxHoraInicial.TabIndex = 94;
             // 
             // TxtBoxCidade
             // 
             this.TxtBoxCidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCidade.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxCidade.Location = new System.Drawing.Point(90, 88);
             this.TxtBoxCidade.Name = "TxtBoxCidade";
-            this.TxtBoxCidade.Size = new System.Drawing.Size(117, 15);
+            this.TxtBoxCidade.Size = new System.Drawing.Size(117, 14);
             this.TxtBoxCidade.TabIndex = 76;
             // 
             // label6
@@ -286,15 +287,15 @@ namespace CapacitaDesk {
             // 
             this.TxtDataFinal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtDataFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataFinal.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtDataFinal.Location = new System.Drawing.Point(301, 88);
             this.TxtDataFinal.Name = "TxtDataFinal";
-            this.TxtDataFinal.Size = new System.Drawing.Size(74, 15);
+            this.TxtDataFinal.Size = new System.Drawing.Size(74, 14);
             this.TxtDataFinal.TabIndex = 92;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ListViewParceiro);
+            this.groupBox2.Controls.Add(this.listViewParceiro);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox2.Location = new System.Drawing.Point(58, 270);
@@ -304,26 +305,28 @@ namespace CapacitaDesk {
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de novos parceiros";
             // 
-            // ListViewParceiro
+            // listViewParceiro
             // 
-            this.ListViewParceiro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewParceiro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Data,
             this.Hora,
             this.NomeDaInstituicao,
             this.UfParceiros,
             this.CidadeParceiro});
-            this.ListViewParceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ListViewParceiro.HideSelection = false;
-            this.ListViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.listViewParceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.listViewParceiro.FullRowSelect = true;
+            this.listViewParceiro.HideSelection = false;
+            this.listViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.ListViewParceiro.Location = new System.Drawing.Point(15, 27);
-            this.ListViewParceiro.Name = "ListViewParceiro";
-            this.ListViewParceiro.Size = new System.Drawing.Size(642, 198);
-            this.ListViewParceiro.TabIndex = 1;
-            this.ListViewParceiro.UseCompatibleStateImageBehavior = false;
-            this.ListViewParceiro.View = System.Windows.Forms.View.Details;
-            this.ListViewParceiro.SelectedIndexChanged += new System.EventHandler(this.ListViewParceiro_SelectedIndexChanged);
+            this.listViewParceiro.Location = new System.Drawing.Point(15, 27);
+            this.listViewParceiro.MultiSelect = false;
+            this.listViewParceiro.Name = "listViewParceiro";
+            this.listViewParceiro.Size = new System.Drawing.Size(642, 198);
+            this.listViewParceiro.TabIndex = 1;
+            this.listViewParceiro.UseCompatibleStateImageBehavior = false;
+            this.listViewParceiro.View = System.Windows.Forms.View.Details;
+            this.listViewParceiro.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewParceiro_MouseDoubleClick);
             // 
             // Id
             // 
@@ -386,6 +389,7 @@ namespace CapacitaDesk {
             this.Name = "RegistroDeNovoParceiro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capacita Desk";
+            this.Load += new System.EventHandler(this.RegistroDeNovoParceiro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -419,7 +423,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TxtBoxNomedaInstitucao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListView ListViewParceiro;
+        private System.Windows.Forms.ListView listViewParceiro;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Data;
         private System.Windows.Forms.ColumnHeader Hora;

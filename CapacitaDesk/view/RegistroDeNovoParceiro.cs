@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapacitaDesk.controller;
 using CapacitaDesk.model;
+using Newtonsoft.Json;
 
 namespace CapacitaDesk {
     public partial class RegistroDeNovoParceiro : Form {
@@ -17,15 +19,91 @@ namespace CapacitaDesk {
             this.administrador = admin;
         }
 
-        private void ListViewParceiro_SelectedIndexChanged(object sender, EventArgs e) {
+        public void carregarTabela()
+        {
+            List<Instituicao> instituicoes;
+            String rota = "http://localhost:3000/instituicao-inativa";
 
+            Object objectResponse = ConnectionAPI.getLista(rota, this.administrador.Token);
+            instituicoes = JsonConvert.DeserializeObject <List<Instituicao>>(objectResponse.ToString());
+
+            listViewParceiro.Items.Clear();
+
+            foreach (Instituicao instituicao in instituicoes)
+            {
+                ListViewItem item = listViewParceiro.Items.Add(instituicao.id);
+                item.SubItems.Add(Convert.ToDateTime(instituicao.createdAt).ToString("dd/MM/yy"));
+                item.SubItems.Add(Convert.ToDateTime(instituicao.createdAt).ToString("hh:mm"));
+                item.SubItems.Add(instituicao.nome);
+                item.SubItems.Add(EstadoConvert.getEstadoUf(Convert.ToInt32(instituicao.id_estado)));
+                item.SubItems.Add(instituicao.cidade);
+            }
+        }
+
+        // CARREGAR TABELA FILTRANDO PELO NOME DA INSTITUICAO
+        public void carregarTabelaInstituicao(String nomeInstituicao)
+        {
+            List<Instituicao> instituicoes;
+            Instituicao instituicaoPesquisa = new Instituicao();
+            instituicaoPesquisa.nome = nomeInstituicao;
+            
+            String rota = "http://localhost:3000/instituicao-inativa";
+            String json = JsonConvert.SerializeObject(instituicaoPesquisa);
+
+            Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
+            instituicoes = JsonConvert.DeserializeObject<List<Instituicao>>(objectResponse.ToString());
+
+            listViewParceiro.Items.Clear();
+
+            foreach (Instituicao instituicao in instituicoes)
+            {
+                ListViewItem item = listViewParceiro.Items.Add(instituicao.id);
+                item.SubItems.Add(Convert.ToDateTime(instituicao.createdAt).ToString("dd/MM/yy"));
+                item.SubItems.Add(Convert.ToDateTime(instituicao.createdAt).ToString("hh:mm"));
+                item.SubItems.Add(instituicao.nome);
+                item.SubItems.Add(EstadoConvert.getEstadoUf(Convert.ToInt32(instituicao.id_estado)));
+                item.SubItems.Add(instituicao.cidade);
+            }
+        }
+
+        private void exibirDetalhesParceria()
+        {
+            if (listViewParceiro.SelectedItems.Count > 0)
+            {
+                
+
+                Instituicao instituicao = new Instituicao();
+                instituicao.id = listViewParceiro.SelectedItems[0].SubItems[0].Text;
+
+                String rota = "http://localhost:3000/busca-instituicao";
+                String json = JsonConvert.SerializeObject(instituicao);
+
+                Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
+
+                this.Dispose();
+                DetalheDoParceiro dParceiro = new DetalheDoParceiro(administrador, respUsuario.instituicao);
+                dParceiro.ShowDialog();
+            }
         }
 
         private void BtnExibirParceiro_Click(object sender, EventArgs e) {
-            this.Close();
-            DetalheDoParceiro dParceiro = new DetalheDoParceiro();
-            dParceiro.ShowDialog();
+            exibirDetalhesParceria();
+        }
 
+        private void RegistroDeNovoParceiro_Load(object sender, EventArgs e)
+        {
+            carregarTabela();
+        }
+
+        private void BtnBuscarParceiro_Click(object sender, EventArgs e)
+        {
+            carregarTabelaInstituicao(TxtBoxNomedaInstitucao.Text);
+        }
+
+        private void listViewParceiro_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            exibirDetalhesParceria();
         }
     }
 }
