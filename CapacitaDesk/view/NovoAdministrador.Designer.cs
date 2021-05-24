@@ -94,7 +94,7 @@ namespace CapacitaDesk {
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(160, 121);
+            this.label6.Location = new System.Drawing.Point(160, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 41;
@@ -105,7 +105,7 @@ namespace CapacitaDesk {
             this.TxtBoxSenhaUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxSenhaUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxSenhaUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxSenhaUsuario.Location = new System.Drawing.Point(160, 141);
+            this.TxtBoxSenhaUsuario.Location = new System.Drawing.Point(160, 184);
             this.TxtBoxSenhaUsuario.Name = "TxtBoxSenhaUsuario";
             this.TxtBoxSenhaUsuario.Size = new System.Drawing.Size(145, 20);
             this.TxtBoxSenhaUsuario.TabIndex = 40;
@@ -115,7 +115,7 @@ namespace CapacitaDesk {
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label5.Location = new System.Drawing.Point(160, 70);
+            this.label5.Location = new System.Drawing.Point(160, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 39;
@@ -126,7 +126,7 @@ namespace CapacitaDesk {
             this.TxtBoxEmailUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEmailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxEmailUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxEmailUsuario.Location = new System.Drawing.Point(160, 90);
+            this.TxtBoxEmailUsuario.Location = new System.Drawing.Point(160, 133);
             this.TxtBoxEmailUsuario.Name = "TxtBoxEmailUsuario";
             this.TxtBoxEmailUsuario.Size = new System.Drawing.Size(287, 20);
             this.TxtBoxEmailUsuario.TabIndex = 38;
@@ -136,7 +136,7 @@ namespace CapacitaDesk {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label2.Location = new System.Drawing.Point(160, 27);
+            this.label2.Location = new System.Drawing.Point(160, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 33;
@@ -147,7 +147,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(160, 47);
+            this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(160, 90);
             this.TxtBoxNomeUsuario.Name = "TxtBoxNomeUsuario";
             this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(327, 20);
             this.TxtBoxNomeUsuario.TabIndex = 32;
@@ -155,7 +155,7 @@ namespace CapacitaDesk {
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapacitaDesk.Properties.Resources.ImgAdministrador;
-            this.pictureBox3.Location = new System.Drawing.Point(56, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(56, 72);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(75, 86);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

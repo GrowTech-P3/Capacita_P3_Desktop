@@ -79,5 +79,13 @@ namespace CapacitaDesk {
                 this.Dispose();
             }
         }
+
+        private void label4_Click(object sender, EventArgs e) {
+
+        }
+
+        private void maskedTextBoxTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e) {
+
+        }
     }
 }
