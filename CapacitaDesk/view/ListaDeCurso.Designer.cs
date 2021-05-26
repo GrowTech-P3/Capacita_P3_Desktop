@@ -128,10 +128,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxDeficiencia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxDeficiencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxDeficiencia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxDeficiencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxDeficiencia.Location = new System.Drawing.Point(453, 43);
             this.TxtBoxDeficiencia.Name = "TxtBoxDeficiencia";
-            this.TxtBoxDeficiencia.Size = new System.Drawing.Size(190, 15);
+            this.TxtBoxDeficiencia.Size = new System.Drawing.Size(190, 14);
             this.TxtBoxDeficiencia.TabIndex = 78;
             // 
             // label1
@@ -149,10 +149,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeDaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeDaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeDaInstitucao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeDaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeDaInstitucao.Location = new System.Drawing.Point(8, 43);
             this.TxtBoxNomeDaInstitucao.Name = "TxtBoxNomeDaInstitucao";
-            this.TxtBoxNomeDaInstitucao.Size = new System.Drawing.Size(235, 15);
+            this.TxtBoxNomeDaInstitucao.Size = new System.Drawing.Size(235, 14);
             this.TxtBoxNomeDaInstitucao.TabIndex = 74;
             // 
             // label3
@@ -170,10 +170,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeDoCurso.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeDoCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeDoCurso.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeDoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeDoCurso.Location = new System.Drawing.Point(249, 43);
             this.TxtBoxNomeDoCurso.Name = "TxtBoxNomeDoCurso";
-            this.TxtBoxNomeDoCurso.Size = new System.Drawing.Size(198, 15);
+            this.TxtBoxNomeDoCurso.Size = new System.Drawing.Size(198, 14);
             this.TxtBoxNomeDoCurso.TabIndex = 76;
             // 
             // label4
@@ -216,15 +216,16 @@ namespace CapacitaDesk {
             this.BtnExibirBuscarInstituicao.TabIndex = 107;
             this.BtnExibirBuscarInstituicao.Text = "BUSCAR";
             this.BtnExibirBuscarInstituicao.UseVisualStyleBackColor = false;
+            this.BtnExibirBuscarInstituicao.Click += new System.EventHandler(this.BtnExibirBuscarInstituicao_Click);
             // 
             // textBoxBuscarInstituicao
             // 
             this.textBoxBuscarInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxBuscarInstituicao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBuscarInstituicao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxBuscarInstituicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxBuscarInstituicao.Location = new System.Drawing.Point(6, 40);
             this.textBoxBuscarInstituicao.Name = "textBoxBuscarInstituicao";
-            this.textBoxBuscarInstituicao.Size = new System.Drawing.Size(518, 15);
+            this.textBoxBuscarInstituicao.Size = new System.Drawing.Size(518, 14);
             this.textBoxBuscarInstituicao.TabIndex = 74;
             // 
             // label5
