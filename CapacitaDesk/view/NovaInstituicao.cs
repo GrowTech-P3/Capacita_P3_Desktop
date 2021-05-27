@@ -27,6 +27,23 @@ namespace CapacitaDesk {
                 comboBoxEstado.Items.Add(estados[i].label);
             }
         }
+        
+        public void limparCampos()
+        {
+            TxtBoxNomeUsuario.Clear();
+            maskedTextBoxTelefone.Clear();
+            TxtBoxBairroUsuario.Clear();
+            maskedTextBoxCep.Clear();
+            textBoxCidade.Clear();
+            maskedTextBoxCnpj.Clear();
+            TxtBoxEnderecoUsuario.Clear();
+            comboBoxEstado.SelectedIndex = -1;
+            textBoxNumero.Clear();
+            textBoxDescricao.Clear();
+            TxtBoxEmailUsuario.Clear();
+            textBoxPassword.Clear();
+        }
+        
         public NovaInstituicao(AdminLogado admin) {
             InitializeComponent();
             this.adminstrador = admin;
@@ -65,6 +82,8 @@ namespace CapacitaDesk {
             instituicao.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
             instituicao.numero = textBoxNumero.Text;
             instituicao.descricao = textBoxDescricao.Text;
+            instituicao.email = TxtBoxEmailUsuario.Text;
+            instituicao.password = textBoxPassword.Text;
             String validate = validar.validateInstituicao(instituicao);
             if (validate.Trim().Equals("ok"))
             {
@@ -73,19 +92,13 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, this.adminstrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                limparCampos();
             }
             else
             {
                 MessageBox.Show(validate);
             }
             
-            
-            DialogResult Resp = MessageBox.Show("Deseja cadastrar uma nova instituição?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Resp == DialogResult.No) {
-
-                this.Dispose();
-            }
         }
 
         private void label4_Click(object sender, EventArgs e) {

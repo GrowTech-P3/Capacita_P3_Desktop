@@ -25,7 +25,7 @@ namespace CapacitaDesk {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeNovoParceiro));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -319,7 +319,7 @@ namespace CapacitaDesk {
             this.listViewParceiro.FullRowSelect = true;
             this.listViewParceiro.HideSelection = false;
             this.listViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
+            listViewItem1});
             this.listViewParceiro.Location = new System.Drawing.Point(15, 27);
             this.listViewParceiro.MultiSelect = false;
             this.listViewParceiro.Name = "listViewParceiro";

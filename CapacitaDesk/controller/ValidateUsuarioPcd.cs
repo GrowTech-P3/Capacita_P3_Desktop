@@ -18,7 +18,6 @@ namespace CapacitaDesk.controller
             {
                 return message = "Informe o nome";
             }
-            
             if (usuarioPcd.cpf == null || usuarioPcd.cpf.Trim().Equals(",   ,   -")) {
                 return message = "Informe o valor do CPF";
             }
@@ -50,7 +49,6 @@ namespace CapacitaDesk.controller
             }
             if (usuarioPcd.cep.Length != 10) {
                 return message = "CEP incompleto!";
-                
             }
             if (usuarioPcd.bairro == null || usuarioPcd.bairro.Trim().Equals(""))
             {

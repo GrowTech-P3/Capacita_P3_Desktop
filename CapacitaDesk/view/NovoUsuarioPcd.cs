@@ -32,6 +32,27 @@ namespace CapacitaDesk {
                 comboBoxEstado.Items.Add(estados[i].label);
             }
         }
+        public void limparCampos()
+        {
+            textBoxCidade.Clear();
+            TxtBoxEmailUsuario.Clear();
+            TxtBoxSenhaUsuario.Clear();
+            maskedTextBoxCPF.Clear();
+            TxtBoxBairroUsuario.Clear();
+            maskedTextBoxCep.Clear();
+            TxtBoxEnderecoUsuario.Clear();
+            TxtBoxNumUsuario.Clear();
+            maskedTextBoxTelefone.Clear();
+            TxtBoxNomeUsuario.Clear();
+            comboBoxEstado.SelectedIndex = -1;
+            checkBoxAuditivo.Checked = false;
+            checkBoxFisico.Checked = false;
+            checkBoxMental.Checked = false;
+            checkBoxMudez.Checked = false;
+            checkBoxVisual.Checked = false;
+        }
+        
+        
         public NovoUsuarioPcd(Usuario adminUser) {
             InitializeComponent();
             this.admin = adminUser;
@@ -87,19 +108,12 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                limparCampos();
             }
             else { 
                 MessageBox.Show(validate);
             }
 
-
-
-            DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Resp == DialogResult.No) {
-
-                this.Dispose();
-            }
         }
 
         private void maskedTextBoxCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

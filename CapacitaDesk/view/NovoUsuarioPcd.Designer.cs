@@ -52,7 +52,6 @@ namespace CapacitaDesk {
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.TxtBoxBairroUsuario = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@ namespace CapacitaDesk {
             this.TxtBoxSenhaUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxEmailUsuario = new System.Windows.Forms.TextBox();
+            this.maskedTextBoxCPF = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -150,7 +150,7 @@ namespace CapacitaDesk {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label4.Location = new System.Drawing.Point(223, 71);
+            this.label4.Location = new System.Drawing.Point(250, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 17);
             this.label4.TabIndex = 19;
@@ -420,23 +420,11 @@ namespace CapacitaDesk {
             // 
             this.maskedTextBoxTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.maskedTextBoxTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(223, 91);
+            this.maskedTextBoxTelefone.Location = new System.Drawing.Point(250, 91);
             this.maskedTextBoxTelefone.Mask = "(00) 00000-0000";
             this.maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
-            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(102, 20);
+            this.maskedTextBoxTelefone.Size = new System.Drawing.Size(135, 20);
             this.maskedTextBoxTelefone.TabIndex = 53;
-            // 
-            // maskedTextBoxCPF
-            // 
-            this.maskedTextBoxCPF.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBoxCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBoxCPF.Location = new System.Drawing.Point(108, 91);
-            this.maskedTextBoxCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.maskedTextBoxCPF.Mask = "000.000.000-00";
-            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            this.maskedTextBoxCPF.Size = new System.Drawing.Size(99, 20);
-            this.maskedTextBoxCPF.TabIndex = 52;
-            this.maskedTextBoxCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCPF_MaskInputRejected);
             // 
             // label10
             // 
@@ -538,6 +526,18 @@ namespace CapacitaDesk {
             this.TxtBoxEmailUsuario.TabIndex = 42;
             this.TxtBoxEmailUsuario.TextChanged += new System.EventHandler(this.TxtBoxEmailUsuario_TextChanged);
             // 
+            // maskedTextBoxCPF
+            // 
+            this.maskedTextBoxCPF.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.maskedTextBoxCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBoxCPF.Location = new System.Drawing.Point(108, 91);
+            this.maskedTextBoxCPF.Margin = new System.Windows.Forms.Padding(0);
+            this.maskedTextBoxCPF.Mask = "000.000.000-00";
+            this.maskedTextBoxCPF.Name = "maskedTextBoxCPF";
+            this.maskedTextBoxCPF.Size = new System.Drawing.Size(122, 20);
+            this.maskedTextBoxCPF.TabIndex = 52;
+            this.maskedTextBoxCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCPF_MaskInputRejected);
+            // 
             // NovoUsuarioPcd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -600,12 +600,12 @@ namespace CapacitaDesk {
         private System.Windows.Forms.TextBox TxtBoxSenhaUsuario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtBoxEmailUsuario;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxTelefone;
         private System.Windows.Forms.Label LabelCidade;
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.TextBox textBoxCidade;
         private System.Windows.Forms.ComboBox comboBoxEstado;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
     }
 }

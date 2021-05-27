@@ -118,6 +118,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxDescricaoParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxDescricaoParceiro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBoxDescricaoParceiro.Enabled = false;
             this.TxtBoxDescricaoParceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxDescricaoParceiro.Location = new System.Drawing.Point(6, 22);
             this.TxtBoxDescricaoParceiro.Multiline = true;
