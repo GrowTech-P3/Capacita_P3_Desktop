@@ -430,6 +430,7 @@ namespace CapacitaDesk {
             this.maskedTextBoxCnpj.Name = "maskedTextBoxCnpj";
             this.maskedTextBoxCnpj.Size = new System.Drawing.Size(151, 22);
             this.maskedTextBoxCnpj.TabIndex = 77;
+            this.maskedTextBoxCnpj.Click += new System.EventHandler(this.maskedTextBoxCnpj_Click);
             // 
             // maskedTextBoxTelefone
             // 
@@ -441,6 +442,7 @@ namespace CapacitaDesk {
             this.maskedTextBoxTelefone.Size = new System.Drawing.Size(141, 22);
             this.maskedTextBoxTelefone.TabIndex = 76;
             this.maskedTextBoxTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxTelefone_MaskInputRejected);
+            this.maskedTextBoxTelefone.Click += new System.EventHandler(this.maskedTextBoxTelefone_Click);
             // 
             // maskedTextBoxCep
             // 
@@ -452,6 +454,7 @@ namespace CapacitaDesk {
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(149, 20);
             this.maskedTextBoxCep.TabIndex = 75;
+            this.maskedTextBoxCep.Click += new System.EventHandler(this.maskedTextBoxCep_Click);
             // 
             // comboBoxEstado
             // 
