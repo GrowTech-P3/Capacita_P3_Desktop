@@ -87,7 +87,6 @@ namespace CapacitaDesk {
             this.ListViewCurso.TabIndex = 0;
             this.ListViewCurso.UseCompatibleStateImageBehavior = false;
             this.ListViewCurso.View = System.Windows.Forms.View.Details;
-            this.ListViewCurso.SelectedIndexChanged += new System.EventHandler(this.ListViewCurso_SelectedIndexChanged);
             // 
             // IdCurso
             // 
