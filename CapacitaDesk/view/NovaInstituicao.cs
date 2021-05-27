@@ -61,10 +61,8 @@ namespace CapacitaDesk {
             instituicao.cep = maskedTextBoxCep.Text;
             instituicao.cidade = textBoxCidade.Text;
             instituicao.cnpj = maskedTextBoxCnpj.Text;
-            instituicao.email = TxtBoxEmailUsuario.Text;
             instituicao.endereco = TxtBoxEnderecoUsuario.Text;
             instituicao.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
-            instituicao.password = textBoxPassword.Text;
             instituicao.numero = textBoxNumero.Text;
             instituicao.descricao = textBoxDescricao.Text;
             String validate = validar.validateInstituicao(instituicao);

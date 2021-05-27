@@ -40,22 +40,32 @@ namespace CapacitaDesk {
         }
 
         // CARREGAR TABELA FILTRANDO PELO NOME DA INSTITUICAO
-        public void carregarTabelaCursoInst(String nomeInstituicao)
+        public void carregarTabelaCursoPesquisa()
         {
-            List<Curso> cursos;
-            
+            List<Curso> cursosResultado;
+
+            Curso cursoPesquisa = new Curso();
             Instituicao instPesquisa = new Instituicao();
-            instPesquisa.nome = nomeInstituicao;
+            TipoDeficiencia deficienciaPesquisa = new TipoDeficiencia();
+            Usuario usuarioPesquisa = new Usuario();
+
+            deficienciaPesquisa.nome = "";
+            cursoPesquisa.nome_curso = TxtBoxNomeDoCurso.Text;
+            instPesquisa.nome = TxtBoxNomeDaInstitucao.Text;
+
+            cursoPesquisa.instituicao = instPesquisa;
+            cursoPesquisa.tipo_deficiencium = deficienciaPesquisa;
+            cursoPesquisa.instituicao.usuario = usuarioPesquisa;
 
             String rota = "http://localhost:3000/curso-inst-pesquisa-inativo";
-            String json = JsonConvert.SerializeObject(instPesquisa);
+            String json = JsonConvert.SerializeObject(cursoPesquisa);
 
             Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
-            cursos = JsonConvert.DeserializeObject<List<Curso>>(objectResponse.ToString());
+            cursosResultado = JsonConvert.DeserializeObject<List<Curso>>(objectResponse.ToString());
 
             ListViewCurso.Items.Clear();
 
-            foreach (Curso curso in cursos)
+            foreach (Curso curso in cursosResultado)
             {
                 ListViewItem item = ListViewCurso.Items.Add(curso.id);
                 item.SubItems.Add(curso.instituicao.nome);
@@ -70,7 +80,12 @@ namespace CapacitaDesk {
         }
         private void BtnExibirBuscarInstituicao_Click(object sender, EventArgs e)
         {
-            carregarTabelaCursoInst(TxtBoxNomeDaInstitucao.Text);
+            
+        }
+
+        private void BtnFiltroCurso_Click(object sender, EventArgs e)
+        {
+            carregarTabelaCursoPesquisa();
         }
     }
 }

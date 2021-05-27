@@ -8,7 +8,7 @@ namespace CapacitaDesk.model
 {
     class TipoDeficiencia
     {
-        public String idDeficiencia { get; set; }
+        public String id { get; set; }
         
         public String nome { get; set; }
     }
