@@ -490,6 +490,7 @@ namespace CapacitaDesk {
             this.TxtBoxNumUsuario.Name = "TxtBoxNumUsuario";
             this.TxtBoxNumUsuario.Size = new System.Drawing.Size(69, 20);
             this.TxtBoxNumUsuario.TabIndex = 46;
+            this.TxtBoxNumUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxNumUsuario_KeyPress);
             // 
             // label6
             // 
@@ -513,6 +514,7 @@ namespace CapacitaDesk {
             this.TxtBoxSenhaUsuario.Size = new System.Drawing.Size(94, 20);
             this.TxtBoxSenhaUsuario.TabIndex = 44;
             this.TxtBoxSenhaUsuario.TextChanged += new System.EventHandler(this.TxtBoxSenhaUsuario_TextChanged);
+            this.TxtBoxSenhaUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSenhaUsuario_KeyPress);
             // 
             // label5
             // 

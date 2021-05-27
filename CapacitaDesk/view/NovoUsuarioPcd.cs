@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using CapacitaDesk.model;
 using Newtonsoft.Json;
 using CapacitaDesk.controller;
-
+using System.Text.RegularExpressions;
 
 namespace CapacitaDesk {
     public partial class NovoUsuarioPcd : Form {
@@ -57,6 +57,7 @@ namespace CapacitaDesk {
 
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
             UsuarioPcd usuarioPcd = new UsuarioPcd();
+            ValidateUsuarioPcd validar = new ValidateUsuarioPcd();
             usuarioPcd.deficiencias = new String[5];
 
             String rota = "http://localhost:3000/usuarioPcd";
@@ -78,12 +79,20 @@ namespace CapacitaDesk {
             usuarioPcd.deficiencias[3] = checkBoxMudez.Checked ? "4" : "0";
             usuarioPcd.deficiencias[4] = checkBoxVisual.Checked ? "5" : "0";
 
-            String json = JsonConvert.SerializeObject(usuarioPcd);
-            Object objResponse = ConnectionAPI.post(rota, json,admin.Token);
 
-            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+            String validate = validar.validateUsuarioPCD(usuarioPcd);
+            if (validate.Trim().Equals("ok"))
+            {
+                String json = JsonConvert.SerializeObject(usuarioPcd);
+                Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+            }
+            else { 
+                MessageBox.Show(validate);
+            }
 
-            MessageBox.Show(respUsuario.message);
+
 
             DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -120,6 +129,21 @@ namespace CapacitaDesk {
 
         private void label6_Click(object sender, EventArgs e) {
 
+        }
+
+        private void TxtBoxNumUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtBoxSenhaUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar != 32)) {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -54,7 +54,7 @@ namespace CapacitaDesk {
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
             Instituicao instituicao = new Instituicao();
             String rota = "http://localhost:3000/instituicao";
-
+            ValidateInstituicao validar = new ValidateInstituicao();
             instituicao.nome = TxtBoxNomeUsuario.Text;
             instituicao.telefone = maskedTextBoxTelefone.Text;
             instituicao.bairro = TxtBoxBairroUsuario.Text;
@@ -67,11 +67,21 @@ namespace CapacitaDesk {
             instituicao.password = textBoxPassword.Text;
             instituicao.numero = textBoxNumero.Text;
             instituicao.descricao = textBoxDescricao.Text;
-            String json = JsonConvert.SerializeObject(instituicao);
+            String validate = validar.validateInstituicao(instituicao);
+            if (validate.Trim().Equals("ok"))
+            {
+                String json = JsonConvert.SerializeObject(instituicao);
 
-            Object objResponse = ConnectionAPI.post(rota, json, this.adminstrador.Token);
-            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
-            MessageBox.Show(respUsuario.message);
+                Object objResponse = ConnectionAPI.post(rota, json, this.adminstrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+            }
+            else
+            {
+                MessageBox.Show(validate);
+            }
+            
+            
             DialogResult Resp = MessageBox.Show("Deseja cadastrar uma nova instituição?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (Resp == DialogResult.No) {
@@ -86,6 +96,20 @@ namespace CapacitaDesk {
 
         private void maskedTextBoxTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e) {
 
+        }
+
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar != 32)) {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08) {
+                e.Handled = true;
+            }
         }
     }
 }

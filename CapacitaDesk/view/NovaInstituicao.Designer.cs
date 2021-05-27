@@ -238,6 +238,7 @@ namespace CapacitaDesk {
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(53, 20);
             this.textBoxNumero.TabIndex = 70;
+            this.textBoxNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumero_KeyPress);
             // 
             // label1
             // 
@@ -408,6 +409,7 @@ namespace CapacitaDesk {
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(138, 20);
             this.textBoxPassword.TabIndex = 79;
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             // 
             // labelSenha
             // 
