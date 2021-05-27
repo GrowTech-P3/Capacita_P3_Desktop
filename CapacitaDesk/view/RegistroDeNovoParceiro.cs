@@ -105,5 +105,13 @@ namespace CapacitaDesk {
         {
             exibirDetalhesParceria();
         }
+
+        private void listViewParceiro_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e) {
+
+        }
     }
 }

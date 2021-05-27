@@ -25,7 +25,7 @@ namespace CapacitaDesk {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeNovoParceiro));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -151,7 +151,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomedaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomedaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(31, 42);
+            this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(30, 42);
             this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
             this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(508, 14);
             this.TxtBoxNomedaInstitucao.TabIndex = 98;
@@ -304,6 +304,7 @@ namespace CapacitaDesk {
             this.groupBox2.TabIndex = 106;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de novos parceiros";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // listViewParceiro
             // 
@@ -318,7 +319,7 @@ namespace CapacitaDesk {
             this.listViewParceiro.FullRowSelect = true;
             this.listViewParceiro.HideSelection = false;
             this.listViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem5});
             this.listViewParceiro.Location = new System.Drawing.Point(15, 27);
             this.listViewParceiro.MultiSelect = false;
             this.listViewParceiro.Name = "listViewParceiro";
@@ -326,6 +327,7 @@ namespace CapacitaDesk {
             this.listViewParceiro.TabIndex = 1;
             this.listViewParceiro.UseCompatibleStateImageBehavior = false;
             this.listViewParceiro.View = System.Windows.Forms.View.Details;
+            this.listViewParceiro.SelectedIndexChanged += new System.EventHandler(this.listViewParceiro_SelectedIndexChanged);
             this.listViewParceiro.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewParceiro_MouseDoubleClick);
             // 
             // Id
