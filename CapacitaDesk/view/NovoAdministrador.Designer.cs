@@ -128,7 +128,7 @@ namespace CapacitaDesk {
             this.TxtBoxEmailUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEmailUsuario.Location = new System.Drawing.Point(160, 133);
             this.TxtBoxEmailUsuario.Name = "TxtBoxEmailUsuario";
-            this.TxtBoxEmailUsuario.Size = new System.Drawing.Size(287, 20);
+            this.TxtBoxEmailUsuario.Size = new System.Drawing.Size(327, 20);
             this.TxtBoxEmailUsuario.TabIndex = 38;
             // 
             // label2

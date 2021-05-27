@@ -175,9 +175,10 @@ namespace CapacitaDesk {
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.label3.Location = new System.Drawing.Point(126, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 17);
+            this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 111;
-            this.label3.Text = "Nome do usuário";
+            this.label3.Text = "Nome do curso";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBoxNomeUsuario
             // 

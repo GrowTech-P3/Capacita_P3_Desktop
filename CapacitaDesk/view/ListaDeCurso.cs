@@ -21,5 +21,9 @@ namespace CapacitaDesk {
             DetalheDoCurso detalheCurso = new DetalheDoCurso();
             detalheCurso.ShowDialog();
         }
+
+        private void ListViewCurso_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
 }
