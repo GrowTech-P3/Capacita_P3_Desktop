@@ -18,7 +18,12 @@ namespace CapacitaDesk {
             InitializeComponent();
             this.administrador = admin;
         }
-
+        public void limparCampos()
+        {
+            TxtBoxEmailUsuario.Clear();
+            TxtBoxNomeUsuario.Clear();
+            TxtBoxSenhaUsuario.Clear();
+        }
         private void label1_Click(object sender, EventArgs e) {
 
         }
@@ -48,18 +53,13 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, this.administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                limparCampos();
             } 
             else
             {
                 MessageBox.Show(validar);
             }
             
-            DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Resp == DialogResult.No) {
-
-                this.Dispose();
-            }
         }
 
         private void TxtBoxSenhaUsuario_TextChanged(object sender, EventArgs e)
