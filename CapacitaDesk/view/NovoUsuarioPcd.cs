@@ -159,5 +159,20 @@ namespace CapacitaDesk {
                 e.Handled = true;
             }
         }
+
+        private void maskedTextBoxCPF_Click(object sender, EventArgs e)
+        {
+            maskedTextBoxCPF.SelectionStart = 0;
+        }
+
+        private void maskedTextBoxTelefone_Click(object sender, EventArgs e)
+        {
+            maskedTextBoxTelefone.SelectionStart = 0;
+        }
+
+        private void maskedTextBoxCep_Click(object sender, EventArgs e)
+        {
+            maskedTextBoxCep.SelectionStart = 0;
+        }
     }
 }
