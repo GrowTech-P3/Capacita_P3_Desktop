@@ -34,20 +34,43 @@ namespace CapacitaDesk {
         }
 
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
+            ValidadeAdministrador validate = new ValidadeAdministrador();
+
+
             Administrador administrador = new Administrador();
             administrador.email = TxtBoxEmailUsuario.Text;
             administrador.nome = TxtBoxNomeUsuario.Text;
             administrador.password = TxtBoxSenhaUsuario.Text;
-            String rota = "http://localhost:3000/administrador";
-            String json = JsonConvert.SerializeObject(administrador);
-            Object objResponse = ConnectionAPI.post(rota,json, this.administrador.Token);
-            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
-            MessageBox.Show(respUsuario.message);
+            String validar = validate.validateAdministrador(administrador);
+            if (validar.Trim().Equals("ok")) { 
+                String rota = "http://localhost:3000/administrador";
+                String json = JsonConvert.SerializeObject(administrador);
+                Object objResponse = ConnectionAPI.post(rota, json, this.administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+            } 
+            else
+            {
+                MessageBox.Show(validar);
+            }
+            
             DialogResult Resp = MessageBox.Show("Deseja cadastrar outro usuário?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (Resp == DialogResult.No) {
 
                 this.Dispose();
+            }
+        }
+
+        private void TxtBoxSenhaUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtBoxSenhaUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar != 32)) {
+                e.Handled = true;
             }
         }
     }

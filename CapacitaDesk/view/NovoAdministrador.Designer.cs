@@ -109,6 +109,8 @@ namespace CapacitaDesk {
             this.TxtBoxSenhaUsuario.Name = "TxtBoxSenhaUsuario";
             this.TxtBoxSenhaUsuario.Size = new System.Drawing.Size(145, 20);
             this.TxtBoxSenhaUsuario.TabIndex = 40;
+            this.TxtBoxSenhaUsuario.TextChanged += new System.EventHandler(this.TxtBoxSenhaUsuario_TextChanged);
+            this.TxtBoxSenhaUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxSenhaUsuario_KeyPress);
             // 
             // label5
             // 
