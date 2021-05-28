@@ -30,13 +30,6 @@ namespace CapacitaDesk.controller
                 return message = "Informe a senha";
             }
 
-
-
-
-
-
-
-
             return message;
         }
     }

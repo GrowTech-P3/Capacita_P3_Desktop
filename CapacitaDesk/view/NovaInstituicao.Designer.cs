@@ -51,7 +51,7 @@ namespace CapacitaDesk {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelSenha = new System.Windows.Forms.Label();
@@ -59,6 +59,8 @@ namespace CapacitaDesk {
             this.maskedTextBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxCep = new System.Windows.Forms.MaskedTextBox();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
+            this.buttonRemover = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -344,7 +346,7 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(642, 462);
+            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(641, 442);
             this.BtnCadastrarUsuario.Name = "BtnCadastrarUsuario";
             this.BtnCadastrarUsuario.Size = new System.Drawing.Size(145, 44);
             this.BtnCadastrarUsuario.TabIndex = 76;
@@ -352,19 +354,19 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario.UseVisualStyleBackColor = false;
             this.BtnCadastrarUsuario.Click += new System.EventHandler(this.BtnCadastrarUsuario_Click);
             // 
-            // BtnCancelar
+            // BtnBuscar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(473, 462);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(145, 44);
-            this.BtnCancelar.TabIndex = 75;
-            this.BtnCancelar.Text = "CANCELAR";
-            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(483, 442);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(145, 44);
+            this.BtnBuscar.TabIndex = 75;
+            this.BtnBuscar.Text = "BUSCAR";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -468,14 +470,44 @@ namespace CapacitaDesk {
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 28);
             this.comboBoxEstado.TabIndex = 74;
             // 
+            // buttonAtualizar
+            // 
+            this.buttonAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.buttonAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.buttonAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAtualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonAtualizar.ForeColor = System.Drawing.Color.White;
+            this.buttonAtualizar.Location = new System.Drawing.Point(483, 492);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(145, 44);
+            this.buttonAtualizar.TabIndex = 78;
+            this.buttonAtualizar.Text = "ATUALIZAR";
+            this.buttonAtualizar.UseVisualStyleBackColor = false;
+            // 
+            // buttonRemover
+            // 
+            this.buttonRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.buttonRemover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.buttonRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemover.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonRemover.ForeColor = System.Drawing.Color.White;
+            this.buttonRemover.Location = new System.Drawing.Point(641, 492);
+            this.buttonRemover.Name = "buttonRemover";
+            this.buttonRemover.Size = new System.Drawing.Size(145, 44);
+            this.buttonRemover.TabIndex = 79;
+            this.buttonRemover.Text = "REMOVER";
+            this.buttonRemover.UseVisualStyleBackColor = false;
+            // 
             // NovaInstituicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(866, 561);
+            this.Controls.Add(this.buttonRemover);
+            this.Controls.Add(this.buttonAtualizar);
             this.Controls.Add(this.BtnCadastrarUsuario);
-            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxDescricao);
             this.Controls.Add(this.panel2);
@@ -524,7 +556,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnCadastrarUsuario;
-        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -534,5 +566,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCep;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelSenha;
+        private System.Windows.Forms.Button buttonAtualizar;
+        private System.Windows.Forms.Button buttonRemover;
     }
 }
