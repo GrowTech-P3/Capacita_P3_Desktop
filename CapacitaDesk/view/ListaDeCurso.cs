@@ -115,44 +115,58 @@ namespace CapacitaDesk {
             carregarTabelaCursoPesquisa();
         }
 
-        private void checkBoxAuditivo_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBoxFisico.Checked      = false;
-            checkBoxMental.Checked      = false;
-            checkBoxMudez.Checked       = false;
-            checkBoxVisual.Checked      = false;
+        private void checkBoxAuditivo_CheckedChanged(object sender, EventArgs e) {
+            
+            if (checkBoxAuditivo.Checked == true){ 
+                checkBoxFisico.Checked = false;
+                checkBoxMental.Checked = false;
+                checkBoxMudez.Checked = false;
+                checkBoxVisual.Checked = false;
+            }
         }
 
         private void checkBoxMudez_CheckedChanged(object sender, EventArgs e)
         {
-            checkBoxFisico.Checked      = false;
-            checkBoxMental.Checked      = false;
-            checkBoxAuditivo.Checked    = false;
-            checkBoxVisual.Checked      = false;
+            if (checkBoxMudez.Checked == true){
+                checkBoxFisico.Checked = false;
+                checkBoxMental.Checked = false;
+                checkBoxAuditivo.Checked = false;
+                checkBoxVisual.Checked = false;
+            }
         }
 
         private void checkBoxFisico_CheckedChanged(object sender, EventArgs e)
         {
-            checkBoxAuditivo.Checked    = false;
-            checkBoxMental.Checked      = false;
-            checkBoxMudez.Checked       = false;
-            checkBoxVisual.Checked      = false;
+            if (checkBoxFisico.Checked == true){
+                checkBoxAuditivo.Checked = false;
+                checkBoxMental.Checked = false;
+                checkBoxMudez.Checked = false;
+                checkBoxVisual.Checked = false;
+            }
         }
 
         private void checkBoxMental_CheckedChanged(object sender, EventArgs e)
         {
-            checkBoxFisico.Checked      = false;
-            checkBoxAuditivo.Checked    = false;
-            checkBoxMudez.Checked       = false;
-            checkBoxVisual.Checked      = false;
+            if (checkBoxMental.Checked == true){
+                checkBoxFisico.Checked = false;
+                checkBoxAuditivo.Checked = false;
+                checkBoxMudez.Checked = false;
+                checkBoxVisual.Checked = false;
+            }
         }
 
         private void checkBoxVisual_CheckedChanged(object sender, EventArgs e)
         {
-            checkBoxFisico.Checked      = false;
-            checkBoxMental.Checked      = false;
-            checkBoxMudez.Checked       = false;
-            checkBoxAuditivo.Checked    = false;
+            if (checkBoxVisual.Checked == true){
+                checkBoxFisico.Checked = false;
+                checkBoxMental.Checked = false;
+                checkBoxMudez.Checked = false;
+                checkBoxAuditivo.Checked = false;
+            }
+        }
+
+        private void ListViewCurso_MouseDoubleClick(object sender, MouseEventArgs e) {
+            exibirDetalhesCursos();
         }
     }
 }

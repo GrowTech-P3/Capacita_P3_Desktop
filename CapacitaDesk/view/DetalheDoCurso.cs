@@ -50,5 +50,9 @@ namespace CapacitaDesk {
             ListaDeCurso listaDeCurso = new ListaDeCurso(administrador);
             listaDeCurso.ShowDialog();
         }
+
+        private void BtnRecusarCurso_Click(object sender, EventArgs e) {
+            this.Dispose();
+        }
     }
 }

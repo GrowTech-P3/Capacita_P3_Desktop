@@ -10,14 +10,33 @@ using System.Windows.Forms;
 using CapacitaDesk.controller;
 using CapacitaDesk.model;
 using Newtonsoft.Json;
+using System.Text.RegularExpressions;
 
 namespace CapacitaDesk {
     public partial class RegistroDeNovoParceiro : Form {
         AdminLogado administrador = new AdminLogado();
+
+        public void estadoComboBoxParceiro() {
+
+            String rota = "http://localhost:3000/estados";
+
+            Object objResponse = ConnectionAPI.getLista(rota, administrador.Token);
+
+
+            List<Estado> estados = JsonConvert.DeserializeObject<List<Estado>>(objResponse.ToString());
+
+
+            for (int i = 0; i < estados.Count; i++) {
+                comboBoxEstadoParceiro.Items.Add(estados[i].label);
+            }
+        }
+
+
         public RegistroDeNovoParceiro(AdminLogado admin) {
             InitializeComponent();
             this.administrador = admin;
         }
+
 
         public void carregarTabela()
         {
@@ -112,6 +131,10 @@ namespace CapacitaDesk {
 
         private void groupBox2_Enter(object sender, EventArgs e) {
 
+        }
+
+        private void comboBoxEstadoParceiro_SelectedIndexChanged(object sender, EventArgs e) {
+            estadoComboBoxParceiro();
         }
     }
 }

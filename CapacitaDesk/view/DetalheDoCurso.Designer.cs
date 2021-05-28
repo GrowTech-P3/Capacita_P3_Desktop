@@ -105,6 +105,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxDescricao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBoxDescricao.Enabled = false;
             this.TxtBoxDescricao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxDescricao.Location = new System.Drawing.Point(6, 22);
             this.TxtBoxDescricao.Multiline = true;
@@ -128,6 +129,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxResumo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxResumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBoxResumo.Enabled = false;
             this.TxtBoxResumo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxResumo.Location = new System.Drawing.Point(6, 22);
             this.TxtBoxResumo.Multiline = true;
@@ -162,6 +164,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeInstituicao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeInstituicao.Enabled = false;
             this.TxtBoxNomeInstituicao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeInstituicao.Location = new System.Drawing.Point(126, 43);
             this.TxtBoxNomeInstituicao.Name = "TxtBoxNomeInstituicao";
@@ -184,6 +187,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeCurso.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeCurso.Enabled = false;
             this.TxtBoxNomeCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeCurso.Location = new System.Drawing.Point(126, 90);
             this.TxtBoxNomeCurso.Name = "TxtBoxNomeCurso";
@@ -194,6 +198,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxDuracao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxDuracao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxDuracao.Enabled = false;
             this.TxtBoxDuracao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxDuracao.Location = new System.Drawing.Point(11, 141);
             this.TxtBoxDuracao.Name = "TxtBoxDuracao";
@@ -226,6 +231,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxCargaHoraria.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxCargaHoraria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxCargaHoraria.Enabled = false;
             this.TxtBoxCargaHoraria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxCargaHoraria.Location = new System.Drawing.Point(126, 141);
             this.TxtBoxCargaHoraria.Name = "TxtBoxCargaHoraria";
@@ -247,6 +253,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxHoraio.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxHoraio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxHoraio.Enabled = false;
             this.TxtBoxHoraio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxHoraio.Location = new System.Drawing.Point(240, 141);
             this.TxtBoxHoraio.Name = "TxtBoxHoraio";
@@ -268,6 +275,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxTipoDeficiencia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTipoDeficiencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTipoDeficiencia.Enabled = false;
             this.TxtBoxTipoDeficiencia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTipoDeficiencia.Location = new System.Drawing.Point(330, 141);
             this.TxtBoxTipoDeficiencia.Name = "TxtBoxTipoDeficiencia";
@@ -314,6 +322,7 @@ namespace CapacitaDesk {
             this.BtnRecusarCurso.TabIndex = 122;
             this.BtnRecusarCurso.Text = "RECUSAR";
             this.BtnRecusarCurso.UseVisualStyleBackColor = false;
+            this.BtnRecusarCurso.Click += new System.EventHandler(this.BtnRecusarCurso_Click);
             // 
             // label8
             // 
@@ -330,6 +339,7 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxValor.Enabled = false;
             this.TxtBoxValor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxValor.Location = new System.Drawing.Point(456, 141);
             this.TxtBoxValor.Name = "TxtBoxValor";

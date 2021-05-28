@@ -24,7 +24,7 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaDeCurso));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ListViewCurso = new System.Windows.Forms.ListView();
@@ -81,7 +81,7 @@ namespace CapacitaDesk {
             this.ListViewCurso.FullRowSelect = true;
             this.ListViewCurso.HideSelection = false;
             this.ListViewCurso.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7});
+            listViewItem1});
             this.ListViewCurso.Location = new System.Drawing.Point(8, 26);
             this.ListViewCurso.MultiSelect = false;
             this.ListViewCurso.Name = "ListViewCurso";
@@ -89,6 +89,7 @@ namespace CapacitaDesk {
             this.ListViewCurso.TabIndex = 0;
             this.ListViewCurso.UseCompatibleStateImageBehavior = false;
             this.ListViewCurso.View = System.Windows.Forms.View.Details;
+            this.ListViewCurso.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListViewCurso_MouseDoubleClick);
             // 
             // IdCurso
             // 
