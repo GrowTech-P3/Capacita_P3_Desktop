@@ -49,7 +49,12 @@ namespace CapacitaDesk {
             TipoDeficiencia deficienciaPesquisa = new TipoDeficiencia();
             Usuario usuarioPesquisa = new Usuario();
 
-            deficienciaPesquisa.nome = "";
+            deficienciaPesquisa.nome += checkBoxAuditivo.Checked    ? " auditivo"    : "";
+            deficienciaPesquisa.nome += checkBoxFisico.Checked      ? " fisico"      : "";
+            deficienciaPesquisa.nome += checkBoxMental.Checked      ? " mental"      : "";
+            deficienciaPesquisa.nome += checkBoxMudez.Checked       ? " mudez"       : "";
+            deficienciaPesquisa.nome += checkBoxVisual.Checked      ? " visual"      : "";
+            deficienciaPesquisa.nome = deficienciaPesquisa.nome.Trim();
             cursoPesquisa.nome_curso = TxtBoxNomeDoCurso.Text;
             instPesquisa.nome = TxtBoxNomeDaInstitucao.Text;
 
@@ -74,10 +79,32 @@ namespace CapacitaDesk {
             }
         }
 
-        private void BtnExibirInstituicao_Click(object sender, EventArgs e) {
-            DetalheDoCurso detalheCurso = new DetalheDoCurso();
-            detalheCurso.ShowDialog();
+        private void exibirDetalhesCursos()
+        {
+            // VERIFICA SE UMA LINHA FOI SELECIONADA
+            if (ListViewCurso.SelectedItems.Count > 0)
+            {
+
+
+                Curso curso = new Curso();
+                curso.id = ListViewCurso.SelectedItems[0].SubItems[0].Text;
+
+                String rota = "http://localhost:3000/buscar-curso";
+                String json = JsonConvert.SerializeObject(curso);
+
+                Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
+
+                this.Dispose();
+                DetalheDoCurso dCurso = new DetalheDoCurso(administrador, respUsuario.curso);
+                dCurso.ShowDialog();
+            }
         }
+
+        private void BtnExibirInstituicao_Click(object sender, EventArgs e) {
+            exibirDetalhesCursos();
+        }
+
         private void BtnExibirBuscarInstituicao_Click(object sender, EventArgs e)
         {
             
@@ -86,6 +113,46 @@ namespace CapacitaDesk {
         private void BtnFiltroCurso_Click(object sender, EventArgs e)
         {
             carregarTabelaCursoPesquisa();
+        }
+
+        private void checkBoxAuditivo_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxFisico.Checked      = false;
+            checkBoxMental.Checked      = false;
+            checkBoxMudez.Checked       = false;
+            checkBoxVisual.Checked      = false;
+        }
+
+        private void checkBoxMudez_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxFisico.Checked      = false;
+            checkBoxMental.Checked      = false;
+            checkBoxAuditivo.Checked    = false;
+            checkBoxVisual.Checked      = false;
+        }
+
+        private void checkBoxFisico_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxAuditivo.Checked    = false;
+            checkBoxMental.Checked      = false;
+            checkBoxMudez.Checked       = false;
+            checkBoxVisual.Checked      = false;
+        }
+
+        private void checkBoxMental_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxFisico.Checked      = false;
+            checkBoxAuditivo.Checked    = false;
+            checkBoxMudez.Checked       = false;
+            checkBoxVisual.Checked      = false;
+        }
+
+        private void checkBoxVisual_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxFisico.Checked      = false;
+            checkBoxMental.Checked      = false;
+            checkBoxMudez.Checked       = false;
+            checkBoxAuditivo.Checked    = false;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaDeCurso));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ListViewCurso = new System.Windows.Forms.ListView();
@@ -81,7 +81,7 @@ namespace CapacitaDesk {
             this.ListViewCurso.FullRowSelect = true;
             this.ListViewCurso.HideSelection = false;
             this.ListViewCurso.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem7});
             this.ListViewCurso.Location = new System.Drawing.Point(8, 26);
             this.ListViewCurso.MultiSelect = false;
             this.ListViewCurso.Name = "ListViewCurso";
@@ -159,6 +159,7 @@ namespace CapacitaDesk {
             this.checkBoxMudez.TabIndex = 35;
             this.checkBoxMudez.Text = "Mudez";
             this.checkBoxMudez.UseVisualStyleBackColor = true;
+            this.checkBoxMudez.CheckedChanged += new System.EventHandler(this.checkBoxMudez_CheckedChanged);
             // 
             // checkBoxFisico
             // 
@@ -176,6 +177,7 @@ namespace CapacitaDesk {
             this.checkBoxFisico.TabIndex = 36;
             this.checkBoxFisico.Text = "Físico";
             this.checkBoxFisico.UseVisualStyleBackColor = true;
+            this.checkBoxFisico.CheckedChanged += new System.EventHandler(this.checkBoxFisico_CheckedChanged);
             // 
             // label11
             // 
@@ -205,6 +207,7 @@ namespace CapacitaDesk {
             this.checkBoxAuditivo.TabIndex = 32;
             this.checkBoxAuditivo.Text = "Auditivo";
             this.checkBoxAuditivo.UseVisualStyleBackColor = true;
+            this.checkBoxAuditivo.CheckedChanged += new System.EventHandler(this.checkBoxAuditivo_CheckedChanged);
             // 
             // checkBoxMental
             // 
@@ -222,6 +225,7 @@ namespace CapacitaDesk {
             this.checkBoxMental.TabIndex = 33;
             this.checkBoxMental.Text = "Mental   ";
             this.checkBoxMental.UseVisualStyleBackColor = true;
+            this.checkBoxMental.CheckedChanged += new System.EventHandler(this.checkBoxMental_CheckedChanged);
             // 
             // checkBoxVisual
             // 
@@ -239,6 +243,7 @@ namespace CapacitaDesk {
             this.checkBoxVisual.TabIndex = 34;
             this.checkBoxVisual.Text = "Visual";
             this.checkBoxVisual.UseVisualStyleBackColor = true;
+            this.checkBoxVisual.CheckedChanged += new System.EventHandler(this.checkBoxVisual_CheckedChanged);
             // 
             // BtnFiltroCurso
             // 

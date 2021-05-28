@@ -29,22 +29,22 @@ namespace CapacitaDesk {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxDescricao = new System.Windows.Forms.TextBox();
+            this.TxtBoxDescricao = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxResumo = new System.Windows.Forms.TextBox();
+            this.TxtBoxResumo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxNomeInstituicao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNomeUsuario = new System.Windows.Forms.TextBox();
-            this.textBoxDuracao = new System.Windows.Forms.TextBox();
+            this.TxtBoxNomeCurso = new System.Windows.Forms.TextBox();
+            this.TxtBoxDuracao = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxCargaHoraria = new System.Windows.Forms.TextBox();
+            this.TxtBoxCargaHoraria = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxHoraio = new System.Windows.Forms.TextBox();
+            this.TxtBoxHoraio = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxTipoDeficiencia = new System.Windows.Forms.TextBox();
+            this.TxtBoxTipoDeficiencia = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAceitarCurso = new System.Windows.Forms.Button();
             this.BtnRecusarCurso = new System.Windows.Forms.Button();
@@ -101,20 +101,20 @@ namespace CapacitaDesk {
             this.panel2.Size = new System.Drawing.Size(784, 59);
             this.panel2.TabIndex = 104;
             // 
-            // textBoxDescricao
+            // TxtBoxDescricao
             // 
-            this.textBoxDescricao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDescricao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxDescricao.Location = new System.Drawing.Point(6, 22);
-            this.textBoxDescricao.Multiline = true;
-            this.textBoxDescricao.Name = "textBoxDescricao";
-            this.textBoxDescricao.Size = new System.Drawing.Size(261, 150);
-            this.textBoxDescricao.TabIndex = 105;
+            this.TxtBoxDescricao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBoxDescricao.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxDescricao.Location = new System.Drawing.Point(6, 22);
+            this.TxtBoxDescricao.Multiline = true;
+            this.TxtBoxDescricao.Name = "TxtBoxDescricao";
+            this.TxtBoxDescricao.Size = new System.Drawing.Size(261, 150);
+            this.TxtBoxDescricao.TabIndex = 105;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxDescricao);
+            this.groupBox1.Controls.Add(this.TxtBoxDescricao);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox1.Location = new System.Drawing.Point(104, 320);
@@ -124,20 +124,20 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Descrição ";
             // 
-            // textBoxResumo
+            // TxtBoxResumo
             // 
-            this.textBoxResumo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxResumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxResumo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxResumo.Location = new System.Drawing.Point(6, 22);
-            this.textBoxResumo.Multiline = true;
-            this.textBoxResumo.Name = "textBoxResumo";
-            this.textBoxResumo.Size = new System.Drawing.Size(264, 150);
-            this.textBoxResumo.TabIndex = 105;
+            this.TxtBoxResumo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxResumo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBoxResumo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxResumo.Location = new System.Drawing.Point(6, 22);
+            this.TxtBoxResumo.Multiline = true;
+            this.TxtBoxResumo.Name = "TxtBoxResumo";
+            this.TxtBoxResumo.Size = new System.Drawing.Size(264, 150);
+            this.TxtBoxResumo.TabIndex = 105;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBoxResumo);
+            this.groupBox2.Controls.Add(this.TxtBoxResumo);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox2.Location = new System.Drawing.Point(393, 320);
@@ -180,25 +180,25 @@ namespace CapacitaDesk {
             this.label3.Text = "Nome do curso";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBoxNomeUsuario
+            // TxtBoxNomeCurso
             // 
-            this.textBoxNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNomeUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNomeUsuario.Location = new System.Drawing.Point(126, 90);
-            this.textBoxNomeUsuario.Name = "textBoxNomeUsuario";
-            this.textBoxNomeUsuario.Size = new System.Drawing.Size(431, 16);
-            this.textBoxNomeUsuario.TabIndex = 110;
+            this.TxtBoxNomeCurso.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxNomeCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeCurso.Location = new System.Drawing.Point(126, 90);
+            this.TxtBoxNomeCurso.Name = "TxtBoxNomeCurso";
+            this.TxtBoxNomeCurso.Size = new System.Drawing.Size(431, 16);
+            this.TxtBoxNomeCurso.TabIndex = 110;
             // 
-            // textBoxDuracao
+            // TxtBoxDuracao
             // 
-            this.textBoxDuracao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxDuracao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDuracao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxDuracao.Location = new System.Drawing.Point(11, 141);
-            this.textBoxDuracao.Name = "textBoxDuracao";
-            this.textBoxDuracao.Size = new System.Drawing.Size(109, 16);
-            this.textBoxDuracao.TabIndex = 112;
+            this.TxtBoxDuracao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxDuracao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxDuracao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxDuracao.Location = new System.Drawing.Point(11, 141);
+            this.TxtBoxDuracao.Name = "TxtBoxDuracao";
+            this.TxtBoxDuracao.Size = new System.Drawing.Size(109, 16);
+            this.TxtBoxDuracao.TabIndex = 112;
             // 
             // label4
             // 
@@ -222,15 +222,15 @@ namespace CapacitaDesk {
             this.label5.TabIndex = 115;
             this.label5.Text = "Carga Horária";
             // 
-            // textBoxCargaHoraria
+            // TxtBoxCargaHoraria
             // 
-            this.textBoxCargaHoraria.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxCargaHoraria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCargaHoraria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxCargaHoraria.Location = new System.Drawing.Point(126, 141);
-            this.textBoxCargaHoraria.Name = "textBoxCargaHoraria";
-            this.textBoxCargaHoraria.Size = new System.Drawing.Size(109, 16);
-            this.textBoxCargaHoraria.TabIndex = 114;
+            this.TxtBoxCargaHoraria.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxCargaHoraria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxCargaHoraria.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxCargaHoraria.Location = new System.Drawing.Point(126, 141);
+            this.TxtBoxCargaHoraria.Name = "TxtBoxCargaHoraria";
+            this.TxtBoxCargaHoraria.Size = new System.Drawing.Size(109, 16);
+            this.TxtBoxCargaHoraria.TabIndex = 114;
             // 
             // label6
             // 
@@ -243,15 +243,15 @@ namespace CapacitaDesk {
             this.label6.TabIndex = 117;
             this.label6.Text = "Horário";
             // 
-            // textBoxHoraio
+            // TxtBoxHoraio
             // 
-            this.textBoxHoraio.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxHoraio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxHoraio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxHoraio.Location = new System.Drawing.Point(240, 141);
-            this.textBoxHoraio.Name = "textBoxHoraio";
-            this.textBoxHoraio.Size = new System.Drawing.Size(84, 16);
-            this.textBoxHoraio.TabIndex = 116;
+            this.TxtBoxHoraio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxHoraio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxHoraio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxHoraio.Location = new System.Drawing.Point(240, 141);
+            this.TxtBoxHoraio.Name = "TxtBoxHoraio";
+            this.TxtBoxHoraio.Size = new System.Drawing.Size(84, 16);
+            this.TxtBoxHoraio.TabIndex = 116;
             // 
             // label7
             // 
@@ -264,15 +264,15 @@ namespace CapacitaDesk {
             this.label7.TabIndex = 119;
             this.label7.Text = "Tipo de Deficiência";
             // 
-            // textBoxTipoDeficiencia
+            // TxtBoxTipoDeficiencia
             // 
-            this.textBoxTipoDeficiencia.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxTipoDeficiencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTipoDeficiencia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxTipoDeficiencia.Location = new System.Drawing.Point(330, 141);
-            this.textBoxTipoDeficiencia.Name = "textBoxTipoDeficiencia";
-            this.textBoxTipoDeficiencia.Size = new System.Drawing.Size(120, 16);
-            this.textBoxTipoDeficiencia.TabIndex = 118;
+            this.TxtBoxTipoDeficiencia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxTipoDeficiencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTipoDeficiencia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTipoDeficiencia.Location = new System.Drawing.Point(330, 141);
+            this.TxtBoxTipoDeficiencia.Name = "TxtBoxTipoDeficiencia";
+            this.TxtBoxTipoDeficiencia.Size = new System.Drawing.Size(120, 16);
+            this.TxtBoxTipoDeficiencia.TabIndex = 118;
             // 
             // pictureBox1
             // 
@@ -298,6 +298,7 @@ namespace CapacitaDesk {
             this.BtnAceitarCurso.TabIndex = 121;
             this.BtnAceitarCurso.Text = "ACEITAR";
             this.BtnAceitarCurso.UseVisualStyleBackColor = false;
+            this.BtnAceitarCurso.Click += new System.EventHandler(this.BtnAceitarCurso_Click);
             // 
             // BtnRecusarCurso
             // 
@@ -342,16 +343,16 @@ namespace CapacitaDesk {
             this.groupBox3.Controls.Add(this.TxtBoxNomeInstituicao);
             this.groupBox3.Controls.Add(this.TxtBoxValor);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.textBoxNomeUsuario);
+            this.groupBox3.Controls.Add(this.TxtBoxNomeCurso);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBoxDuracao);
+            this.groupBox3.Controls.Add(this.TxtBoxDuracao);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBoxTipoDeficiencia);
-            this.groupBox3.Controls.Add(this.textBoxCargaHoraria);
+            this.groupBox3.Controls.Add(this.TxtBoxTipoDeficiencia);
+            this.groupBox3.Controls.Add(this.TxtBoxCargaHoraria);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBoxHoraio);
+            this.groupBox3.Controls.Add(this.TxtBoxHoraio);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox3.Location = new System.Drawing.Point(104, 144);
@@ -400,22 +401,22 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBoxDescricao;
+        private System.Windows.Forms.TextBox TxtBoxDescricao;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBoxResumo;
+        private System.Windows.Forms.TextBox TxtBoxResumo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtBoxNomeInstituicao;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxNomeUsuario;
-        private System.Windows.Forms.TextBox textBoxDuracao;
+        private System.Windows.Forms.TextBox TxtBoxNomeCurso;
+        private System.Windows.Forms.TextBox TxtBoxDuracao;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxCargaHoraria;
+        private System.Windows.Forms.TextBox TxtBoxCargaHoraria;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxHoraio;
+        private System.Windows.Forms.TextBox TxtBoxHoraio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxTipoDeficiencia;
+        private System.Windows.Forms.TextBox TxtBoxTipoDeficiencia;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnAceitarCurso;
         private System.Windows.Forms.Button BtnRecusarCurso;

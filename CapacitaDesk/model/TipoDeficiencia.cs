@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class TipoDeficiencia
+    public class TipoDeficiencia
     {
         public String id { get; set; }
         
