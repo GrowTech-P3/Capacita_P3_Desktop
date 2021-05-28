@@ -30,16 +30,6 @@ namespace CapacitaDesk {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxEstadoParceiro = new System.Windows.Forms.ComboBox();
-            this.BtnBuscarParceiro = new System.Windows.Forms.Button();
-            this.TxtBoxNomedaInstitucao = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtDataInicial = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtDataFinal = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listViewParceiro = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
@@ -49,11 +39,21 @@ namespace CapacitaDesk {
             this.UfParceiros = new System.Windows.Forms.ColumnHeader();
             this.CidadeParceiro = new System.Windows.Forms.ColumnHeader();
             this.BtnExibirParceiro = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtBoxNomedaInstitucao = new System.Windows.Forms.TextBox();
+            this.BtnBuscarParceiro = new System.Windows.Forms.Button();
+            this.comboBoxEstadoParceiro = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PictureBoxLogo
@@ -96,127 +96,6 @@ namespace CapacitaDesk {
             this.label1.Size = new System.Drawing.Size(440, 37);
             this.label1.TabIndex = 13;
             this.label1.Text = "REGISTRO DE NOVOS PARCEIROS";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBoxEstadoParceiro);
-            this.groupBox1.Controls.Add(this.BtnBuscarParceiro);
-            this.groupBox1.Controls.Add(this.TxtBoxNomedaInstitucao);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TxtDataInicial);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.TxtDataFinal);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.groupBox1.Location = new System.Drawing.Point(58, 141);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(669, 120);
-            this.groupBox1.TabIndex = 105;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtros";
-            // 
-            // comboBoxEstadoParceiro
-            // 
-            this.comboBoxEstadoParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxEstadoParceiro.FormattingEnabled = true;
-            this.comboBoxEstadoParceiro.Location = new System.Drawing.Point(368, 32);
-            this.comboBoxEstadoParceiro.Name = "comboBoxEstadoParceiro";
-            this.comboBoxEstadoParceiro.Size = new System.Drawing.Size(169, 29);
-            this.comboBoxEstadoParceiro.TabIndex = 108;
-            this.comboBoxEstadoParceiro.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstadoParceiro_SelectedIndexChanged);
-            // 
-            // BtnBuscarParceiro
-            // 
-            this.BtnBuscarParceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnBuscarParceiro.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnBuscarParceiro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnBuscarParceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscarParceiro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnBuscarParceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBuscarParceiro.Location = new System.Drawing.Point(548, 68);
-            this.BtnBuscarParceiro.Name = "BtnBuscarParceiro";
-            this.BtnBuscarParceiro.Size = new System.Drawing.Size(112, 35);
-            this.BtnBuscarParceiro.TabIndex = 107;
-            this.BtnBuscarParceiro.Text = "BUSCAR";
-            this.BtnBuscarParceiro.UseVisualStyleBackColor = false;
-            this.BtnBuscarParceiro.Click += new System.EventHandler(this.BtnBuscarParceiro_Click);
-            // 
-            // TxtBoxNomedaInstitucao
-            // 
-            this.TxtBoxNomedaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxNomedaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(16, 44);
-            this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
-            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(342, 14);
-            this.TxtBoxNomedaInstitucao.TabIndex = 98;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label5.Location = new System.Drawing.Point(17, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 17);
-            this.label5.TabIndex = 99;
-            this.label5.Text = "Nome da Insituicao";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label2.Location = new System.Drawing.Point(16, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Data Inicial";
-            // 
-            // TxtDataInicial
-            // 
-            this.TxtDataInicial.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtDataInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtDataInicial.Location = new System.Drawing.Point(16, 91);
-            this.TxtDataInicial.Name = "TxtDataInicial";
-            this.TxtDataInicial.Size = new System.Drawing.Size(93, 14);
-            this.TxtDataInicial.TabIndex = 72;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label3.Location = new System.Drawing.Point(368, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Estado ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(164, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 93;
-            this.label6.Text = "Data Final";
-            // 
-            // TxtDataFinal
-            // 
-            this.TxtDataFinal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtDataFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtDataFinal.Location = new System.Drawing.Point(164, 91);
-            this.TxtDataFinal.Name = "TxtDataFinal";
-            this.TxtDataFinal.Size = new System.Drawing.Size(93, 14);
-            this.TxtDataFinal.TabIndex = 92;
             // 
             // groupBox2
             // 
@@ -301,6 +180,133 @@ namespace CapacitaDesk {
             this.BtnExibirParceiro.UseVisualStyleBackColor = false;
             this.BtnExibirParceiro.Click += new System.EventHandler(this.BtnExibirParceiro_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label6.Location = new System.Drawing.Point(217, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.TabIndex = 93;
+            this.label6.Text = "Data Final";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label3.Location = new System.Drawing.Point(368, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Estado ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label2.Location = new System.Drawing.Point(16, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Data Inicial";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label5.Location = new System.Drawing.Point(17, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 17);
+            this.label5.TabIndex = 99;
+            this.label5.Text = "Nome da Insituicao";
+            // 
+            // TxtBoxNomedaInstitucao
+            // 
+            this.TxtBoxNomedaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxNomedaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(16, 44);
+            this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
+            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(342, 14);
+            this.TxtBoxNomedaInstitucao.TabIndex = 1;
+            // 
+            // BtnBuscarParceiro
+            // 
+            this.BtnBuscarParceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnBuscarParceiro.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnBuscarParceiro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnBuscarParceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscarParceiro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnBuscarParceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnBuscarParceiro.Location = new System.Drawing.Point(548, 68);
+            this.BtnBuscarParceiro.Name = "BtnBuscarParceiro";
+            this.BtnBuscarParceiro.Size = new System.Drawing.Size(112, 35);
+            this.BtnBuscarParceiro.TabIndex = 107;
+            this.BtnBuscarParceiro.Text = "BUSCAR";
+            this.BtnBuscarParceiro.UseVisualStyleBackColor = false;
+            this.BtnBuscarParceiro.Click += new System.EventHandler(this.BtnBuscarParceiro_Click);
+            // 
+            // comboBoxEstadoParceiro
+            // 
+            this.comboBoxEstadoParceiro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxEstadoParceiro.DropDownHeight = 60;
+            this.comboBoxEstadoParceiro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEstadoParceiro.DropDownWidth = 150;
+            this.comboBoxEstadoParceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEstadoParceiro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxEstadoParceiro.FormattingEnabled = true;
+            this.comboBoxEstadoParceiro.IntegralHeight = false;
+            this.comboBoxEstadoParceiro.Location = new System.Drawing.Point(368, 32);
+            this.comboBoxEstadoParceiro.Name = "comboBoxEstadoParceiro";
+            this.comboBoxEstadoParceiro.Size = new System.Drawing.Size(169, 28);
+            this.comboBoxEstadoParceiro.TabIndex = 4;
+            this.comboBoxEstadoParceiro.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstadoParceiro_SelectedIndexChanged);
+            // 
+            // dateTimePickerInicial
+            // 
+            this.dateTimePickerInicial.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerInicial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerInicial.Location = new System.Drawing.Point(17, 83);
+            this.dateTimePickerInicial.Name = "dateTimePickerInicial";
+            this.dateTimePickerInicial.Size = new System.Drawing.Size(126, 25);
+            this.dateTimePickerInicial.TabIndex = 108;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateTimePickerFinal);
+            this.groupBox1.Controls.Add(this.dateTimePickerInicial);
+            this.groupBox1.Controls.Add(this.comboBoxEstadoParceiro);
+            this.groupBox1.Controls.Add(this.BtnBuscarParceiro);
+            this.groupBox1.Controls.Add(this.TxtBoxNomedaInstitucao);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.groupBox1.Location = new System.Drawing.Point(58, 141);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(669, 120);
+            this.groupBox1.TabIndex = 105;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtros";
+            // 
+            // dateTimePickerFinal
+            // 
+            this.dateTimePickerFinal.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFinal.Location = new System.Drawing.Point(217, 83);
+            this.dateTimePickerFinal.Name = "dateTimePickerFinal";
+            this.dateTimePickerFinal.Size = new System.Drawing.Size(126, 25);
+            this.dateTimePickerFinal.TabIndex = 109;
+            // 
             // RegistroDeNovoParceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -321,9 +327,9 @@ namespace CapacitaDesk {
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -334,11 +340,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox TxtBoxNomedaInstitucao;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListView listViewParceiro;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Data;
@@ -346,12 +348,16 @@ namespace CapacitaDesk {
         private System.Windows.Forms.ColumnHeader NomeDaInstituicao;
         private System.Windows.Forms.ColumnHeader UfParceiros;
         private System.Windows.Forms.ColumnHeader CidadeParceiro;
-        private System.Windows.Forms.Button BtnBuscarParceiro;
         private System.Windows.Forms.Button BtnExibirParceiro;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtDataInicial;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtDataFinal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtBoxNomedaInstitucao;
+        private System.Windows.Forms.Button BtnBuscarParceiro;
         private System.Windows.Forms.ComboBox comboBoxEstadoParceiro;
+        private System.Windows.Forms.DateTimePicker dateTimePickerInicial;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFinal;
     }
 }
