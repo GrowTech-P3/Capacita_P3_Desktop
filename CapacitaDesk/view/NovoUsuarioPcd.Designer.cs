@@ -42,7 +42,7 @@ namespace CapacitaDesk {
             this.checkBoxFisico = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,6 +62,8 @@ namespace CapacitaDesk {
             this.TxtBoxSenhaUsuario = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxEmailUsuario = new System.Windows.Forms.TextBox();
+            this.BtnAtualizar = new System.Windows.Forms.Button();
+            this.BtnRemover = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -272,7 +274,7 @@ namespace CapacitaDesk {
             this.panel3.Controls.Add(this.checkBoxMental);
             this.panel3.Controls.Add(this.checkBoxVisual);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(194, 428);
+            this.panel3.Location = new System.Drawing.Point(145, 428);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 127);
             this.panel3.TabIndex = 37;
@@ -289,19 +291,19 @@ namespace CapacitaDesk {
             this.label11.TabIndex = 38;
             this.label11.Text = "Portador tipo:";
             // 
-            // BtnCancelar
+            // BtnBuscar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(621, 428);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(145, 44);
-            this.BtnCancelar.TabIndex = 39;
-            this.BtnCancelar.Text = "CANCELAR";
-            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(524, 440);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(145, 44);
+            this.BtnBuscar.TabIndex = 39;
+            this.BtnBuscar.Text = "BUSCAR";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -320,7 +322,7 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(621, 486);
+            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(524, 498);
             this.BtnCadastrarUsuario.Name = "BtnCadastrarUsuario";
             this.BtnCadastrarUsuario.Size = new System.Drawing.Size(145, 44);
             this.BtnCadastrarUsuario.TabIndex = 42;
@@ -541,15 +543,45 @@ namespace CapacitaDesk {
             this.TxtBoxEmailUsuario.TabIndex = 42;
             this.TxtBoxEmailUsuario.TextChanged += new System.EventHandler(this.TxtBoxEmailUsuario_TextChanged);
             // 
+            // BtnAtualizar
+            // 
+            this.BtnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAtualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.BtnAtualizar.Location = new System.Drawing.Point(676, 440);
+            this.BtnAtualizar.Name = "BtnAtualizar";
+            this.BtnAtualizar.Size = new System.Drawing.Size(145, 44);
+            this.BtnAtualizar.TabIndex = 44;
+            this.BtnAtualizar.Text = "ATUALIZAR";
+            this.BtnAtualizar.UseVisualStyleBackColor = false;
+            // 
+            // BtnRemover
+            // 
+            this.BtnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnRemover.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRemover.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnRemover.ForeColor = System.Drawing.Color.White;
+            this.BtnRemover.Location = new System.Drawing.Point(676, 498);
+            this.BtnRemover.Name = "BtnRemover";
+            this.BtnRemover.Size = new System.Drawing.Size(145, 44);
+            this.BtnRemover.TabIndex = 45;
+            this.BtnRemover.Text = "REMOVER";
+            this.BtnRemover.UseVisualStyleBackColor = false;
+            // 
             // NovoUsuarioPcd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 561);
+            this.Controls.Add(this.BtnRemover);
+            this.Controls.Add(this.BtnAtualizar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnCadastrarUsuario);
-            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -590,7 +622,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.CheckBox checkBoxFisico;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button BtnCadastrarUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -610,5 +642,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.TextBox textBoxCidade;
         private System.Windows.Forms.ComboBox comboBoxEstado;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
+        private System.Windows.Forms.Button BtnAtualizar;
+        private System.Windows.Forms.Button BtnRemover;
     }
 }

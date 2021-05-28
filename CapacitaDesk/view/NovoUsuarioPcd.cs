@@ -167,7 +167,7 @@ namespace CapacitaDesk {
 
         private void maskedTextBoxTelefone_Click(object sender, EventArgs e)
         {
-            maskedTextBoxTelefone.SelectionStart = 0;
+            maskedTextBoxTelefone.SelectionStart = 1;
         }
 
         private void maskedTextBoxCep_Click(object sender, EventArgs e)

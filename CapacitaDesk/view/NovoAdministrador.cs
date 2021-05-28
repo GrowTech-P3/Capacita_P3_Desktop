@@ -73,5 +73,51 @@ namespace CapacitaDesk {
                 e.Handled = true;
             }
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            
+            Administrador admin = new Administrador();
+            
+            admin.email = TxtBoxEmailUsuario.Text;
+            
+            if (!(admin.email.Trim().Equals("") || admin.email == null))
+            {
+                String rota = "http://localhost:3000/administrador/" + admin.email;
+                String json = JsonConvert.SerializeObject(admin);
+                Object objResponse = ConnectionAPI.getOne(rota, json,administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                TxtBoxNomeUsuario.Text = respUsuario.admin.nome;
+            }
+            else 
+            {
+                MessageBox.Show("Informe email para Buscar");
+            }
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRemover_Click(object sender, EventArgs e)
+        {
+            String rota = "http://localhost:3000/administrador";
+            Administrador admin = new Administrador();
+
+            admin.email = TxtBoxEmailUsuario.Text;
+            if (!(admin.email.Trim().Equals("") || admin.email == null))
+            {
+                String json = JsonConvert.SerializeObject(admin);
+                Object objResponse = ConnectionAPI.remove(rota,json,administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+            }
+            else
+            {
+                MessageBox.Show("Digite um email");
+            }
+
+        }
     }
 }
