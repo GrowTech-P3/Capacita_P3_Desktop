@@ -35,6 +35,7 @@ namespace CapacitaDesk {
         public RegistroDeNovoParceiro(AdminLogado admin) {
             InitializeComponent();
             this.administrador = admin;
+            estadoComboBoxParceiro();
         }
 
 
@@ -134,7 +135,7 @@ namespace CapacitaDesk {
         }
 
         private void comboBoxEstadoParceiro_SelectedIndexChanged(object sender, EventArgs e) {
-            estadoComboBoxParceiro();
+
         }
     }
 }
