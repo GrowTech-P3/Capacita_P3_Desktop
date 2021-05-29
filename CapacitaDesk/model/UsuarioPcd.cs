@@ -25,7 +25,7 @@ namespace CapacitaDesk.model
         public String cep { get; set; }
         public String cpf { get; set; }
         public String ativo { get; set; }
-
-        public String[] deficiencias { get; set; }
+        public String[] deficiencias { get; set; } 
+        public List<String> deficiencia { get; set; }
     }
 }

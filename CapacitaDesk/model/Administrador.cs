@@ -12,6 +12,8 @@ namespace CapacitaDesk.model
         public Usuario usuario { get; set; }
         public String email { get; set; }
         public String password { get; set; }
+
+        public Boolean ativo { get; set; }
         public String nome { get; set; }
     }
 }

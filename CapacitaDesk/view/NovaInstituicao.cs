@@ -88,7 +88,6 @@ namespace CapacitaDesk {
             if (validate.Trim().Equals("ok"))
             {
                 String json = JsonConvert.SerializeObject(instituicao);
-
                 Object objResponse = ConnectionAPI.post(rota, json, this.adminstrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
@@ -136,6 +135,39 @@ namespace CapacitaDesk {
         private void maskedTextBoxCep_Click(object sender, EventArgs e)
         {
             maskedTextBoxCep.SelectionStart = 0;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxAtivoInst_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivoInst.Checked = true;
+            checkBoxInativoInst.Checked = false;
+        }
+
+        private void checkBoxInativoInst_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivoInst.Checked = false;
+            checkBoxInativoInst.Checked = true;
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            //Instituicao inst = new Instituicao();
+
+            //inst.cnpj = maskedTextBoxCnpj.Text;
+
+            //String rota = "http://localhost:3000/busca-instituicao";
+
+            //String json = JsonConvert.SerializeObject(inst);
+            //Object objResponse = ConnectionAPI.post(rota, json, adminstrador.Token);
+            //RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+            //MessageBox.Show(respUsuario.message);
+
         }
     }
 }

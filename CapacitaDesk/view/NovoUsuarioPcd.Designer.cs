@@ -46,6 +46,8 @@ namespace CapacitaDesk {
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxInativoUser = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivoUser = new System.Windows.Forms.CheckBox();
             this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.LabelCidade = new System.Windows.Forms.Label();
             this.labelEstado = new System.Windows.Forms.Label();
@@ -304,6 +306,7 @@ namespace CapacitaDesk {
             this.BtnBuscar.TabIndex = 39;
             this.BtnBuscar.Text = "BUSCAR";
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // pictureBox3
             // 
@@ -332,7 +335,8 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
-            //this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.checkBoxInativoUser);
+            this.groupBox1.Controls.Add(this.checkBoxAtivoUser);
             this.groupBox1.Controls.Add(this.textBoxCidade);
             this.groupBox1.Controls.Add(this.LabelCidade);
             this.groupBox1.Controls.Add(this.labelEstado);
@@ -364,6 +368,30 @@ namespace CapacitaDesk {
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do usuário";
+            // 
+            // checkBoxInativoUser
+            // 
+            this.checkBoxInativoUser.AutoSize = true;
+            this.checkBoxInativoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxInativoUser.Location = new System.Drawing.Point(575, 177);
+            this.checkBoxInativoUser.Name = "checkBoxInativoUser";
+            this.checkBoxInativoUser.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxInativoUser.TabIndex = 59;
+            this.checkBoxInativoUser.Text = "Inativo";
+            this.checkBoxInativoUser.UseVisualStyleBackColor = true;
+            this.checkBoxInativoUser.Click += new System.EventHandler(this.checkBoxInativoUser_Click);
+            // 
+            // checkBoxAtivoUser
+            // 
+            this.checkBoxAtivoUser.AutoSize = true;
+            this.checkBoxAtivoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAtivoUser.Location = new System.Drawing.Point(510, 177);
+            this.checkBoxAtivoUser.Name = "checkBoxAtivoUser";
+            this.checkBoxAtivoUser.Size = new System.Drawing.Size(59, 21);
+            this.checkBoxAtivoUser.TabIndex = 58;
+            this.checkBoxAtivoUser.Text = "Ativo";
+            this.checkBoxAtivoUser.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoUser.Click += new System.EventHandler(this.checkBoxAtivoUser_Click);
             // 
             // textBoxCidade
             // 
@@ -558,6 +586,7 @@ namespace CapacitaDesk {
             this.BtnAtualizar.TabIndex = 44;
             this.BtnAtualizar.Text = "ATUALIZAR";
             this.BtnAtualizar.UseVisualStyleBackColor = false;
+            this.BtnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // BtnRemover
             // 
@@ -572,6 +601,7 @@ namespace CapacitaDesk {
             this.BtnRemover.TabIndex = 45;
             this.BtnRemover.Text = "REMOVER";
             this.BtnRemover.UseVisualStyleBackColor = false;
+            this.BtnRemover.Click += new System.EventHandler(this.BtnRemover_Click);
             // 
             // NovoUsuarioPcd
             // 
@@ -646,6 +676,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.MaskedTextBox maskedTextBoxCPF;
         private System.Windows.Forms.Button BtnAtualizar;
         private System.Windows.Forms.Button BtnRemover;
-
+        private System.Windows.Forms.CheckBox checkBoxInativoUser;
+        private System.Windows.Forms.CheckBox checkBoxAtivoUser;
     }
 }

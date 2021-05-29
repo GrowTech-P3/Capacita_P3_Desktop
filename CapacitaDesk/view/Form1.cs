@@ -29,13 +29,11 @@ namespace CapacitaDesk {
             admin.senha = TxtSenha.Text;
 
             String json = JsonConvert.SerializeObject(admin);
-
             Object objResponse = ConnectionAPI.login(rota, json);
-
             RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
-          
 
-            if (respUsuario.administrador != null)
+
+            if (respUsuario.administrador != null && respUsuario.administrador.ativo.Trim().Equals("true"))
             {
                 MessageBox.Show("Login efetuado com sucesso!");
                 this.Hide();
