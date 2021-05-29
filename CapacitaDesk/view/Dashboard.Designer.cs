@@ -26,6 +26,7 @@ namespace CapacitaDesk {
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelEmailAdmin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PictureBoxExit = new System.Windows.Forms.PictureBox();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
@@ -51,6 +52,7 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.Controls.Add(this.labelEmailAdmin);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.PictureBoxExit);
             this.panel1.Controls.Add(this.PictureBoxLogo);
@@ -59,6 +61,15 @@ namespace CapacitaDesk {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 69);
             this.panel1.TabIndex = 0;
+            // 
+            // labelEmailAdmin
+            // 
+            this.labelEmailAdmin.AutoSize = true;
+            this.labelEmailAdmin.Location = new System.Drawing.Point(1055, 29);
+            this.labelEmailAdmin.Name = "labelEmailAdmin";
+            this.labelEmailAdmin.Size = new System.Drawing.Size(38, 15);
+            this.labelEmailAdmin.TabIndex = 15;
+            this.labelEmailAdmin.Text = "label3";
             // 
             // label2
             // 
@@ -322,5 +333,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox PictureBoxExit;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelEmailAdmin;
     }
 }

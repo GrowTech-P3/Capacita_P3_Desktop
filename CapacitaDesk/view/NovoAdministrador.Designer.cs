@@ -39,6 +39,8 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.BtnRemover = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxInativo = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivo = new System.Windows.Forms.CheckBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.buttonAtualizar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
@@ -200,6 +202,8 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBoxInativo);
+            this.groupBox1.Controls.Add(this.checkBoxAtivo);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.TxtBoxSenhaUsuario);
@@ -215,6 +219,30 @@ namespace CapacitaDesk {
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do administrador";
+            // 
+            // checkBoxInativo
+            // 
+            this.checkBoxInativo.AutoSize = true;
+            this.checkBoxInativo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxInativo.Location = new System.Drawing.Point(400, 217);
+            this.checkBoxInativo.Name = "checkBoxInativo";
+            this.checkBoxInativo.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxInativo.TabIndex = 52;
+            this.checkBoxInativo.Text = "Inativo";
+            this.checkBoxInativo.UseVisualStyleBackColor = true;
+            this.checkBoxInativo.Click += new System.EventHandler(this.checkBoxInativo_Click);
+            // 
+            // checkBoxAtivo
+            // 
+            this.checkBoxAtivo.AutoSize = true;
+            this.checkBoxAtivo.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAtivo.Location = new System.Drawing.Point(335, 217);
+            this.checkBoxAtivo.Name = "checkBoxAtivo";
+            this.checkBoxAtivo.Size = new System.Drawing.Size(59, 21);
+            this.checkBoxAtivo.TabIndex = 51;
+            this.checkBoxAtivo.Text = "Ativo";
+            this.checkBoxAtivo.UseVisualStyleBackColor = true;
+            this.checkBoxAtivo.Click += new System.EventHandler(this.checkBoxAtivo_Click);
             // 
             // buttonBuscar
             // 
@@ -295,5 +323,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Button buttonAtualizar;
+        private System.Windows.Forms.CheckBox checkBoxInativo;
+        private System.Windows.Forms.CheckBox checkBoxAtivo;
     }
 }

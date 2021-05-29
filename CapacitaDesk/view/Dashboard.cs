@@ -15,15 +15,18 @@ namespace CapacitaDesk {
 
         AdminLogado administrador = new AdminLogado();
 
-
+        String[] nome = new string[2];
 
         public Dashboard()
         {
             InitializeComponent();
+            
         }
         public Dashboard(AdminLogado admin) {
             InitializeComponent();
             this.administrador = admin;
+            nome = administrador.email.Split("@");
+            labelEmailAdmin.Text = nome[0];
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {

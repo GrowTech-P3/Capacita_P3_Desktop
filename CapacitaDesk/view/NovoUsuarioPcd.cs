@@ -50,6 +50,8 @@ namespace CapacitaDesk {
             checkBoxMental.Checked = false;
             checkBoxMudez.Checked = false;
             checkBoxVisual.Checked = false;
+            checkBoxAtivoUser.Checked = false;
+            checkBoxInativoUser.Checked = false;
         }
         
         
@@ -79,10 +81,9 @@ namespace CapacitaDesk {
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
             UsuarioPcd usuarioPcd = new UsuarioPcd();
             ValidateUsuarioPcd validar = new ValidateUsuarioPcd();
-            usuarioPcd.deficiencias = new String[5];
-
             String rota = "http://localhost:3000/usuarioPcd";
-
+            usuarioPcd.deficiencias = new String[5];    
+      
             usuarioPcd.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
             usuarioPcd.cidade = textBoxCidade.Text;
             usuarioPcd.email = TxtBoxEmailUsuario.Text;
@@ -99,7 +100,6 @@ namespace CapacitaDesk {
             usuarioPcd.deficiencias[2] = checkBoxMental.Checked ? "3" : "0";
             usuarioPcd.deficiencias[3] = checkBoxMudez.Checked ? "4" : "0";
             usuarioPcd.deficiencias[4] = checkBoxVisual.Checked ? "5" : "0";
-
 
             String validate = validar.validateUsuarioPCD(usuarioPcd);
             if (validate.Trim().Equals("ok"))
@@ -173,6 +173,144 @@ namespace CapacitaDesk {
         private void maskedTextBoxCep_Click(object sender, EventArgs e)
         {
             maskedTextBoxCep.SelectionStart = 0;
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            UsuarioPcd usuarioPcd = new UsuarioPcd();
+            String rota = "http://localhost:3000/buscar-usuariopcd";
+            RespUsuario respUsuario = new RespUsuario();
+            
+
+            usuarioPcd.cpf = maskedTextBoxCPF.Text;
+            if (usuarioPcd.cpf != null && !(usuarioPcd.cpf.Trim().Equals("")) && usuarioPcd.cpf.Trim().Length == 14)
+            {
+
+                String json = JsonConvert.SerializeObject(usuarioPcd);
+                Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
+                respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+                if (!(respUsuario.message.Trim().Equals("Usuário PCD não encontrado!"))) { 
+                TxtBoxNomeUsuario.Text = respUsuario.usuarioPCD.nome;
+                maskedTextBoxCPF.Text = respUsuario.usuarioPCD.cpf;
+                maskedTextBoxTelefone.Text = respUsuario.usuarioPCD.telefone;
+                comboBoxEstado.SelectedIndex = Convert.ToInt32(respUsuario.usuarioPCD.id_estado) - 1;
+                maskedTextBoxCep.Text = respUsuario.usuarioPCD.cep;
+                TxtBoxBairroUsuario.Text = respUsuario.usuarioPCD.bairro;
+                TxtBoxEnderecoUsuario.Text = respUsuario.usuarioPCD.endereco;
+                textBoxCidade.Text = respUsuario.usuarioPCD.cidade;
+                TxtBoxNumUsuario.Text = respUsuario.usuarioPCD.numero;
+                TxtBoxEmailUsuario.Text = respUsuario.usuario.email;
+                if (respUsuario.usuario.ativo.Trim().Equals("true"))
+                {
+                    checkBoxAtivoUser.Checked = true;
+                    checkBoxInativoUser.Checked = false;
+                }
+                else {
+                    checkBoxAtivoUser.Checked = false;
+                    checkBoxInativoUser.Checked = true;
+                }
+                for (int i = 0; i < respUsuario.usuarioPCD.deficiencia.Count ; i++)
+                {
+                    if (respUsuario.usuarioPCD.deficiencia[i].Trim().Equals("1"))
+                    {
+                        checkBoxAuditivo.Checked = true;
+                    }
+                    else if (respUsuario.usuarioPCD.deficiencia[i].Trim().Equals("2"))
+                    {
+                        checkBoxFisico.Checked = true;
+                    }
+                    else if (respUsuario.usuarioPCD.deficiencia[i].Trim().Equals("3"))
+                    {
+                        checkBoxMental.Checked = true; 
+                    }
+                    else if (respUsuario.usuarioPCD.deficiencia[i].Trim().Equals("4"))
+                    {
+                        checkBoxMudez.Checked = true;
+                    }
+                    else if (respUsuario.usuarioPCD.deficiencia[i].Trim().Equals("5")) { 
+                        checkBoxVisual.Checked = true;
+                    }
+                }
+                }
+            }
+            else {
+                MessageBox.Show("Informe o CPF para buscar usuário");
+            }
+
+        }
+
+        private void checkBoxAtivoUser_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivoUser.Checked = true;
+            checkBoxInativoUser.Checked = false;
+        }
+
+        private void checkBoxInativoUser_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivoUser.Checked = false;
+            checkBoxInativoUser.Checked = true;
+        }
+
+        private void BtnRemover_Click(object sender, EventArgs e)
+        {
+            String rota = "http://localhost:3000/usuariopcd";
+            UsuarioPcd usuarioPcd = new UsuarioPcd();
+
+            usuarioPcd.cpf = maskedTextBoxCPF.Text;
+
+            if (usuarioPcd.cpf != null && usuarioPcd.cpf.Length == 14)
+            {
+
+                String json = JsonConvert.SerializeObject(usuarioPcd);
+                Object objResponse = ConnectionAPI.remove(rota, json, admin.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else {
+                MessageBox.Show("Informe ao menos o CPF para remover");
+            }
+        }
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            UsuarioPcd usuarioPcd = new UsuarioPcd();
+            ValidateUsuarioPcd validar = new ValidateUsuarioPcd();
+
+            String rota = "http://localhost:3000/usuariopcd/update";
+
+            usuarioPcd.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
+            usuarioPcd.cidade = textBoxCidade.Text;
+            usuarioPcd.email = TxtBoxEmailUsuario.Text;
+            usuarioPcd.cpf = maskedTextBoxCPF.Text;
+            usuarioPcd.bairro = TxtBoxBairroUsuario.Text;
+            usuarioPcd.cep = maskedTextBoxCep.Text;
+            usuarioPcd.endereco = TxtBoxEnderecoUsuario.Text;
+            usuarioPcd.numero = TxtBoxNumUsuario.Text;
+            usuarioPcd.telefone = maskedTextBoxTelefone.Text;
+            usuarioPcd.nome = TxtBoxNomeUsuario.Text;
+            if (checkBoxAtivoUser.Checked == true)
+            {
+                usuarioPcd.ativo = "true";
+            }
+            else {
+                usuarioPcd.ativo = "false";
+            }
+            String validate = validar.validateUsuarioPCD(usuarioPcd);
+            if (validate.Trim().Equals("ok")  || validate.Trim().Equals("Informe a senha"))
+            {
+                String json = JsonConvert.SerializeObject(usuarioPcd);
+                Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else
+            {
+                MessageBox.Show(validate);
+            }
         }
     }
 }

@@ -17,6 +17,7 @@ namespace CapacitaDesk.model
 
         public AdminLogado administrador { get; set; }
 
+        public List<TipoDeficiencia> tipoDeficiencia { get; set; }
         public Estado estados { get; set; }
 
         public Curso curso { get; set; }

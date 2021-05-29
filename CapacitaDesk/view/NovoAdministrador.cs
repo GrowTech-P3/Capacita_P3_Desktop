@@ -88,6 +88,16 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.getOne(rota, json,administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 TxtBoxNomeUsuario.Text = respUsuario.admin.nome;
+                if (respUsuario.usuario.ativo.Trim().Equals("true"))
+                {
+                    checkBoxAtivo.Checked = true;
+                    checkBoxInativo.Checked = false;
+                }
+                else 
+                {
+                    checkBoxAtivo.Checked = false;
+                    checkBoxInativo.Checked = true;
+                }
             }
             else 
             {
@@ -97,7 +107,42 @@ namespace CapacitaDesk {
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
+            Administrador admin = new Administrador();
+            String rota = "http://localhost:3000/administradors";
+            String rotaSenha = "http://localhost:3000/administrador/password";
+            admin.email = TxtBoxEmailUsuario.Text;
+            admin.nome = TxtBoxNomeUsuario.Text;
+            admin.password = TxtBoxSenhaUsuario.Text;
 
+            if (checkBoxAtivo.Checked == true)
+            {
+                admin.ativo = true;
+            }
+            else {
+                admin.ativo = false;
+            }
+            if (admin.password != null && !(admin.password.Trim().Equals("")) && !(admin.email.Trim().Equals("")) && admin.email != null)
+            {
+                String json = JsonConvert.SerializeObject(admin);
+                Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                ConnectionAPI.post(rotaSenha, json, administrador.Token);
+                RespUsuario respUsario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsario.message);
+            }
+            else if (admin.nome != null && !(admin.nome.Trim().Equals("")) && !(admin.email.Trim().Equals("")) && admin.email != null)
+            {
+                String json = JsonConvert.SerializeObject(admin);
+                Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                RespUsuario respUsario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsario.message);
+            }
+            else if (admin.email == null || admin.email.Trim().Equals(""))
+            {
+                MessageBox.Show("Informe Email para buscar");
+            }
+            else {
+                MessageBox.Show("Informe ao menos o nome para atualizar");
+            }
         }
 
         private void BtnRemover_Click(object sender, EventArgs e)
@@ -118,6 +163,18 @@ namespace CapacitaDesk {
                 MessageBox.Show("Digite um email");
             }
 
+        }
+
+        private void checkBoxInativo_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivo.Checked = false;
+            checkBoxInativo.Checked = true;
+        }
+
+        private void checkBoxAtivo_Click(object sender, EventArgs e)
+        {
+            checkBoxAtivo.Checked = true;
+            checkBoxInativo.Checked = false;
         }
     }
 }
