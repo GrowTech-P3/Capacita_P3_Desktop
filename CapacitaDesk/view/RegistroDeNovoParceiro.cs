@@ -25,7 +25,7 @@ namespace CapacitaDesk {
 
             List<Estado> estados = JsonConvert.DeserializeObject<List<Estado>>(objResponse.ToString());
 
-
+            comboBoxEstadoParceiro.Items.Add("");
             for (int i = 0; i < estados.Count; i++) {
                 comboBoxEstadoParceiro.Items.Add(estados[i].label);
             }
@@ -36,9 +36,10 @@ namespace CapacitaDesk {
             InitializeComponent();
             this.administrador = admin;
             estadoComboBoxParceiro();
+            dateTimePickerInicial.Value = DateTime.Now.AddMonths(-1);
         }
 
-
+        //CARREGAR TODAS AS INSTITUICOES NO LISTVIEW
         public void carregarTabela()
         {
             List<Instituicao> instituicoes;
@@ -60,15 +61,13 @@ namespace CapacitaDesk {
             }
         }
 
-        // CARREGAR TABELA FILTRANDO PELO NOME DA INSTITUICAO
-        public void carregarTabelaInstituicao(String nomeInstituicao)
+        // CARREGAR TABELA FILTRANDO PELO PESQUISA
+        public void carregarTabelaPesquisa(PesquisaInstituicao pesquisa)
         {
             List<Instituicao> instituicoes;
-            Instituicao instituicaoPesquisa = new Instituicao();
-            instituicaoPesquisa.nome = nomeInstituicao;
             
-            String rota = "http://localhost:3000/instituicao-inativa";
-            String json = JsonConvert.SerializeObject(instituicaoPesquisa);
+            String rota = "http://localhost:3000/instituicao-pesquisa";
+            String json = JsonConvert.SerializeObject(pesquisa);
 
             Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
             instituicoes = JsonConvert.DeserializeObject<List<Instituicao>>(objectResponse.ToString());
@@ -118,7 +117,14 @@ namespace CapacitaDesk {
 
         private void BtnBuscarParceiro_Click(object sender, EventArgs e)
         {
-            carregarTabelaInstituicao(TxtBoxNomedaInstitucao.Text);
+            carregarTabelaPesquisa(new PesquisaInstituicao()
+            {
+                nome = TxtBoxNomedaInstitucao.Text,
+                label = comboBoxEstadoParceiro.Text,
+                //NECESSARIO ADICIONAR -1 DIA E +1 DIA NAS DATAS PARA PROCURAR ENTRE AS DATAS
+                createdAt = Convert.ToDateTime(dateTimePickerInicial.Text).ToString("yyyy-MM-dd"),
+                createdAt2 = Convert.ToDateTime(dateTimePickerFinal.Text).AddDays(1).ToString("yyyy-MM-dd")
+            }) ;
         }
 
         private void listViewParceiro_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -136,6 +142,15 @@ namespace CapacitaDesk {
 
         private void comboBoxEstadoParceiro_SelectedIndexChanged(object sender, EventArgs e) {
 
+        }
+
+        private void btnLimparPesquisa_Click(object sender, EventArgs e)
+        {
+            TxtBoxNomedaInstitucao.Clear();
+            comboBoxEstadoParceiro.SelectedIndex = 0;
+            dateTimePickerInicial.Value = DateTime.Now.AddMonths(-1); ;
+            dateTimePickerFinal.Value = DateTime.Now;
+            carregarTabela();
         }
     }
 }

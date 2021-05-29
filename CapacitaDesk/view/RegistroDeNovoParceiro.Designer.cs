@@ -25,7 +25,7 @@ namespace CapacitaDesk {
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeNovoParceiro));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,6 +49,7 @@ namespace CapacitaDesk {
             this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
+            this.btnLimparPesquisa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -123,7 +124,7 @@ namespace CapacitaDesk {
             this.listViewParceiro.FullRowSelect = true;
             this.listViewParceiro.HideSelection = false;
             this.listViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.listViewParceiro.Location = new System.Drawing.Point(15, 27);
             this.listViewParceiro.MultiSelect = false;
             this.listViewParceiro.Name = "listViewParceiro";
@@ -185,7 +186,7 @@ namespace CapacitaDesk {
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(217, 63);
+            this.label6.Location = new System.Drawing.Point(161, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 93;
@@ -196,7 +197,7 @@ namespace CapacitaDesk {
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label3.Location = new System.Drawing.Point(368, 12);
+            this.label3.Location = new System.Drawing.Point(337, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 75;
@@ -231,7 +232,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(16, 44);
             this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
-            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(342, 14);
+            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(304, 14);
             this.TxtBoxNomedaInstitucao.TabIndex = 1;
             // 
             // BtnBuscarParceiro
@@ -242,9 +243,9 @@ namespace CapacitaDesk {
             this.BtnBuscarParceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarParceiro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBuscarParceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBuscarParceiro.Location = new System.Drawing.Point(548, 68);
+            this.BtnBuscarParceiro.Location = new System.Drawing.Point(526, 68);
             this.BtnBuscarParceiro.Name = "BtnBuscarParceiro";
-            this.BtnBuscarParceiro.Size = new System.Drawing.Size(112, 35);
+            this.BtnBuscarParceiro.Size = new System.Drawing.Size(134, 35);
             this.BtnBuscarParceiro.TabIndex = 107;
             this.BtnBuscarParceiro.Text = "BUSCAR";
             this.BtnBuscarParceiro.UseVisualStyleBackColor = false;
@@ -260,7 +261,7 @@ namespace CapacitaDesk {
             this.comboBoxEstadoParceiro.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.comboBoxEstadoParceiro.FormattingEnabled = true;
             this.comboBoxEstadoParceiro.IntegralHeight = false;
-            this.comboBoxEstadoParceiro.Location = new System.Drawing.Point(368, 32);
+            this.comboBoxEstadoParceiro.Location = new System.Drawing.Point(337, 30);
             this.comboBoxEstadoParceiro.Name = "comboBoxEstadoParceiro";
             this.comboBoxEstadoParceiro.Size = new System.Drawing.Size(169, 28);
             this.comboBoxEstadoParceiro.TabIndex = 4;
@@ -269,6 +270,7 @@ namespace CapacitaDesk {
             // dateTimePickerInicial
             // 
             this.dateTimePickerInicial.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerInicial.CustomFormat = " ";
             this.dateTimePickerInicial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerInicial.Location = new System.Drawing.Point(17, 83);
@@ -278,6 +280,7 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLimparPesquisa);
             this.groupBox1.Controls.Add(this.dateTimePickerFinal);
             this.groupBox1.Controls.Add(this.dateTimePickerInicial);
             this.groupBox1.Controls.Add(this.comboBoxEstadoParceiro);
@@ -300,12 +303,29 @@ namespace CapacitaDesk {
             // dateTimePickerFinal
             // 
             this.dateTimePickerFinal.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFinal.CustomFormat = " ";
             this.dateTimePickerFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dateTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFinal.Location = new System.Drawing.Point(217, 83);
+            this.dateTimePickerFinal.Location = new System.Drawing.Point(161, 83);
             this.dateTimePickerFinal.Name = "dateTimePickerFinal";
             this.dateTimePickerFinal.Size = new System.Drawing.Size(126, 25);
             this.dateTimePickerFinal.TabIndex = 109;
+            // 
+            // btnLimparPesquisa
+            // 
+            this.btnLimparPesquisa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.btnLimparPesquisa.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLimparPesquisa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnLimparPesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparPesquisa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLimparPesquisa.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLimparPesquisa.Location = new System.Drawing.Point(526, 23);
+            this.btnLimparPesquisa.Name = "btnLimparPesquisa";
+            this.btnLimparPesquisa.Size = new System.Drawing.Size(134, 35);
+            this.btnLimparPesquisa.TabIndex = 110;
+            this.btnLimparPesquisa.Text = "LIMPAR PESQUISA";
+            this.btnLimparPesquisa.UseVisualStyleBackColor = false;
+            this.btnLimparPesquisa.Click += new System.EventHandler(this.btnLimparPesquisa_Click);
             // 
             // RegistroDeNovoParceiro
             // 
@@ -359,5 +379,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.DateTimePicker dateTimePickerInicial;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePickerFinal;
+        private System.Windows.Forms.Button btnLimparPesquisa;
     }
 }
