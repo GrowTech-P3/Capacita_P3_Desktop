@@ -304,6 +304,7 @@ namespace CapacitaDesk {
             this.BtnBuscar.TabIndex = 39;
             this.BtnBuscar.Text = "BUSCAR";
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // pictureBox3
             // 
