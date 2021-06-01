@@ -26,7 +26,6 @@ namespace CapacitaDesk {
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelEmailAdmin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PictureBoxExit = new System.Windows.Forms.PictureBox();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
@@ -43,6 +42,7 @@ namespace CapacitaDesk {
             this.BtnGerenciarDenuncia = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelEmailAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -61,15 +61,6 @@ namespace CapacitaDesk {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 69);
             this.panel1.TabIndex = 0;
-            // 
-            // labelEmailAdmin
-            // 
-            this.labelEmailAdmin.AutoSize = true;
-            this.labelEmailAdmin.Location = new System.Drawing.Point(1055, 29);
-            this.labelEmailAdmin.Name = "labelEmailAdmin";
-            this.labelEmailAdmin.Size = new System.Drawing.Size(38, 15);
-            this.labelEmailAdmin.TabIndex = 15;
-            this.labelEmailAdmin.Text = "label3";
             // 
             // label2
             // 
@@ -277,6 +268,17 @@ namespace CapacitaDesk {
             this.label1.Size = new System.Drawing.Size(98, 37);
             this.label1.TabIndex = 13;
             this.label1.Text = "HOME";
+            // 
+            // labelEmailAdmin
+            // 
+            this.labelEmailAdmin.AutoSize = true;
+            this.labelEmailAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelEmailAdmin.ForeColor = System.Drawing.Color.White;
+            this.labelEmailAdmin.Location = new System.Drawing.Point(1085, 30);
+            this.labelEmailAdmin.Name = "labelEmailAdmin";
+            this.labelEmailAdmin.Size = new System.Drawing.Size(57, 21);
+            this.labelEmailAdmin.TabIndex = 15;
+            this.labelEmailAdmin.Text = "label3";
             // 
             // Dashboard
             // 
