@@ -53,6 +53,8 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxInativoInst = new System.Windows.Forms.CheckBox();
+            this.checkBoxAtivoInst = new System.Windows.Forms.CheckBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelSenha = new System.Windows.Forms.Label();
             this.maskedTextBoxCnpj = new System.Windows.Forms.MaskedTextBox();
@@ -61,8 +63,6 @@ namespace CapacitaDesk {
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.buttonAtualizar = new System.Windows.Forms.Button();
             this.buttonRemover = new System.Windows.Forms.Button();
-            this.checkBoxAtivoInst = new System.Windows.Forms.CheckBox();
-            this.checkBoxInativoInst = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -407,6 +407,31 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados da instituição";
             // 
+            // checkBoxInativoInst
+            // 
+            this.checkBoxInativoInst.AutoSize = true;
+            this.checkBoxInativoInst.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxInativoInst.Location = new System.Drawing.Point(585, 112);
+            this.checkBoxInativoInst.Name = "checkBoxInativoInst";
+            this.checkBoxInativoInst.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxInativoInst.TabIndex = 81;
+            this.checkBoxInativoInst.Text = "Inativo";
+            this.checkBoxInativoInst.UseVisualStyleBackColor = true;
+            this.checkBoxInativoInst.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxInativoInst.Click += new System.EventHandler(this.checkBoxInativoInst_Click);
+            // 
+            // checkBoxAtivoInst
+            // 
+            this.checkBoxAtivoInst.AutoSize = true;
+            this.checkBoxAtivoInst.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAtivoInst.Location = new System.Drawing.Point(520, 112);
+            this.checkBoxAtivoInst.Name = "checkBoxAtivoInst";
+            this.checkBoxAtivoInst.Size = new System.Drawing.Size(59, 21);
+            this.checkBoxAtivoInst.TabIndex = 80;
+            this.checkBoxAtivoInst.Text = "Ativo";
+            this.checkBoxAtivoInst.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoInst.Click += new System.EventHandler(this.checkBoxAtivoInst_Click);
+            // 
             // textBoxPassword
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -488,6 +513,7 @@ namespace CapacitaDesk {
             this.buttonAtualizar.TabIndex = 78;
             this.buttonAtualizar.Text = "ATUALIZAR";
             this.buttonAtualizar.UseVisualStyleBackColor = false;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
             // buttonRemover
             // 
@@ -502,31 +528,7 @@ namespace CapacitaDesk {
             this.buttonRemover.TabIndex = 79;
             this.buttonRemover.Text = "REMOVER";
             this.buttonRemover.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxAtivoInst
-            // 
-            this.checkBoxAtivoInst.AutoSize = true;
-            this.checkBoxAtivoInst.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxAtivoInst.Location = new System.Drawing.Point(520, 112);
-            this.checkBoxAtivoInst.Name = "checkBoxAtivoInst";
-            this.checkBoxAtivoInst.Size = new System.Drawing.Size(59, 21);
-            this.checkBoxAtivoInst.TabIndex = 80;
-            this.checkBoxAtivoInst.Text = "Ativo";
-            this.checkBoxAtivoInst.UseVisualStyleBackColor = true;
-            this.checkBoxAtivoInst.Click += new System.EventHandler(this.checkBoxAtivoInst_Click);
-            // 
-            // checkBoxInativoInst
-            // 
-            this.checkBoxInativoInst.AutoSize = true;
-            this.checkBoxInativoInst.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxInativoInst.Location = new System.Drawing.Point(585, 112);
-            this.checkBoxInativoInst.Name = "checkBoxInativoInst";
-            this.checkBoxInativoInst.Size = new System.Drawing.Size(69, 21);
-            this.checkBoxInativoInst.TabIndex = 81;
-            this.checkBoxInativoInst.Text = "Inativo";
-            this.checkBoxInativoInst.UseVisualStyleBackColor = true;
-            this.checkBoxInativoInst.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            this.checkBoxInativoInst.Click += new System.EventHandler(this.checkBoxInativoInst_Click);
+            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
             // 
             // NovaInstituicao
             // 

@@ -42,6 +42,8 @@ namespace CapacitaDesk {
             textBoxDescricao.Clear();
             TxtBoxEmailUsuario.Clear();
             textBoxPassword.Clear();
+            checkBoxAtivoInst.Checked = false;
+            checkBoxInativoInst.Checked = false;
         }
         
         public NovaInstituicao(AdminLogado admin) {
@@ -156,17 +158,106 @@ namespace CapacitaDesk {
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            //Instituicao inst = new Instituicao();
+            Instituicao inst = new Instituicao();
 
-            //inst.cnpj = maskedTextBoxCnpj.Text;
+            inst.cnpj = maskedTextBoxCnpj.Text;
 
-            //String rota = "http://localhost:3000/busca-instituicao";
+            String rota = "http://localhost:3000/instituicao/cnpj";
 
-            //String json = JsonConvert.SerializeObject(inst);
-            //Object objResponse = ConnectionAPI.post(rota, json, adminstrador.Token);
-            //RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+            if (inst.cnpj != null && !(inst.cnpj.Trim().Equals(",   ,   /    -")) && inst.cnpj.Length == 18)
+            {
 
-            //MessageBox.Show(respUsuario.message);
+                String json = JsonConvert.SerializeObject(inst);
+                Object objResponse = ConnectionAPI.post(rota, json, adminstrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                if (!(respUsuario.message.Trim().Equals("Instituicão não encontrada"))) {
+                    TxtBoxNomeUsuario.Text = respUsuario.instituicao.nome;
+                    TxtBoxBairroUsuario.Text = respUsuario.instituicao.bairro;
+                    TxtBoxEmailUsuario.Text = respUsuario.usuario.email;
+                    TxtBoxEnderecoUsuario.Text = respUsuario.instituicao.endereco;
+                    maskedTextBoxCep.Text = respUsuario.instituicao.cep;
+                    maskedTextBoxCnpj.Text = respUsuario.instituicao.cnpj;
+                    maskedTextBoxTelefone.Text = respUsuario.instituicao.telefone;
+                    textBoxCidade.Text = respUsuario.instituicao.cidade;
+                    textBoxDescricao.Text = respUsuario.instituicao.descricao;
+                    textBoxNumero.Text = respUsuario.instituicao.numero;
+                    comboBoxEstado.SelectedIndex = Convert.ToInt32(respUsuario.instituicao.id_estado) -1;
+                    if (respUsuario.usuario.ativo == "true") {
+                        checkBoxAtivoInst.Checked = true;
+                        checkBoxInativoInst.Checked = false;
+                    }
+                    else
+                    {
+                        checkBoxAtivoInst.Checked = false;
+                        checkBoxInativoInst.Checked = true;
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Informe ao menos o CNPJ para buscar uma Instituição");
+            }
+
+        }
+
+        private void buttonRemover_Click(object sender, EventArgs e)
+        {
+            Instituicao inst = new Instituicao();
+            String rota = "http://localhost:3000/instituicao/cnpj";
+
+            inst.cnpj = maskedTextBoxCnpj.Text;
+
+            if (inst.cnpj.Length == 18) {
+                String json = JsonConvert.SerializeObject(inst);
+                Object objResponse = ConnectionAPI.remove(rota,json,adminstrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else {
+                MessageBox.Show("Informe ao menos o CNPJ para Remover!");
+            }
+
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+            Instituicao inst = new Instituicao();
+            ValidateInstituicao validar = new ValidateInstituicao();
+            String rota = "http://localhost:3000/instituicao/update";
+
+            inst.nome = TxtBoxNomeUsuario.Text;
+            inst.cnpj = maskedTextBoxCnpj.Text;
+            inst.cep = maskedTextBoxCep.Text;
+            inst.cidade = textBoxCidade.Text;
+            inst.bairro = TxtBoxBairroUsuario.Text;
+            inst.email = TxtBoxEmailUsuario.Text;
+            inst.endereco = TxtBoxEnderecoUsuario.Text;
+            inst.numero = textBoxNumero.Text;
+            inst.telefone = maskedTextBoxTelefone.Text;
+            inst.id_estado = Convert.ToString(comboBoxEstado.SelectedIndex + 1);
+            if (checkBoxAtivoInst.Checked == true)
+            {
+                inst.ativo = "true";
+            }
+            else {
+                inst.ativo = "false";
+            }
+            String validate = validar.validateInstituicao(inst);
+            if (validate.Trim().Equals("ok") || validate.Trim().Equals("Informe a senha"))
+            {
+                String json = JsonConvert.SerializeObject(inst);
+                Object objResponse = ConnectionAPI.post(rota, json, adminstrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else {
+                MessageBox.Show(validate);
+            }
 
         }
     }

@@ -183,7 +183,7 @@ namespace CapacitaDesk {
             
 
             usuarioPcd.cpf = maskedTextBoxCPF.Text;
-            if (usuarioPcd.cpf != null && !(usuarioPcd.cpf.Trim().Equals("")) && usuarioPcd.cpf.Trim().Length == 14)
+            if (usuarioPcd.cpf != null && !(usuarioPcd.cpf.Trim().Equals(",   ,   -")) && usuarioPcd.cpf.Trim().Length == 14)
             {
 
                 String json = JsonConvert.SerializeObject(usuarioPcd);
