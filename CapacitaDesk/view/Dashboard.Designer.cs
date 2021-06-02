@@ -26,6 +26,8 @@ namespace CapacitaDesk {
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxDataHora = new System.Windows.Forms.TextBox();
+            this.labelEmailAdmin = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PictureBoxExit = new System.Windows.Forms.PictureBox();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
@@ -42,7 +44,6 @@ namespace CapacitaDesk {
             this.BtnGerenciarDenuncia = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelEmailAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -52,6 +53,7 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.Controls.Add(this.textBoxDataHora);
             this.panel1.Controls.Add(this.labelEmailAdmin);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.PictureBoxExit);
@@ -62,12 +64,30 @@ namespace CapacitaDesk {
             this.panel1.Size = new System.Drawing.Size(1264, 69);
             this.panel1.TabIndex = 0;
             // 
+            // textBoxDataHora
+            // 
+            this.textBoxDataHora.Location = new System.Drawing.Point(0, 0);
+            this.textBoxDataHora.Name = "textBoxDataHora";
+            this.textBoxDataHora.Size = new System.Drawing.Size(100, 23);
+            this.textBoxDataHora.TabIndex = 0;
+            // 
+            // labelEmailAdmin
+            // 
+            this.labelEmailAdmin.AutoSize = true;
+            this.labelEmailAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelEmailAdmin.ForeColor = System.Drawing.Color.White;
+            this.labelEmailAdmin.Location = new System.Drawing.Point(1075, 25);
+            this.labelEmailAdmin.Name = "labelEmailAdmin";
+            this.labelEmailAdmin.Size = new System.Drawing.Size(57, 21);
+            this.labelEmailAdmin.TabIndex = 15;
+            this.labelEmailAdmin.Text = "label3";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1204, 47);
+            this.label2.Location = new System.Drawing.Point(1212, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 14;
@@ -76,7 +96,7 @@ namespace CapacitaDesk {
             // PictureBoxExit
             // 
             this.PictureBoxExit.Image = global::CapacitaDesk.Properties.Resources.BtnPower;
-            this.PictureBoxExit.Location = new System.Drawing.Point(1206, 18);
+            this.PictureBoxExit.Location = new System.Drawing.Point(1214, 12);
             this.PictureBoxExit.Name = "PictureBoxExit";
             this.PictureBoxExit.Size = new System.Drawing.Size(27, 26);
             this.PictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +134,7 @@ namespace CapacitaDesk {
             this.BtnUsuarioPcd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.BtnUsuarioPcd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuarioPcd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnUsuarioPcd.Image = global::CapacitaDesk.Properties.Resources.IconeNovoUser;
+            this.BtnUsuarioPcd.Image = global::CapacitaDesk.Properties.Resources.IconeNovoUser1;
             this.BtnUsuarioPcd.Location = new System.Drawing.Point(53, 227);
             this.BtnUsuarioPcd.Name = "BtnUsuarioPcd";
             this.BtnUsuarioPcd.Size = new System.Drawing.Size(210, 158);
@@ -128,7 +148,7 @@ namespace CapacitaDesk {
             this.BtnUsuarioAdministrador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.BtnUsuarioAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnUsuarioAdministrador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnUsuarioAdministrador.Image = global::CapacitaDesk.Properties.Resources.IconeNovoAdmin;
+            this.BtnUsuarioAdministrador.Image = global::CapacitaDesk.Properties.Resources.IconeNovoAdmin1;
             this.BtnUsuarioAdministrador.Location = new System.Drawing.Point(291, 227);
             this.BtnUsuarioAdministrador.Name = "BtnUsuarioAdministrador";
             this.BtnUsuarioAdministrador.Size = new System.Drawing.Size(210, 158);
@@ -263,22 +283,11 @@ namespace CapacitaDesk {
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(584, 12);
+            this.label1.Location = new System.Drawing.Point(539, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 37);
+            this.label1.Size = new System.Drawing.Size(186, 37);
             this.label1.TabIndex = 13;
-            this.label1.Text = "HOME";
-            // 
-            // labelEmailAdmin
-            // 
-            this.labelEmailAdmin.AutoSize = true;
-            this.labelEmailAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelEmailAdmin.ForeColor = System.Drawing.Color.White;
-            this.labelEmailAdmin.Location = new System.Drawing.Point(1085, 30);
-            this.labelEmailAdmin.Name = "labelEmailAdmin";
-            this.labelEmailAdmin.Size = new System.Drawing.Size(57, 21);
-            this.labelEmailAdmin.TabIndex = 15;
-            this.labelEmailAdmin.Text = "label3";
+            this.label1.Text = "DASHBOARD";
             // 
             // Dashboard
             // 
@@ -336,5 +345,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.PictureBox PictureBoxExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelEmailAdmin;
+        private System.Windows.Forms.TextBox textBoxDataHora;
     }
 }

@@ -24,18 +24,22 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerencDenuncia));
             this.ListViewInstituicao = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
-            this.Data = new System.Windows.Forms.ColumnHeader();
+            this.Usuario = new System.Windows.Forms.ColumnHeader();
             this.Hora = new System.Windows.Forms.ColumnHeader();
-            this.Topico = new System.Windows.Forms.ColumnHeader();
+            this.Curso = new System.Windows.Forms.ColumnHeader();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtBoxNomeCurso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtBoxNomeInstituicao = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.BtnBuscarDenuncia = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnExibirDenuncia = new System.Windows.Forms.Button();
@@ -47,10 +51,6 @@ namespace CapacitaDesk {
             this.label14 = new System.Windows.Forms.Label();
             this.TxtBoxHoraInicial = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerInicial = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
@@ -63,13 +63,13 @@ namespace CapacitaDesk {
             this.ListViewInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ListViewInstituicao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
-            this.Data,
+            this.Usuario,
             this.Hora,
-            this.Topico});
+            this.Curso});
             this.ListViewInstituicao.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListViewInstituicao.HideSelection = false;
             this.ListViewInstituicao.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.ListViewInstituicao.Location = new System.Drawing.Point(10, 26);
             this.ListViewInstituicao.Name = "ListViewInstituicao";
             this.ListViewInstituicao.Size = new System.Drawing.Size(526, 204);
@@ -82,20 +82,20 @@ namespace CapacitaDesk {
             this.Id.Text = "ID";
             this.Id.Width = 40;
             // 
-            // Data
+            // Usuario
             // 
-            this.Data.Text = "Data";
-            this.Data.Width = 90;
+            this.Usuario.Text = "Usuário";
+            this.Usuario.Width = 150;
             // 
             // Hora
             // 
             this.Hora.Text = "Hora";
-            this.Hora.Width = 90;
+            this.Hora.Width = 120;
             // 
-            // Topico
+            // Curso
             // 
-            this.Topico.Text = "Tópico";
-            this.Topico.Width = 300;
+            this.Curso.Text = "Curso";
+            this.Curso.Width = 200;
             // 
             // label4
             // 
@@ -160,6 +160,50 @@ namespace CapacitaDesk {
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            // 
+            // dateTimePickerFinal
+            // 
+            this.dateTimePickerFinal.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFinal.CustomFormat = " ";
+            this.dateTimePickerFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerFinal.Location = new System.Drawing.Point(161, 82);
+            this.dateTimePickerFinal.Name = "dateTimePickerFinal";
+            this.dateTimePickerFinal.Size = new System.Drawing.Size(126, 25);
+            this.dateTimePickerFinal.TabIndex = 113;
+            // 
+            // dateTimePickerInicial
+            // 
+            this.dateTimePickerInicial.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerInicial.CustomFormat = " ";
+            this.dateTimePickerInicial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dateTimePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerInicial.Location = new System.Drawing.Point(17, 82);
+            this.dateTimePickerInicial.Name = "dateTimePickerInicial";
+            this.dateTimePickerInicial.Size = new System.Drawing.Size(126, 25);
+            this.dateTimePickerInicial.TabIndex = 112;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label2.Location = new System.Drawing.Point(16, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.TabIndex = 110;
+            this.label2.Text = "Data Inicial";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label6.Location = new System.Drawing.Point(161, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.TabIndex = 111;
+            this.label6.Text = "Data Final";
             // 
             // BtnBuscarDenuncia
             // 
@@ -292,50 +336,6 @@ namespace CapacitaDesk {
             this.label13.TabIndex = 97;
             this.label13.Text = "Hora Final";
             // 
-            // dateTimePickerFinal
-            // 
-            this.dateTimePickerFinal.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerFinal.CustomFormat = " ";
-            this.dateTimePickerFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFinal.Location = new System.Drawing.Point(161, 82);
-            this.dateTimePickerFinal.Name = "dateTimePickerFinal";
-            this.dateTimePickerFinal.Size = new System.Drawing.Size(126, 25);
-            this.dateTimePickerFinal.TabIndex = 113;
-            // 
-            // dateTimePickerInicial
-            // 
-            this.dateTimePickerInicial.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerInicial.CustomFormat = " ";
-            this.dateTimePickerInicial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePickerInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerInicial.Location = new System.Drawing.Point(17, 82);
-            this.dateTimePickerInicial.Name = "dateTimePickerInicial";
-            this.dateTimePickerInicial.Size = new System.Drawing.Size(126, 25);
-            this.dateTimePickerInicial.TabIndex = 112;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label2.Location = new System.Drawing.Point(16, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
-            this.label2.TabIndex = 110;
-            this.label2.Text = "Data Inicial";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(161, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "Data Final";
-            // 
             // GerencDenuncia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -367,7 +367,7 @@ namespace CapacitaDesk {
 
         private System.Windows.Forms.ListView ListViewInstituicao;
         private System.Windows.Forms.ColumnHeader Id;
-        private System.Windows.Forms.ColumnHeader Data;
+        private System.Windows.Forms.ColumnHeader Ususário;
         private System.Windows.Forms.ColumnHeader Hora;
         private System.Windows.Forms.ColumnHeader Topico;
         private System.Windows.Forms.Label label4;
@@ -390,5 +390,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.DateTimePicker dateTimePickerInicial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ColumnHeader Usuario;
+        private System.Windows.Forms.ColumnHeader Curso;
     }
 }

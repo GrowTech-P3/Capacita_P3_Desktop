@@ -273,9 +273,29 @@ namespace CapacitaDesk.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IconeNovoAdmin1 {
+            get {
+                object obj = ResourceManager.GetObject("IconeNovoAdmin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconeNovoUser {
             get {
                 object obj = ResourceManager.GetObject("IconeNovoUser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconeNovoUser1 {
+            get {
+                object obj = ResourceManager.GetObject("IconeNovoUser1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,6 +17,9 @@ namespace CapacitaDesk {
 
         String[] nome = new string[2];
 
+        
+
+
         public Dashboard()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace CapacitaDesk {
             this.administrador = admin;
             nome = administrador.email.Split("@");
             labelEmailAdmin.Text = nome[0];
+      
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
@@ -124,6 +128,6 @@ namespace CapacitaDesk {
             Environment.Exit(0);
         }
 
-
+       
     }
 }
