@@ -66,6 +66,7 @@ namespace CapacitaDesk {
             this.TxtBoxEmailUsuario = new System.Windows.Forms.TextBox();
             this.BtnAtualizar = new System.Windows.Forms.Button();
             this.BtnRemover = new System.Windows.Forms.Button();
+            this.buttonResetSenha = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -276,7 +277,7 @@ namespace CapacitaDesk {
             this.panel3.Controls.Add(this.checkBoxMental);
             this.panel3.Controls.Add(this.checkBoxVisual);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Location = new System.Drawing.Point(145, 428);
+            this.panel3.Location = new System.Drawing.Point(153, 443);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(301, 127);
             this.panel3.TabIndex = 37;
@@ -300,9 +301,9 @@ namespace CapacitaDesk {
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Location = new System.Drawing.Point(524, 440);
+            this.BtnBuscar.Location = new System.Drawing.Point(516, 428);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(145, 44);
+            this.BtnBuscar.Size = new System.Drawing.Size(304, 44);
             this.BtnBuscar.TabIndex = 39;
             this.BtnBuscar.Text = "BUSCAR";
             this.BtnBuscar.UseVisualStyleBackColor = false;
@@ -325,7 +326,7 @@ namespace CapacitaDesk {
             this.BtnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCadastrarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(524, 498);
+            this.BtnCadastrarUsuario.Location = new System.Drawing.Point(516, 476);
             this.BtnCadastrarUsuario.Name = "BtnCadastrarUsuario";
             this.BtnCadastrarUsuario.Size = new System.Drawing.Size(145, 44);
             this.BtnCadastrarUsuario.TabIndex = 42;
@@ -580,7 +581,7 @@ namespace CapacitaDesk {
             this.BtnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAtualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnAtualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnAtualizar.Location = new System.Drawing.Point(676, 440);
+            this.BtnAtualizar.Location = new System.Drawing.Point(675, 476);
             this.BtnAtualizar.Name = "BtnAtualizar";
             this.BtnAtualizar.Size = new System.Drawing.Size(145, 44);
             this.BtnAtualizar.TabIndex = 44;
@@ -595,7 +596,7 @@ namespace CapacitaDesk {
             this.BtnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRemover.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnRemover.ForeColor = System.Drawing.Color.White;
-            this.BtnRemover.Location = new System.Drawing.Point(676, 498);
+            this.BtnRemover.Location = new System.Drawing.Point(676, 526);
             this.BtnRemover.Name = "BtnRemover";
             this.BtnRemover.Size = new System.Drawing.Size(145, 44);
             this.BtnRemover.TabIndex = 45;
@@ -603,12 +604,28 @@ namespace CapacitaDesk {
             this.BtnRemover.UseVisualStyleBackColor = false;
             this.BtnRemover.Click += new System.EventHandler(this.BtnRemover_Click);
             // 
+            // buttonResetSenha
+            // 
+            this.buttonResetSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.buttonResetSenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.buttonResetSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResetSenha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonResetSenha.ForeColor = System.Drawing.Color.White;
+            this.buttonResetSenha.Location = new System.Drawing.Point(516, 526);
+            this.buttonResetSenha.Name = "buttonResetSenha";
+            this.buttonResetSenha.Size = new System.Drawing.Size(145, 44);
+            this.buttonResetSenha.TabIndex = 46;
+            this.buttonResetSenha.Text = "RESET SENHA";
+            this.buttonResetSenha.UseVisualStyleBackColor = false;
+            this.buttonResetSenha.Click += new System.EventHandler(this.buttonResetSenha_Click);
+            // 
             // NovoUsuarioPcd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(930, 561);
+            this.ClientSize = new System.Drawing.Size(930, 582);
+            this.Controls.Add(this.buttonResetSenha);
             this.Controls.Add(this.BtnRemover);
             this.Controls.Add(this.BtnAtualizar);
             this.Controls.Add(this.groupBox1);
@@ -678,5 +695,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Button BtnRemover;
         private System.Windows.Forms.CheckBox checkBoxInativoUser;
         private System.Windows.Forms.CheckBox checkBoxAtivoUser;
+        private System.Windows.Forms.Button buttonResetSenha;
     }
 }

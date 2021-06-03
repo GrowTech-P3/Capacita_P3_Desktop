@@ -41,7 +41,7 @@ namespace CapacitaDesk {
                 home.Show();
             } else
             {
-                MessageBox.Show("Usuário não autorizado!");
+                MessageBox.Show(respUsuario.message);
             }  
         }
 
