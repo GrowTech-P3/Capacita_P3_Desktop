@@ -35,7 +35,7 @@ namespace CapacitaDesk {
 
             if (respUsuario.administrador != null && respUsuario.administrador.ativo.Trim().Equals("true"))
             {
-                MessageBox.Show("Login efetuado com sucesso!");
+                //MessageBox.Show("Login efetuado com sucesso!");
                 this.Hide();
                 Dashboard home = new Dashboard(respUsuario.administrador);
                 home.Show();
