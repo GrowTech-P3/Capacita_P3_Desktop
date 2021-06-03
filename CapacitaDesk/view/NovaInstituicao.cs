@@ -260,5 +260,26 @@ namespace CapacitaDesk {
             }
 
         }
+
+        private void buttonResetSenha_Click(object sender, EventArgs e)
+        {
+            Instituicao inst = new Instituicao();
+
+            inst.cnpj = maskedTextBoxCnpj.Text;
+
+            if (inst.cnpj != null && inst.cnpj.Length == 18)
+            {
+                String rota = "http://localhost:3000/instituicao/reset";
+                String json = JsonConvert.SerializeObject(inst);
+                Object objResponse = ConnectionAPI.post(rota, json, adminstrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else {
+                MessageBox.Show("Informe ao menos o CNPJ para resetar senha!");
+            }
+        }
     }
 }

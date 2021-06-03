@@ -312,5 +312,25 @@ namespace CapacitaDesk {
                 MessageBox.Show(validate);
             }
         }
+
+        private void buttonResetSenha_Click(object sender, EventArgs e)
+        {
+            UsuarioPcd usuario = new UsuarioPcd();
+
+            usuario.cpf = maskedTextBoxCPF.Text;
+            if (usuario.cpf != null && usuario.cpf.Length == 14)
+            {
+                String rota = "http://localhost:3000/usuariopcd/reset";
+                String json = JsonConvert.SerializeObject(usuario);
+                Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+                MessageBox.Show(respUsuario.message);
+                limparCampos();
+            }
+            else {
+                MessageBox.Show("Informe ao menos o CPF para resetar senha!");
+            }
+        }
     }
 }
