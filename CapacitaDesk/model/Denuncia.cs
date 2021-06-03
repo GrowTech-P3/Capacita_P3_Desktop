@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class Denuncia
+    class DenunciaTemp
     {
         public String idDenuncia { get; set; }
         public UsuarioPcd usuarioPcd { get; set; }

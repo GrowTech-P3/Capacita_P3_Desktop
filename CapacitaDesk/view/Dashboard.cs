@@ -30,8 +30,8 @@ namespace CapacitaDesk {
             this.administrador = admin;
             nome = administrador.email.Split("@");
             labelEmailAdmin.Text = nome[0];
-            labelData.Text = DateTime.Now.ToString("dd/mm/yyyy");
-            labelHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            labelData.Text = DateTime.Now.ToString("dd/m/yyyy");
+            labelHora.Text = DateTime.Now.ToString("hh:mm:ss");
             
            
            

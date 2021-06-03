@@ -8,7 +8,7 @@ namespace CapacitaDesk.model
 {
     class DenunciaTopico
     {
-        public Denuncia denuncia { get; set;}
+        public DenunciaTemp denuncia { get; set;}
         public ForumTopico forumTopico { get; set; }
 
     }

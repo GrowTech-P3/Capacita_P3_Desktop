@@ -24,13 +24,14 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerencDenuncia));
             this.ListViewInstituicao = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.Usuario = new System.Windows.Forms.ColumnHeader();
-            this.Hora = new System.Windows.Forms.ColumnHeader();
             this.Curso = new System.Windows.Forms.ColumnHeader();
+            this.Instituicao = new System.Windows.Forms.ColumnHeader();
+            this.Data = new System.Windows.Forms.ColumnHeader();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtBoxNomeCurso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,12 +65,13 @@ namespace CapacitaDesk {
             this.ListViewInstituicao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Usuario,
-            this.Hora,
-            this.Curso});
+            this.Curso,
+            this.Instituicao,
+            this.Data});
             this.ListViewInstituicao.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListViewInstituicao.HideSelection = false;
             this.ListViewInstituicao.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.ListViewInstituicao.Location = new System.Drawing.Point(10, 26);
             this.ListViewInstituicao.Name = "ListViewInstituicao";
             this.ListViewInstituicao.Size = new System.Drawing.Size(526, 204);
@@ -85,17 +87,21 @@ namespace CapacitaDesk {
             // Usuario
             // 
             this.Usuario.Text = "Usuário";
-            this.Usuario.Width = 150;
-            // 
-            // Hora
-            // 
-            this.Hora.Text = "Hora";
-            this.Hora.Width = 120;
+            this.Usuario.Width = 120;
             // 
             // Curso
             // 
             this.Curso.Text = "Curso";
-            this.Curso.Width = 200;
+            this.Curso.Width = 120;
+            // 
+            // Instituicao
+            // 
+            this.Instituicao.Text = "instituição";
+            this.Instituicao.Width = 150;
+            // 
+            // Data
+            // 
+            this.Data.Text = "Data";
             // 
             // label4
             // 
@@ -219,6 +225,7 @@ namespace CapacitaDesk {
             this.BtnBuscarDenuncia.TabIndex = 108;
             this.BtnBuscarDenuncia.Text = "BUSCAR";
             this.BtnBuscarDenuncia.UseVisualStyleBackColor = false;
+            this.BtnBuscarDenuncia.Click += new System.EventHandler(this.BtnBuscarDenuncia_Click);
             // 
             // groupBox2
             // 
@@ -368,7 +375,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.ListView ListViewInstituicao;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Ususário;
-        private System.Windows.Forms.ColumnHeader Hora;
+        private System.Windows.Forms.ColumnHeader Data;
         private System.Windows.Forms.ColumnHeader Topico;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtBoxNomeCurso;
@@ -391,6 +398,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ColumnHeader Usuario;
+        private System.Windows.Forms.ColumnHeader Instituicao;
         private System.Windows.Forms.ColumnHeader Curso;
     }
 }

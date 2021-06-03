@@ -28,7 +28,6 @@ namespace CapacitaDesk {
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHora = new System.Windows.Forms.Label();
             this.labelData = new System.Windows.Forms.Label();
-            this.textBoxDataHora = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,7 +56,6 @@ namespace CapacitaDesk {
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.panel1.Controls.Add(this.labelHora);
             this.panel1.Controls.Add(this.labelData);
-            this.panel1.Controls.Add(this.textBoxDataHora);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -87,13 +85,6 @@ namespace CapacitaDesk {
             this.labelData.Size = new System.Drawing.Size(80, 17);
             this.labelData.TabIndex = 16;
             this.labelData.Text = "dd/mm/yyyy";
-            // 
-            // textBoxDataHora
-            // 
-            this.textBoxDataHora.Location = new System.Drawing.Point(0, 0);
-            this.textBoxDataHora.Name = "textBoxDataHora";
-            this.textBoxDataHora.Size = new System.Drawing.Size(100, 23);
-            this.textBoxDataHora.TabIndex = 0;
             // 
             // label2
             // 
@@ -369,7 +360,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelEmailAdmin;
-        private System.Windows.Forms.TextBox textBoxDataHora;
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelData;
         private System.Windows.Forms.PictureBox pictureBox1;
