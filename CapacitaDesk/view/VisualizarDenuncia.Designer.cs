@@ -35,9 +35,7 @@ namespace CapacitaDesk {
             this.label4 = new System.Windows.Forms.Label();
             this.TxtBoxNomeDaInstituicao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxData = new System.Windows.Forms.TextBox();
-            this.TxtBoxTitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBoxEmail = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,6 +43,8 @@ namespace CapacitaDesk {
             this.BtnPostar = new System.Windows.Forms.Button();
             this.BtnEditarDenuncia = new System.Windows.Forms.Button();
             this.BtnExcluirDenuncia = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtBoxNomeCursoDenuncia = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel3.SuspendLayout();
@@ -113,16 +113,16 @@ namespace CapacitaDesk {
             this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(58, 44);
             this.TxtBoxNomeUsuario.Name = "TxtBoxNomeUsuario";
             this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(386, 15);
-            this.TxtBoxNomeUsuario.TabIndex = 52;
+            this.TxtBoxNomeUsuario.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.TxtBoxNomeCursoDenuncia);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TxtBoxNomeDaInstituicao);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtBoxData);
-            this.groupBox1.Controls.Add(this.TxtBoxTitulo);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.TxtBoxEmail);
             this.groupBox1.Controls.Add(this.label2);
@@ -155,7 +155,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomeDaInstituicao.Location = new System.Drawing.Point(58, 121);
             this.TxtBoxNomeDaInstituicao.Name = "TxtBoxNomeDaInstituicao";
             this.TxtBoxNomeDaInstituicao.Size = new System.Drawing.Size(386, 15);
-            this.TxtBoxNomeDaInstituicao.TabIndex = 58;
+            this.TxtBoxNomeDaInstituicao.TabIndex = 4;
             // 
             // label3
             // 
@@ -168,17 +168,6 @@ namespace CapacitaDesk {
             this.label3.TabIndex = 57;
             this.label3.Text = "Data";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label5.Location = new System.Drawing.Point(58, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 17);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Título";
-            // 
             // TxtBoxData
             // 
             this.TxtBoxData.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -187,17 +176,7 @@ namespace CapacitaDesk {
             this.TxtBoxData.Location = new System.Drawing.Point(335, 82);
             this.TxtBoxData.Name = "TxtBoxData";
             this.TxtBoxData.Size = new System.Drawing.Size(109, 15);
-            this.TxtBoxData.TabIndex = 56;
-            // 
-            // TxtBoxTitulo
-            // 
-            this.TxtBoxTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTitulo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxTitulo.Location = new System.Drawing.Point(58, 163);
-            this.TxtBoxTitulo.Name = "TxtBoxTitulo";
-            this.TxtBoxTitulo.Size = new System.Drawing.Size(386, 15);
-            this.TxtBoxTitulo.TabIndex = 60;
+            this.TxtBoxData.TabIndex = 3;
             // 
             // label1
             // 
@@ -218,7 +197,7 @@ namespace CapacitaDesk {
             this.TxtBoxEmail.Location = new System.Drawing.Point(58, 82);
             this.TxtBoxEmail.Name = "TxtBoxEmail";
             this.TxtBoxEmail.Size = new System.Drawing.Size(271, 15);
-            this.TxtBoxEmail.TabIndex = 54;
+            this.TxtBoxEmail.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -286,6 +265,27 @@ namespace CapacitaDesk {
             this.BtnExcluirDenuncia.Text = "RESPONDER";
             this.BtnExcluirDenuncia.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label5.Location = new System.Drawing.Point(58, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Curso";
+            // 
+            // TxtBoxCursoDenuncia
+            // 
+            this.TxtBoxNomeCursoDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxNomeCursoDenuncia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeCursoDenuncia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeCursoDenuncia.Location = new System.Drawing.Point(58, 159);
+            this.TxtBoxNomeCursoDenuncia.Name = "TxtBoxCursoDenuncia";
+            this.TxtBoxNomeCursoDenuncia.Size = new System.Drawing.Size(386, 15);
+            this.TxtBoxNomeCursoDenuncia.TabIndex = 60;
+            // 
             // VisualizarDenuncia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -332,10 +332,10 @@ namespace CapacitaDesk {
         private System.Windows.Forms.TextBox TxtBoxEmail;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TxtBoxDescricaoDenuncia;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtBoxTitulo;
         private System.Windows.Forms.Button BtnPostar;
         private System.Windows.Forms.Button BtnEditarDenuncia;
         private System.Windows.Forms.Button BtnExcluirDenuncia;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtBoxNomeCursoDenuncia;
     }
 }

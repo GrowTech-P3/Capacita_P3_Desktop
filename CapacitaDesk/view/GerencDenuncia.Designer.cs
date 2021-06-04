@@ -24,9 +24,9 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GerencDenuncia));
-            this.ListViewInstituicao = new System.Windows.Forms.ListView();
+            this.ListViewDenuncia = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.Usuario = new System.Windows.Forms.ColumnHeader();
             this.Curso = new System.Windows.Forms.ColumnHeader();
@@ -44,7 +44,6 @@ namespace CapacitaDesk {
             this.BtnBuscarDenuncia = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BtnExibirDenuncia = new System.Windows.Forms.Button();
-            this.BtnExcluirDenuncia = new System.Windows.Forms.Button();
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,25 +58,27 @@ namespace CapacitaDesk {
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ListViewInstituicao
+            // ListViewDenuncia
             // 
-            this.ListViewInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ListViewInstituicao.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListViewDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ListViewDenuncia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Usuario,
             this.Curso,
             this.Instituicao,
             this.Data});
-            this.ListViewInstituicao.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ListViewInstituicao.HideSelection = false;
-            this.ListViewInstituicao.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.ListViewInstituicao.Location = new System.Drawing.Point(10, 26);
-            this.ListViewInstituicao.Name = "ListViewInstituicao";
-            this.ListViewInstituicao.Size = new System.Drawing.Size(526, 204);
-            this.ListViewInstituicao.TabIndex = 0;
-            this.ListViewInstituicao.UseCompatibleStateImageBehavior = false;
-            this.ListViewInstituicao.View = System.Windows.Forms.View.Details;
+            this.ListViewDenuncia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListViewDenuncia.FullRowSelect = true;
+            this.ListViewDenuncia.HideSelection = false;
+            this.ListViewDenuncia.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.ListViewDenuncia.Location = new System.Drawing.Point(10, 26);
+            this.ListViewDenuncia.MultiSelect = false;
+            this.ListViewDenuncia.Name = "ListViewDenuncia";
+            this.ListViewDenuncia.Size = new System.Drawing.Size(526, 204);
+            this.ListViewDenuncia.TabIndex = 0;
+            this.ListViewDenuncia.UseCompatibleStateImageBehavior = false;
+            this.ListViewDenuncia.View = System.Windows.Forms.View.Details;
             // 
             // Id
             // 
@@ -229,7 +230,7 @@ namespace CapacitaDesk {
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ListViewInstituicao);
+            this.groupBox2.Controls.Add(this.ListViewDenuncia);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox2.Location = new System.Drawing.Point(120, 261);
@@ -247,28 +248,13 @@ namespace CapacitaDesk {
             this.BtnExibirDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExibirDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExibirDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExibirDenuncia.Location = new System.Drawing.Point(407, 508);
+            this.BtnExibirDenuncia.Location = new System.Drawing.Point(533, 506);
             this.BtnExibirDenuncia.Name = "BtnExibirDenuncia";
             this.BtnExibirDenuncia.Size = new System.Drawing.Size(121, 35);
             this.BtnExibirDenuncia.TabIndex = 100;
             this.BtnExibirDenuncia.Text = "EXIBIR";
             this.BtnExibirDenuncia.UseVisualStyleBackColor = false;
             this.BtnExibirDenuncia.Click += new System.EventHandler(this.BtnExibirDenuncia_Click);
-            // 
-            // BtnExcluirDenuncia
-            // 
-            this.BtnExcluirDenuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnExcluirDenuncia.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnExcluirDenuncia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnExcluirDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExcluirDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnExcluirDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExcluirDenuncia.Location = new System.Drawing.Point(280, 508);
-            this.BtnExcluirDenuncia.Name = "BtnExcluirDenuncia";
-            this.BtnExcluirDenuncia.Size = new System.Drawing.Size(121, 35);
-            this.BtnExcluirDenuncia.TabIndex = 101;
-            this.BtnExcluirDenuncia.Text = "EXCLUIR";
-            this.BtnExcluirDenuncia.UseVisualStyleBackColor = false;
             // 
             // PictureBoxLogo
             // 
@@ -351,7 +337,6 @@ namespace CapacitaDesk {
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.BtnExcluirDenuncia);
             this.Controls.Add(this.BtnExibirDenuncia);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -372,7 +357,7 @@ namespace CapacitaDesk {
 
         #endregion
 
-        private System.Windows.Forms.ListView ListViewInstituicao;
+        private System.Windows.Forms.ListView ListViewDenuncia;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Ususário;
         private System.Windows.Forms.ColumnHeader Data;
@@ -384,7 +369,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button BtnExibirDenuncia;
-        private System.Windows.Forms.Button BtnExcluirDenuncia;
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
