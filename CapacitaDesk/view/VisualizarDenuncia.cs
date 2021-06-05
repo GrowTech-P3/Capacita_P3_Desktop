@@ -23,10 +23,46 @@ namespace CapacitaDesk {
 
             TxtBoxNomeUsuario.Text = denunciaCurso.usuario_pcd.nome;
             TxtBoxNomeDaInstituicao.Text = denunciaCurso.cursos[0].instituicao.nome;
-            TxtBoxEmail.Text = denunciaCurso.usuario_pcd.email;
+            TxtBoxEmail.Text = denunciaCurso.usuario_pcd.usuario.email;
             TxtBoxData.Text = Convert.ToDateTime(denunciaCurso.data).ToString("dd/MM/yy");
             TxtBoxNomeCursoDenuncia.Text = denunciaCurso.cursos[0].nome_curso;
             TxtBoxDescricaoDenuncia.Text = denunciaCurso.descricao;
+        }
+
+        private void BtnEncerrarDenuncia_Click(object sender, EventArgs e) {
+            
+            String rota = "http://localhost:3000/denunciaCurso-fechar";
+            String json = JsonConvert.SerializeObject(denunciaCurso);
+
+            Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
+            RespUsuario respDenunciaCurso = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+            MessageBox.Show(respDenunciaCurso.message);
+
+            Dispose();
+            GerencDenuncia regGerenciarDenuncia = new GerencDenuncia(administrador);
+            regGerenciarDenuncia.ShowDialog();
+        }
+
+        private void BtnAvaliarDenuncia_Click(object sender, EventArgs e) {
+            Dispose();
+            GerencDenuncia regGerenciarDenuncia = new GerencDenuncia(administrador);
+            regGerenciarDenuncia.ShowDialog();
+        }
+
+        private void BtnSuspenderCurso_Click(object sender, EventArgs e) {
+           
+            String rota = "http://localhost:3000/denunciaCurso-curso-inativo";
+            String json = JsonConvert.SerializeObject(denunciaCurso);
+
+            Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
+            RespUsuario respDenunciaCurso = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+            MessageBox.Show(respDenunciaCurso.message);
+
+            Dispose();
+            GerencDenuncia regGerenciarDenuncia = new GerencDenuncia(administrador);
+            regGerenciarDenuncia.ShowDialog();
         }
     }
 }

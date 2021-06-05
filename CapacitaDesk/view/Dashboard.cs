@@ -130,6 +130,12 @@ namespace CapacitaDesk {
             Environment.Exit(0);
         }
 
-       
+        private void labelEmailAdmin_Click(object sender, EventArgs e) {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e) {
+
+        }
     }
 }

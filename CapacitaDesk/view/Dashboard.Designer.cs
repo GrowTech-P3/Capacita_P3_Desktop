@@ -87,7 +87,7 @@ namespace CapacitaDesk {
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapacitaDesk.Properties.Resources.usuer;
-            this.pictureBox1.Location = new System.Drawing.Point(1162, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(1139, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +99,7 @@ namespace CapacitaDesk {
             this.labelEmailAdmin.AutoSize = true;
             this.labelEmailAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelEmailAdmin.ForeColor = System.Drawing.Color.White;
-            this.labelEmailAdmin.Location = new System.Drawing.Point(1186, 22);
+            this.labelEmailAdmin.Location = new System.Drawing.Point(1172, 18);
             this.labelEmailAdmin.Name = "labelEmailAdmin";
             this.labelEmailAdmin.Size = new System.Drawing.Size(57, 21);
             this.labelEmailAdmin.TabIndex = 15;

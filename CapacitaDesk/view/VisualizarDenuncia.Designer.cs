@@ -32,6 +32,8 @@ namespace CapacitaDesk {
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxNomeUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtBoxNomeCursoDenuncia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtBoxNomeDaInstituicao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,11 +42,9 @@ namespace CapacitaDesk {
             this.TxtBoxEmail = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TxtBoxDescricaoDenuncia = new System.Windows.Forms.TextBox();
-            this.BtnPostar = new System.Windows.Forms.Button();
-            this.BtnEditarDenuncia = new System.Windows.Forms.Button();
-            this.BtnExcluirDenuncia = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtBoxNomeCursoDenuncia = new System.Windows.Forms.TextBox();
+            this.BtnEncerrarDenuncia = new System.Windows.Forms.Button();
+            this.BtnAvaliarDenuncia = new System.Windows.Forms.Button();
+            this.BtnSuspenderCurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel3.SuspendLayout();
@@ -136,6 +136,27 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.label5.Location = new System.Drawing.Point(58, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Curso";
+            // 
+            // TxtBoxNomeCursoDenuncia
+            // 
+            this.TxtBoxNomeCursoDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxNomeCursoDenuncia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeCursoDenuncia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeCursoDenuncia.Location = new System.Drawing.Point(58, 159);
+            this.TxtBoxNomeCursoDenuncia.Name = "TxtBoxNomeCursoDenuncia";
+            this.TxtBoxNomeCursoDenuncia.Size = new System.Drawing.Size(386, 15);
+            this.TxtBoxNomeCursoDenuncia.TabIndex = 60;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -220,71 +241,53 @@ namespace CapacitaDesk {
             this.TxtBoxDescricaoDenuncia.Size = new System.Drawing.Size(479, 119);
             this.TxtBoxDescricaoDenuncia.TabIndex = 0;
             // 
-            // BtnPostar
+            // BtnEncerrarDenuncia
             // 
-            this.BtnPostar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnPostar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnPostar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnPostar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPostar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnPostar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnPostar.Location = new System.Drawing.Point(481, 498);
-            this.BtnPostar.Name = "BtnPostar";
-            this.BtnPostar.Size = new System.Drawing.Size(121, 25);
-            this.BtnPostar.TabIndex = 109;
-            this.BtnPostar.Text = "RECUSAR";
-            this.BtnPostar.UseVisualStyleBackColor = false;
+            this.BtnEncerrarDenuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnEncerrarDenuncia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnEncerrarDenuncia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnEncerrarDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEncerrarDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnEncerrarDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnEncerrarDenuncia.Location = new System.Drawing.Point(496, 500);
+            this.BtnEncerrarDenuncia.Name = "BtnEncerrarDenuncia";
+            this.BtnEncerrarDenuncia.Size = new System.Drawing.Size(121, 25);
+            this.BtnEncerrarDenuncia.TabIndex = 109;
+            this.BtnEncerrarDenuncia.Text = "ENCERRAR";
+            this.BtnEncerrarDenuncia.UseVisualStyleBackColor = false;
+            this.BtnEncerrarDenuncia.Click += new System.EventHandler(this.BtnEncerrarDenuncia_Click);
             // 
-            // BtnEditarDenuncia
+            // BtnAvaliarDenuncia
             // 
-            this.BtnEditarDenuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnEditarDenuncia.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnEditarDenuncia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnEditarDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditarDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnEditarDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnEditarDenuncia.Location = new System.Drawing.Point(352, 498);
-            this.BtnEditarDenuncia.Name = "BtnEditarDenuncia";
-            this.BtnEditarDenuncia.Size = new System.Drawing.Size(121, 25);
-            this.BtnEditarDenuncia.TabIndex = 110;
-            this.BtnEditarDenuncia.Text = "ACEITAR";
-            this.BtnEditarDenuncia.UseVisualStyleBackColor = false;
+            this.BtnAvaliarDenuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnAvaliarDenuncia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnAvaliarDenuncia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnAvaliarDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAvaliarDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnAvaliarDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnAvaliarDenuncia.Location = new System.Drawing.Point(367, 500);
+            this.BtnAvaliarDenuncia.Name = "BtnAvaliarDenuncia";
+            this.BtnAvaliarDenuncia.Size = new System.Drawing.Size(121, 25);
+            this.BtnAvaliarDenuncia.TabIndex = 110;
+            this.BtnAvaliarDenuncia.Text = "AVALIAR";
+            this.BtnAvaliarDenuncia.UseVisualStyleBackColor = false;
+            this.BtnAvaliarDenuncia.Click += new System.EventHandler(this.BtnAvaliarDenuncia_Click);
             // 
-            // BtnExcluirDenuncia
+            // BtnSuspenderCurso
             // 
-            this.BtnExcluirDenuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.BtnExcluirDenuncia.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnExcluirDenuncia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.BtnExcluirDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExcluirDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnExcluirDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExcluirDenuncia.Location = new System.Drawing.Point(225, 498);
-            this.BtnExcluirDenuncia.Name = "BtnExcluirDenuncia";
-            this.BtnExcluirDenuncia.Size = new System.Drawing.Size(121, 25);
-            this.BtnExcluirDenuncia.TabIndex = 111;
-            this.BtnExcluirDenuncia.Text = "RESPONDER";
-            this.BtnExcluirDenuncia.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label5.Location = new System.Drawing.Point(58, 139);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Curso";
-            // 
-            // TxtBoxCursoDenuncia
-            // 
-            this.TxtBoxNomeCursoDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxNomeCursoDenuncia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeCursoDenuncia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNomeCursoDenuncia.Location = new System.Drawing.Point(58, 159);
-            this.TxtBoxNomeCursoDenuncia.Name = "TxtBoxCursoDenuncia";
-            this.TxtBoxNomeCursoDenuncia.Size = new System.Drawing.Size(386, 15);
-            this.TxtBoxNomeCursoDenuncia.TabIndex = 60;
+            this.BtnSuspenderCurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.BtnSuspenderCurso.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnSuspenderCurso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.BtnSuspenderCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSuspenderCurso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnSuspenderCurso.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.BtnSuspenderCurso.Location = new System.Drawing.Point(192, 500);
+            this.BtnSuspenderCurso.Name = "BtnSuspenderCurso";
+            this.BtnSuspenderCurso.Size = new System.Drawing.Size(169, 25);
+            this.BtnSuspenderCurso.TabIndex = 111;
+            this.BtnSuspenderCurso.Text = "SUSPENDER CURSO";
+            this.BtnSuspenderCurso.UseVisualStyleBackColor = false;
+            this.BtnSuspenderCurso.Click += new System.EventHandler(this.BtnSuspenderCurso_Click);
             // 
             // VisualizarDenuncia
             // 
@@ -292,9 +295,9 @@ namespace CapacitaDesk {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.BtnExcluirDenuncia);
-            this.Controls.Add(this.BtnEditarDenuncia);
-            this.Controls.Add(this.BtnPostar);
+            this.Controls.Add(this.BtnSuspenderCurso);
+            this.Controls.Add(this.BtnAvaliarDenuncia);
+            this.Controls.Add(this.BtnEncerrarDenuncia);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
@@ -332,9 +335,9 @@ namespace CapacitaDesk {
         private System.Windows.Forms.TextBox TxtBoxEmail;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox TxtBoxDescricaoDenuncia;
-        private System.Windows.Forms.Button BtnPostar;
-        private System.Windows.Forms.Button BtnEditarDenuncia;
-        private System.Windows.Forms.Button BtnExcluirDenuncia;
+        private System.Windows.Forms.Button BtnEncerrarDenuncia;
+        private System.Windows.Forms.Button BtnAvaliarDenuncia;
+        private System.Windows.Forms.Button BtnSuspenderCurso;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtBoxNomeCursoDenuncia;
     }
