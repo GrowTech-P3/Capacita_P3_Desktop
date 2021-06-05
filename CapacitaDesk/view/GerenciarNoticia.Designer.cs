@@ -34,25 +34,23 @@ namespace CapacitaDesk {
             this.BtnExcluirNoticia = new System.Windows.Forms.Button();
             this.BtnExibirNoticia = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ListViewDenuncia = new System.Windows.Forms.ListView();
+            this.ListViewNoticia = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.Data = new System.Windows.Forms.ColumnHeader();
-            this.Hora = new System.Windows.Forms.ColumnHeader();
-            this.Topico = new System.Windows.Forms.ColumnHeader();
+            this.Instituicao = new System.Windows.Forms.ColumnHeader();
+            this.Titulo = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnBuscarNoticia = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.TxtDataInicial = new System.Windows.Forms.TextBox();
-            this.TxtBoxHoraFinal = new System.Windows.Forms.TextBox();
-            this.TxtBoxUsuarioDenuncia = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.TxtBoxUsuarioNoticia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtBoxHoraInicial = new System.Windows.Forms.TextBox();
-            this.TxtBoxTopico = new System.Windows.Forms.TextBox();
+            this.TxtBoxTitulo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtDataFinal = new System.Windows.Forms.TextBox();
+            this.btnPostarNoticia = new System.Windows.Forms.Button();
+            this.btnAlterarNoticia = new System.Windows.Forms.Button();
+            this.dtpDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,10 +107,10 @@ namespace CapacitaDesk {
             this.BtnExcluirNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExcluirNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExcluirNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExcluirNoticia.Location = new System.Drawing.Point(414, 510);
+            this.BtnExcluirNoticia.Location = new System.Drawing.Point(276, 481);
             this.BtnExcluirNoticia.Name = "BtnExcluirNoticia";
             this.BtnExcluirNoticia.Size = new System.Drawing.Size(121, 35);
-            this.BtnExcluirNoticia.TabIndex = 108;
+            this.BtnExcluirNoticia.TabIndex = 7;
             this.BtnExcluirNoticia.Text = "EXCLUIR";
             this.BtnExcluirNoticia.UseVisualStyleBackColor = false;
             // 
@@ -124,43 +122,43 @@ namespace CapacitaDesk {
             this.BtnExibirNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExibirNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExibirNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExibirNoticia.Location = new System.Drawing.Point(541, 510);
+            this.BtnExibirNoticia.Location = new System.Drawing.Point(530, 481);
             this.BtnExibirNoticia.Name = "BtnExibirNoticia";
             this.BtnExibirNoticia.Size = new System.Drawing.Size(121, 35);
-            this.BtnExibirNoticia.TabIndex = 107;
+            this.BtnExibirNoticia.TabIndex = 9;
             this.BtnExibirNoticia.Text = "EXIBIR";
             this.BtnExibirNoticia.UseVisualStyleBackColor = false;
             this.BtnExibirNoticia.Click += new System.EventHandler(this.BtnExibirNoticia_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.ListViewDenuncia);
+            this.groupBox2.Controls.Add(this.ListViewNoticia);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox2.Location = new System.Drawing.Point(117, 265);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(545, 239);
+            this.groupBox2.Size = new System.Drawing.Size(545, 197);
             this.groupBox2.TabIndex = 106;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de notícias";
             // 
-            // ListViewDenuncia
+            // ListViewNoticia
             // 
-            this.ListViewDenuncia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListViewNoticia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Data,
-            this.Hora,
-            this.Topico});
-            this.ListViewDenuncia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ListViewDenuncia.HideSelection = false;
-            this.ListViewDenuncia.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.Instituicao,
+            this.Titulo});
+            this.ListViewNoticia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListViewNoticia.HideSelection = false;
+            this.ListViewNoticia.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.ListViewDenuncia.Location = new System.Drawing.Point(8, 26);
-            this.ListViewDenuncia.Name = "ListViewDenuncia";
-            this.ListViewDenuncia.Size = new System.Drawing.Size(527, 204);
-            this.ListViewDenuncia.TabIndex = 0;
-            this.ListViewDenuncia.UseCompatibleStateImageBehavior = false;
-            this.ListViewDenuncia.View = System.Windows.Forms.View.Details;
+            this.ListViewNoticia.Location = new System.Drawing.Point(8, 26);
+            this.ListViewNoticia.Name = "ListViewNoticia";
+            this.ListViewNoticia.Size = new System.Drawing.Size(527, 161);
+            this.ListViewNoticia.TabIndex = 10;
+            this.ListViewNoticia.UseCompatibleStateImageBehavior = false;
+            this.ListViewNoticia.View = System.Windows.Forms.View.Details;
             // 
             // Id
             // 
@@ -170,33 +168,29 @@ namespace CapacitaDesk {
             // Data
             // 
             this.Data.Text = "Data";
-            this.Data.Width = 90;
+            this.Data.Width = 70;
             // 
-            // Hora
+            // Instituicao
             // 
-            this.Hora.Text = "Hora";
-            this.Hora.Width = 90;
+            this.Instituicao.Text = "Instituição";
+            this.Instituicao.Width = 130;
             // 
-            // Topico
+            // Titulo
             // 
-            this.Topico.Text = "Tópico";
-            this.Topico.Width = 300;
+            this.Titulo.Text = "Título";
+            this.Titulo.Width = 300;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpDataFinal);
+            this.groupBox1.Controls.Add(this.dtpDataInicial);
             this.groupBox1.Controls.Add(this.BtnBuscarNoticia);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.TxtDataInicial);
-            this.groupBox1.Controls.Add(this.TxtBoxHoraFinal);
-            this.groupBox1.Controls.Add(this.TxtBoxUsuarioDenuncia);
-            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.TxtBoxUsuarioNoticia);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.TxtBoxHoraInicial);
-            this.groupBox1.Controls.Add(this.TxtBoxTopico);
+            this.groupBox1.Controls.Add(this.TxtBoxTitulo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TxtDataFinal);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
@@ -218,7 +212,7 @@ namespace CapacitaDesk {
             this.BtnBuscarNoticia.Location = new System.Drawing.Point(422, 67);
             this.BtnBuscarNoticia.Name = "BtnBuscarNoticia";
             this.BtnBuscarNoticia.Size = new System.Drawing.Size(112, 35);
-            this.BtnBuscarNoticia.TabIndex = 108;
+            this.BtnBuscarNoticia.TabIndex = 5;
             this.BtnBuscarNoticia.Text = "BUSCAR";
             this.BtnBuscarNoticia.UseVisualStyleBackColor = false;
             // 
@@ -227,101 +221,49 @@ namespace CapacitaDesk {
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label2.Location = new System.Drawing.Point(27, 26);
+            this.label2.Location = new System.Drawing.Point(19, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 17);
             this.label2.TabIndex = 73;
             this.label2.Text = "Data Inicial";
             // 
-            // label13
+            // TxtBoxUsuarioNoticia
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label13.Location = new System.Drawing.Point(338, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 17);
-            this.label13.TabIndex = 97;
-            this.label13.Text = "Hora Final";
-            // 
-            // TxtDataInicial
-            // 
-            this.TxtDataInicial.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtDataInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataInicial.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtDataInicial.Location = new System.Drawing.Point(27, 46);
-            this.TxtDataInicial.Name = "TxtDataInicial";
-            this.TxtDataInicial.Size = new System.Drawing.Size(74, 15);
-            this.TxtDataInicial.TabIndex = 72;
-            // 
-            // TxtBoxHoraFinal
-            // 
-            this.TxtBoxHoraFinal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxHoraFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxHoraFinal.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxHoraFinal.Location = new System.Drawing.Point(339, 46);
-            this.TxtBoxHoraFinal.Name = "TxtBoxHoraFinal";
-            this.TxtBoxHoraFinal.Size = new System.Drawing.Size(74, 15);
-            this.TxtBoxHoraFinal.TabIndex = 96;
-            // 
-            // TxtBoxUsuarioDenuncia
-            // 
-            this.TxtBoxUsuarioDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxUsuarioDenuncia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxUsuarioDenuncia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxUsuarioDenuncia.Location = new System.Drawing.Point(27, 86);
-            this.TxtBoxUsuarioDenuncia.Name = "TxtBoxUsuarioDenuncia";
-            this.TxtBoxUsuarioDenuncia.Size = new System.Drawing.Size(218, 15);
-            this.TxtBoxUsuarioDenuncia.TabIndex = 74;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label14.Location = new System.Drawing.Point(258, 26);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 17);
-            this.label14.TabIndex = 95;
-            this.label14.Text = "Hora Inicial";
+            this.TxtBoxUsuarioNoticia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxUsuarioNoticia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxUsuarioNoticia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxUsuarioNoticia.Location = new System.Drawing.Point(19, 41);
+            this.TxtBoxUsuarioNoticia.Name = "TxtBoxUsuarioNoticia";
+            this.TxtBoxUsuarioNoticia.Size = new System.Drawing.Size(240, 15);
+            this.TxtBoxUsuarioNoticia.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label3.Location = new System.Drawing.Point(27, 68);
+            this.label3.Location = new System.Drawing.Point(19, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 17);
             this.label3.TabIndex = 75;
             this.label3.Text = "Nome de usuário";
             // 
-            // TxtBoxHoraInicial
+            // TxtBoxTitulo
             // 
-            this.TxtBoxHoraInicial.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxHoraInicial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxHoraInicial.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxHoraInicial.Location = new System.Drawing.Point(258, 46);
-            this.TxtBoxHoraInicial.Name = "TxtBoxHoraInicial";
-            this.TxtBoxHoraInicial.Size = new System.Drawing.Size(74, 15);
-            this.TxtBoxHoraInicial.TabIndex = 94;
-            // 
-            // TxtBoxTopico
-            // 
-            this.TxtBoxTopico.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxTopico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTopico.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxTopico.Location = new System.Drawing.Point(251, 86);
-            this.TxtBoxTopico.Name = "TxtBoxTopico";
-            this.TxtBoxTopico.Size = new System.Drawing.Size(162, 15);
-            this.TxtBoxTopico.TabIndex = 76;
+            this.TxtBoxTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTitulo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTitulo.Location = new System.Drawing.Point(265, 41);
+            this.TxtBoxTitulo.Name = "TxtBoxTitulo";
+            this.TxtBoxTitulo.Size = new System.Drawing.Size(269, 15);
+            this.TxtBoxTitulo.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(114, 26);
+            this.label6.Location = new System.Drawing.Point(184, 59);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 93;
@@ -332,21 +274,58 @@ namespace CapacitaDesk {
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label4.Location = new System.Drawing.Point(251, 68);
+            this.label4.Location = new System.Drawing.Point(265, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 17);
+            this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 77;
-            this.label4.Text = "Tópico";
+            this.label4.Text = "Título";
             // 
-            // TxtDataFinal
+            // btnPostarNoticia
             // 
-            this.TxtDataFinal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtDataFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDataFinal.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtDataFinal.Location = new System.Drawing.Point(114, 46);
-            this.TxtDataFinal.Name = "TxtDataFinal";
-            this.TxtDataFinal.Size = new System.Drawing.Size(74, 15);
-            this.TxtDataFinal.TabIndex = 92;
+            this.btnPostarNoticia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnPostarNoticia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPostarNoticia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnPostarNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPostarNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPostarNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPostarNoticia.Location = new System.Drawing.Point(149, 481);
+            this.btnPostarNoticia.Name = "btnPostarNoticia";
+            this.btnPostarNoticia.Size = new System.Drawing.Size(121, 35);
+            this.btnPostarNoticia.TabIndex = 6;
+            this.btnPostarNoticia.Text = "POSTAR NOTÍCIA";
+            this.btnPostarNoticia.UseVisualStyleBackColor = false;
+            this.btnPostarNoticia.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAlterarNoticia
+            // 
+            this.btnAlterarNoticia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.btnAlterarNoticia.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAlterarNoticia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnAlterarNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterarNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAlterarNoticia.Location = new System.Drawing.Point(403, 481);
+            this.btnAlterarNoticia.Name = "btnAlterarNoticia";
+            this.btnAlterarNoticia.Size = new System.Drawing.Size(121, 35);
+            this.btnAlterarNoticia.TabIndex = 8;
+            this.btnAlterarNoticia.Text = "ALTERAR";
+            this.btnAlterarNoticia.UseVisualStyleBackColor = false;
+            // 
+            // dtpDataInicial
+            // 
+            this.dtpDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataInicial.Location = new System.Drawing.Point(19, 80);
+            this.dtpDataInicial.Name = "dtpDataInicial";
+            this.dtpDataInicial.Size = new System.Drawing.Size(113, 27);
+            this.dtpDataInicial.TabIndex = 3;
+            // 
+            // dtpDataFinal
+            // 
+            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFinal.Location = new System.Drawing.Point(184, 79);
+            this.dtpDataFinal.Name = "dtpDataFinal";
+            this.dtpDataFinal.Size = new System.Drawing.Size(113, 27);
+            this.dtpDataFinal.TabIndex = 4;
             // 
             // GerenciarNoticia
             // 
@@ -354,6 +333,8 @@ namespace CapacitaDesk {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnAlterarNoticia);
+            this.Controls.Add(this.btnPostarNoticia);
             this.Controls.Add(this.BtnExcluirNoticia);
             this.Controls.Add(this.BtnExibirNoticia);
             this.Controls.Add(this.groupBox2);
@@ -384,24 +365,23 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Button BtnExcluirNoticia;
         private System.Windows.Forms.Button BtnExibirNoticia;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView ListViewDenuncia;
+        private System.Windows.Forms.ListView ListViewNoticia;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Data;
-        private System.Windows.Forms.ColumnHeader Hora;
+        private System.Windows.Forms.ColumnHeader Instituicao;
         private System.Windows.Forms.ColumnHeader Topico;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnBuscarNoticia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TxtDataInicial;
-        private System.Windows.Forms.TextBox TxtBoxHoraFinal;
-        private System.Windows.Forms.TextBox TxtBoxUsuarioDenuncia;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox TxtBoxUsuarioNoticia;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtBoxHoraInicial;
-        private System.Windows.Forms.TextBox TxtBoxTopico;
+        private System.Windows.Forms.TextBox TxtBoxTitulo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtDataFinal;
+        private System.Windows.Forms.ColumnHeader Titulo;
+        private System.Windows.Forms.Button btnPostarNoticia;
+        private System.Windows.Forms.Button btnAlterarNoticia;
+        private System.Windows.Forms.DateTimePicker dtpDataFinal;
+        private System.Windows.Forms.DateTimePicker dtpDataInicial;
     }
 }

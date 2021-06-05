@@ -52,6 +52,7 @@ namespace CapacitaDesk {
             checkBoxVisual.Checked = false;
             checkBoxAtivoUser.Checked = false;
             checkBoxInativoUser.Checked = false;
+            maskedTextBoxBuscarCpf.Clear();
         }
         
         
@@ -116,10 +117,6 @@ namespace CapacitaDesk {
 
         }
 
-        private void maskedTextBoxCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
 
         private void TxtBoxEmailUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -182,7 +179,7 @@ namespace CapacitaDesk {
             RespUsuario respUsuario = new RespUsuario();
             
 
-            usuarioPcd.cpf = maskedTextBoxCPF.Text;
+            usuarioPcd.cpf = maskedTextBoxBuscarCpf.Text;
             if (usuarioPcd.cpf != null && !(usuarioPcd.cpf.Trim().Equals(",   ,   -")) && usuarioPcd.cpf.Trim().Length == 14)
             {
 
@@ -331,6 +328,10 @@ namespace CapacitaDesk {
             else {
                 MessageBox.Show("Informe ao menos o CPF para resetar senha!");
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e) {
+            limparCampos();
         }
     }
 }

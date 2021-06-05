@@ -23,5 +23,10 @@ namespace CapacitaDesk {
             VisualizarNoticia vNoticia = new VisualizarNoticia();
             vNoticia.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            PostarNoticia postNoticia = new PostarNoticia(administrador);
+            postNoticia.ShowDialog();
+        }
     }
 }

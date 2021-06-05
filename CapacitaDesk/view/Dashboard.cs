@@ -106,8 +106,12 @@ namespace CapacitaDesk {
         }
 
         private void BtnPostarNoticia_Click(object sender, EventArgs e) {
-            PostarNoticia postNoticia = new PostarNoticia(administrador);
-            postNoticia.ShowDialog();
+            DialogResult Resp = MessageBox.Show("Deseja mesmo sair?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Resp == DialogResult.Yes) {
+
+                this.Close();
+            }
         }
 
         private void BtnFinanceiro_Click(object sender, EventArgs e) {
