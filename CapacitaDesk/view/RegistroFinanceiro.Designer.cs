@@ -28,27 +28,19 @@ namespace CapacitaDesk {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroFinanceiro));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.ListViewParceiro = new System.Windows.Forms.ListView();
-            this.Id = new System.Windows.Forms.ColumnHeader();
+            this.textBoxSaldoTotal = new System.Windows.Forms.TextBox();
+            this.ListViewFinanceiro = new System.Windows.Forms.ListView();
             this.Curso = new System.Windows.Forms.ColumnHeader();
             this.NomeUsuario = new System.Windows.Forms.ColumnHeader();
             this.NomeDaInstituicao = new System.Windows.Forms.ColumnHeader();
-            this.UfParceiros = new System.Windows.Forms.ColumnHeader();
-            this.CidadeParceiro = new System.Windows.Forms.ColumnHeader();
+            this.DataHora = new System.Windows.Forms.ColumnHeader();
             this.Valor = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscarParceiro = new System.Windows.Forms.Button();
             this.TxtBoxNomedaInstitucao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TxtBoxEstado = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtBoxCidade = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,8 +55,8 @@ namespace CapacitaDesk {
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.ListViewParceiro);
+            this.groupBox2.Controls.Add(this.textBoxSaldoTotal);
+            this.groupBox2.Controls.Add(this.ListViewFinanceiro);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.groupBox2.Location = new System.Drawing.Point(58, 277);
@@ -72,7 +64,7 @@ namespace CapacitaDesk {
             this.groupBox2.Size = new System.Drawing.Size(669, 236);
             this.groupBox2.TabIndex = 111;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Registro de novos parceiros";
+            this.groupBox2.Text = "Registro Financeiro";
             // 
             // label7
             // 
@@ -83,39 +75,34 @@ namespace CapacitaDesk {
             this.label7.TabIndex = 3;
             this.label7.Text = "Saldo Total";
             // 
-            // textBox3
+            // textBoxSaldoTotal
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(548, 201);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(109, 29);
-            this.textBox3.TabIndex = 2;
+            this.textBoxSaldoTotal.Enabled = false;
+            this.textBoxSaldoTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBoxSaldoTotal.Location = new System.Drawing.Point(548, 201);
+            this.textBoxSaldoTotal.Name = "textBoxSaldoTotal";
+            this.textBoxSaldoTotal.Size = new System.Drawing.Size(109, 29);
+            this.textBoxSaldoTotal.TabIndex = 2;
             // 
-            // ListViewParceiro
+            // ListViewFinanceiro
             // 
-            this.ListViewParceiro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Id,
+            this.ListViewFinanceiro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Curso,
             this.NomeUsuario,
             this.NomeDaInstituicao,
-            this.UfParceiros,
-            this.CidadeParceiro,
+            this.DataHora,
             this.Valor});
-            this.ListViewParceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ListViewParceiro.HideSelection = false;
-            this.ListViewParceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.ListViewFinanceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ListViewFinanceiro.HideSelection = false;
+            this.ListViewFinanceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.ListViewParceiro.Location = new System.Drawing.Point(15, 27);
-            this.ListViewParceiro.Name = "ListViewParceiro";
-            this.ListViewParceiro.Size = new System.Drawing.Size(642, 167);
-            this.ListViewParceiro.TabIndex = 1;
-            this.ListViewParceiro.UseCompatibleStateImageBehavior = false;
-            this.ListViewParceiro.View = System.Windows.Forms.View.Details;
-            // 
-            // Id
-            // 
-            this.Id.Text = "ID";
-            this.Id.Width = 30;
+            this.ListViewFinanceiro.Location = new System.Drawing.Point(15, 27);
+            this.ListViewFinanceiro.Name = "ListViewFinanceiro";
+            this.ListViewFinanceiro.Size = new System.Drawing.Size(642, 167);
+            this.ListViewFinanceiro.TabIndex = 1;
+            this.ListViewFinanceiro.UseCompatibleStateImageBehavior = false;
+            this.ListViewFinanceiro.View = System.Windows.Forms.View.Details;
+            this.ListViewFinanceiro.SelectedIndexChanged += new System.EventHandler(this.ListViewParceiro_SelectedIndexChanged);
             // 
             // Curso
             // 
@@ -132,15 +119,10 @@ namespace CapacitaDesk {
             this.NomeDaInstituicao.Text = "Nome da Instituição";
             this.NomeDaInstituicao.Width = 150;
             // 
-            // UfParceiros
+            // DataHora
             // 
-            this.UfParceiros.Text = "UF";
-            this.UfParceiros.Width = 40;
-            // 
-            // CidadeParceiro
-            // 
-            this.CidadeParceiro.Text = "Cidade";
-            this.CidadeParceiro.Width = 100;
+            this.DataHora.Text = "Data";
+            this.DataHora.Width = 100;
             // 
             // Valor
             // 
@@ -148,17 +130,11 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BtnBuscarParceiro);
             this.groupBox1.Controls.Add(this.TxtBoxNomedaInstitucao);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.TxtBoxEstado);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.TxtBoxCidade);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
@@ -169,35 +145,14 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(479, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(63, 15);
-            this.textBox2.TabIndex = 110;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label6.Location = new System.Drawing.Point(479, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 17);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "UF";
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(326, 42);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 15);
+            this.textBox1.Size = new System.Drawing.Size(213, 14);
             this.textBox1.TabIndex = 108;
             // 
             // label2
@@ -230,10 +185,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomedaInstitucao.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomedaInstitucao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomedaInstitucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomedaInstitucao.Location = new System.Drawing.Point(31, 42);
             this.TxtBoxNomedaInstitucao.Name = "TxtBoxNomedaInstitucao";
-            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(289, 15);
+            this.TxtBoxNomedaInstitucao.Size = new System.Drawing.Size(289, 14);
             this.TxtBoxNomedaInstitucao.TabIndex = 98;
             // 
             // label5
@@ -243,51 +198,9 @@ namespace CapacitaDesk {
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.label5.Location = new System.Drawing.Point(31, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 17);
+            this.label5.Size = new System.Drawing.Size(131, 17);
             this.label5.TabIndex = 99;
-            this.label5.Text = "Nome da Insituicao";
-            // 
-            // TxtBoxEstado
-            // 
-            this.TxtBoxEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEstado.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxEstado.Location = new System.Drawing.Point(31, 88);
-            this.TxtBoxEstado.Name = "TxtBoxEstado";
-            this.TxtBoxEstado.Size = new System.Drawing.Size(289, 15);
-            this.TxtBoxEstado.TabIndex = 74;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label3.Location = new System.Drawing.Point(31, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 17);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Nome do usuário";
-            // 
-            // TxtBoxCidade
-            // 
-            this.TxtBoxCidade.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxCidade.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxCidade.Location = new System.Drawing.Point(326, 88);
-            this.TxtBoxCidade.Name = "TxtBoxCidade";
-            this.TxtBoxCidade.Size = new System.Drawing.Size(147, 15);
-            this.TxtBoxCidade.TabIndex = 76;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label4.Location = new System.Drawing.Point(326, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 17);
-            this.label4.TabIndex = 77;
-            this.label4.Text = "Cidade";
+            this.label5.Text = "Nome da Instituicao";
             // 
             // panel2
             // 
@@ -359,31 +272,24 @@ namespace CapacitaDesk {
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView ListViewParceiro;
-        private System.Windows.Forms.ColumnHeader Id;
+        private System.Windows.Forms.ListView ListViewFinanceiro;
         private System.Windows.Forms.ColumnHeader Curso;
         private System.Windows.Forms.ColumnHeader NomeUsuario;
         private System.Windows.Forms.ColumnHeader NomeDaInstituicao;
-        private System.Windows.Forms.ColumnHeader UfParceiros;
         private System.Windows.Forms.ColumnHeader CidadeParceiro;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnBuscarParceiro;
         private System.Windows.Forms.TextBox TxtBoxNomedaInstitucao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtBoxEstado;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtBoxCidade;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxSaldoTotal;
         private System.Windows.Forms.ColumnHeader Valor;
+        private System.Windows.Forms.ColumnHeader DataHora;
     }
 }
