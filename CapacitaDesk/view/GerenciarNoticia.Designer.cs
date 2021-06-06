@@ -40,6 +40,8 @@ namespace CapacitaDesk {
             this.Instituicao = new System.Windows.Forms.ColumnHeader();
             this.Titulo = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataInicial = new System.Windows.Forms.DateTimePicker();
             this.BtnBuscarNoticia = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxUsuarioNoticia = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@ namespace CapacitaDesk {
             this.label4 = new System.Windows.Forms.Label();
             this.btnPostarNoticia = new System.Windows.Forms.Button();
             this.btnAlterarNoticia = new System.Windows.Forms.Button();
-            this.dtpDataInicial = new System.Windows.Forms.DateTimePicker();
-            this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -150,10 +150,12 @@ namespace CapacitaDesk {
             this.Instituicao,
             this.Titulo});
             this.ListViewNoticia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListViewNoticia.FullRowSelect = true;
             this.ListViewNoticia.HideSelection = false;
             this.ListViewNoticia.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.ListViewNoticia.Location = new System.Drawing.Point(8, 26);
+            this.ListViewNoticia.MultiSelect = false;
             this.ListViewNoticia.Name = "ListViewNoticia";
             this.ListViewNoticia.Size = new System.Drawing.Size(527, 161);
             this.ListViewNoticia.TabIndex = 10;
@@ -200,6 +202,22 @@ namespace CapacitaDesk {
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            // 
+            // dtpDataFinal
+            // 
+            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFinal.Location = new System.Drawing.Point(184, 79);
+            this.dtpDataFinal.Name = "dtpDataFinal";
+            this.dtpDataFinal.Size = new System.Drawing.Size(113, 27);
+            this.dtpDataFinal.TabIndex = 4;
+            // 
+            // dtpDataInicial
+            // 
+            this.dtpDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataInicial.Location = new System.Drawing.Point(19, 80);
+            this.dtpDataInicial.Name = "dtpDataInicial";
+            this.dtpDataInicial.Size = new System.Drawing.Size(113, 27);
+            this.dtpDataInicial.TabIndex = 3;
             // 
             // BtnBuscarNoticia
             // 
@@ -310,22 +328,6 @@ namespace CapacitaDesk {
             this.btnAlterarNoticia.TabIndex = 8;
             this.btnAlterarNoticia.Text = "ALTERAR";
             this.btnAlterarNoticia.UseVisualStyleBackColor = false;
-            // 
-            // dtpDataInicial
-            // 
-            this.dtpDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataInicial.Location = new System.Drawing.Point(19, 80);
-            this.dtpDataInicial.Name = "dtpDataInicial";
-            this.dtpDataInicial.Size = new System.Drawing.Size(113, 27);
-            this.dtpDataInicial.TabIndex = 3;
-            // 
-            // dtpDataFinal
-            // 
-            this.dtpDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataFinal.Location = new System.Drawing.Point(184, 79);
-            this.dtpDataFinal.Name = "dtpDataFinal";
-            this.dtpDataFinal.Size = new System.Drawing.Size(113, 27);
-            this.dtpDataFinal.TabIndex = 4;
             // 
             // GerenciarNoticia
             // 

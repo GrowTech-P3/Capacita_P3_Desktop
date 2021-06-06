@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class Noticia
+    public class Noticia
     {
-        public String idNoticia { get; set; }
-        public String tituloNoticia { get; set; }
+        public String id { get; set; }
+        public String titulo_noticia { get; set; }
         public String descricao { get; set; }
-        public String txtNoticia { get; set; }
-        public String dataPublicacao { get; set; }
-        public String imgUrlPublicacao { get; set; }
-        public Instituicao instituicao { get; set; }
+        public String txt_noticia { get; set; }
+        public String data_publicacao { get; set; }
+        public String img_publicacao { get; set; }
+        public UsuarioPcd usuarioPcd { get; set; }
+        //public Instituicao instituicao { get; set; }
     }
 }

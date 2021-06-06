@@ -25,5 +25,7 @@ namespace CapacitaDesk.model
         public String token { get; set; }
 
         public DenunciaCurso denunciaCurso { get; set; }
+
+        public Noticia noticia { get; set; }
     }
 }
