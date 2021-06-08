@@ -33,9 +33,9 @@ namespace CapacitaDesk {
             foreach (Noticia noticia in noticias) {
                 ListViewItem item = ListViewNoticia.Items.Add(noticia.id);
                 item.SubItems.Add(Convert.ToDateTime(noticia.data_publicacao).ToString("dd/MM/yy"));
-                //item.SubItems.Add(noticia.instituicao.nome);
-                item.SubItems.Add(noticia.titulo_noticia);               
-
+                item.SubItems.Add(noticia.usuario.email);
+                item.SubItems.Add((noticia.usuario.tipo.Equals("1")) ? "Instituição" : "Administrador");
+                item.SubItems.Add(noticia.titulo_noticia);
             }
 
         }

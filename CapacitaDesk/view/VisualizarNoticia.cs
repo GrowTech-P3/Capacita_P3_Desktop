@@ -25,6 +25,7 @@ namespace CapacitaDesk {
             TxtBoxNomeUsuario.Text = (noticia.usuario.tipo.Equals("1")) ? noticia.usuario.instituicao.nome : noticia.usuario.administrador.nome;
             TxtBoxData.Text = Convert.ToDateTime(noticia.data_publicacao).ToString("dd/MM/yy");
             TxtBoxEmail.Text = noticia.usuario.email;
+            TxtBoxTipoUsuario.Text = (noticia.usuario.tipo.Equals("1")) ? "Instituição" : "Administrador";
             TxtBoxDescricaoNoticia.Text = noticia.descricao;
             TxtBoxTitulo.Text = noticia.titulo_noticia;
             TxtBoxEscreverNoticia.Text = noticia.txt_noticia;

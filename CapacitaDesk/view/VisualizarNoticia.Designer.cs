@@ -31,7 +31,7 @@ namespace CapacitaDesk {
             this.TxtBoxDescricaoNoticia = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtBoxNomeDaInstituicao = new System.Windows.Forms.TextBox();
+            this.TxtBoxTipoUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtBoxData = new System.Windows.Forms.TextBox();
@@ -108,7 +108,7 @@ namespace CapacitaDesk {
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TxtBoxNomeDaInstituicao);
+            this.groupBox1.Controls.Add(this.TxtBoxTipoUsuario);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtBoxData);
@@ -133,19 +133,19 @@ namespace CapacitaDesk {
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.label4.Location = new System.Drawing.Point(9, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 17);
+            this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 59;
-            this.label4.Text = "Nome da instituição";
+            this.label4.Text = "Tipo de Usuário";
             // 
-            // TxtBoxNomeDaInstituicao
+            // TxtBoxTipoUsuario
             // 
-            this.TxtBoxNomeDaInstituicao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxNomeDaInstituicao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeDaInstituicao.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxNomeDaInstituicao.Location = new System.Drawing.Point(9, 122);
-            this.TxtBoxNomeDaInstituicao.Name = "TxtBoxNomeDaInstituicao";
-            this.TxtBoxNomeDaInstituicao.Size = new System.Drawing.Size(301, 15);
-            this.TxtBoxNomeDaInstituicao.TabIndex = 58;
+            this.TxtBoxTipoUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxTipoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTipoUsuario.Location = new System.Drawing.Point(9, 122);
+            this.TxtBoxTipoUsuario.Name = "TxtBoxTipoUsuario";
+            this.TxtBoxTipoUsuario.Size = new System.Drawing.Size(301, 14);
+            this.TxtBoxTipoUsuario.TabIndex = 58;
             // 
             // label3
             // 
@@ -173,20 +173,20 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxData.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxData.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxData.Location = new System.Drawing.Point(235, 83);
             this.TxtBoxData.Name = "TxtBoxData";
-            this.TxtBoxData.Size = new System.Drawing.Size(75, 15);
+            this.TxtBoxData.Size = new System.Drawing.Size(75, 14);
             this.TxtBoxData.TabIndex = 56;
             // 
             // TxtBoxTitulo
             // 
             this.TxtBoxTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTitulo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTitulo.Location = new System.Drawing.Point(9, 164);
             this.TxtBoxTitulo.Name = "TxtBoxTitulo";
-            this.TxtBoxTitulo.Size = new System.Drawing.Size(301, 15);
+            this.TxtBoxTitulo.Size = new System.Drawing.Size(301, 14);
             this.TxtBoxTitulo.TabIndex = 60;
             // 
             // label1
@@ -204,10 +204,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxEmail.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEmail.Location = new System.Drawing.Point(9, 83);
             this.TxtBoxEmail.Name = "TxtBoxEmail";
-            this.TxtBoxEmail.Size = new System.Drawing.Size(220, 15);
+            this.TxtBoxEmail.Size = new System.Drawing.Size(220, 14);
             this.TxtBoxEmail.TabIndex = 54;
             // 
             // label2
@@ -225,10 +225,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(9, 45);
             this.TxtBoxNomeUsuario.Name = "TxtBoxNomeUsuario";
-            this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(301, 15);
+            this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(301, 14);
             this.TxtBoxNomeUsuario.TabIndex = 52;
             // 
             // panel3
@@ -333,7 +333,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.TextBox TxtBoxDescricaoNoticia;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtBoxNomeDaInstituicao;
+        private System.Windows.Forms.TextBox TxtBoxTipoUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtBoxData;

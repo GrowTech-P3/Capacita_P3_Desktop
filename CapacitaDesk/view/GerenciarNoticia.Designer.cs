@@ -37,7 +37,8 @@ namespace CapacitaDesk {
             this.ListViewNoticia = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.Data = new System.Windows.Forms.ColumnHeader();
-            this.Instituicao = new System.Windows.Forms.ColumnHeader();
+            this.Email = new System.Windows.Forms.ColumnHeader();
+            this.Tipo = new System.Windows.Forms.ColumnHeader();
             this.Titulo = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpDataFinal = new System.Windows.Forms.DateTimePicker();
@@ -147,7 +148,8 @@ namespace CapacitaDesk {
             this.ListViewNoticia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Data,
-            this.Instituicao,
+            this.Email,
+            this.Tipo,
             this.Titulo});
             this.ListViewNoticia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListViewNoticia.FullRowSelect = true;
@@ -165,22 +167,27 @@ namespace CapacitaDesk {
             // Id
             // 
             this.Id.Text = "ID";
-            this.Id.Width = 40;
+            this.Id.Width = 30;
             // 
             // Data
             // 
             this.Data.Text = "Data";
             this.Data.Width = 70;
             // 
-            // Instituicao
+            // Email
             // 
-            this.Instituicao.Text = "Instituição";
-            this.Instituicao.Width = 130;
+            this.Email.Text = "E-mail";
+            this.Email.Width = 160;
+            // 
+            // Tipo
+            // 
+            this.Tipo.Text = "Tipo";
+            this.Tipo.Width = 100;
             // 
             // Titulo
             // 
-            this.Titulo.Text = "Título";
-            this.Titulo.Width = 300;
+            this.Titulo.Text = "Titulo";
+            this.Titulo.Width = 160;
             // 
             // groupBox1
             // 
@@ -249,10 +256,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxUsuarioNoticia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxUsuarioNoticia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxUsuarioNoticia.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxUsuarioNoticia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxUsuarioNoticia.Location = new System.Drawing.Point(19, 41);
             this.TxtBoxUsuarioNoticia.Name = "TxtBoxUsuarioNoticia";
-            this.TxtBoxUsuarioNoticia.Size = new System.Drawing.Size(240, 15);
+            this.TxtBoxUsuarioNoticia.Size = new System.Drawing.Size(240, 14);
             this.TxtBoxUsuarioNoticia.TabIndex = 1;
             // 
             // label3
@@ -270,10 +277,10 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxTitulo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTitulo.Location = new System.Drawing.Point(265, 41);
             this.TxtBoxTitulo.Name = "TxtBoxTitulo";
-            this.TxtBoxTitulo.Size = new System.Drawing.Size(269, 15);
+            this.TxtBoxTitulo.Size = new System.Drawing.Size(269, 14);
             this.TxtBoxTitulo.TabIndex = 2;
             // 
             // label6
@@ -370,7 +377,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.ListView ListViewNoticia;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader Data;
-        private System.Windows.Forms.ColumnHeader Instituicao;
+        private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Topico;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnBuscarNoticia;
@@ -385,5 +392,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Button btnAlterarNoticia;
         private System.Windows.Forms.DateTimePicker dtpDataFinal;
         private System.Windows.Forms.DateTimePicker dtpDataInicial;
+        private System.Windows.Forms.ColumnHeader Email;
     }
 }
