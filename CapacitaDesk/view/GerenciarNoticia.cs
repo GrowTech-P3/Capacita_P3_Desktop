@@ -47,7 +47,7 @@ namespace CapacitaDesk {
                 Noticia noticia = new Noticia();
                 noticia.id = ListViewNoticia.SelectedItems[0].SubItems[0].Text;
 
-                String rota = "http://localhost:3000/noticia";
+                String rota = "http://localhost:3000/buscar-noticia";
                 String json = JsonConvert.SerializeObject(noticia);
 
                 Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);

@@ -14,7 +14,6 @@ namespace CapacitaDesk.model
         public String txt_noticia { get; set; }
         public String data_publicacao { get; set; }
         public String img_publicacao { get; set; }
-        public UsuarioPcd usuarioPcd { get; set; }
-        //public Instituicao instituicao { get; set; }
+        public Usuario usuario { get; set; }
     }
 }
