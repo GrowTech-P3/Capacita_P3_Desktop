@@ -34,11 +34,11 @@ namespace CapacitaDesk {
             ValidateNoticia validar = new ValidateNoticia();
             String rota = "http://localhost:3000/noticia";
 
-            noticia.id = administrador.id;
-            noticia.titulo_noticia = TxtBoxTitulo.Text;
-            noticia.descricao = textBox1.Text;
-            noticia.img_publicacao = txtBoxImagem.Text;
-            noticia.txt_noticia = TxtBoxEscreverNoticia.Text;
+            noticia.id_usuario      = administrador.id;
+            noticia.titulo_noticia  = TxtBoxTitulo.Text;
+            noticia.descricao       = textBox1.Text;
+            noticia.img_publicacao  = txtBoxImagem.Text;
+            noticia.txt_noticia     = TxtBoxEscreverNoticia.Text;
 
             String validate = validar.validateNoticia(noticia);
             if (validate.Trim().Equals("ok")) {

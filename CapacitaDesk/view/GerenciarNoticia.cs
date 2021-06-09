@@ -104,7 +104,6 @@ namespace CapacitaDesk {
             
             if (ListViewNoticia.SelectedItems.Count > 0) {
 
-
                 Noticia noticia = new Noticia();
                 noticia.id = ListViewNoticia.SelectedItems[0].SubItems[0].Text;
 

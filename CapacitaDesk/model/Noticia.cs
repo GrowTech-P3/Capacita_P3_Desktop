@@ -10,6 +10,7 @@ namespace CapacitaDesk.model
     {
         public String id { get; set; }
         public String titulo_noticia { get; set; }
+        public String id_usuario { get; set; }
         public String descricao { get; set; }
         public String txt_noticia { get; set; }
         public String data_publicacao { get; set; }

@@ -22,7 +22,7 @@ namespace CapacitaDesk {
 
             InitializeComponent();
 
-            //TxtBoxNomeUsuario.Text = (noticia.usuario.tipo.Equals("1")) ? noticia.usuario.instituicao.nome : noticia.usuario.administrador.nome;
+            TxtBoxNomeUsuario.Text = (noticia.usuario.tipo.Equals("1")) ? noticia.usuario.instituicao.nome : noticia.usuario.administrador.nome;
             TxtBoxData.Text = Convert.ToDateTime(noticia.data_publicacao).ToString("dd/MM/yy");
             TxtBoxEmail.Text = noticia.usuario.email;
             TxtBoxTipoUsuario.Text = (noticia.usuario.tipo.Equals("1")) ? "Instituição" : "Administrador";
