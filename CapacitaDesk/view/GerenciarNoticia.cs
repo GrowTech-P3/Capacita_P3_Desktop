@@ -107,13 +107,18 @@ namespace CapacitaDesk {
                 Noticia noticia = new Noticia();
                 noticia.id = ListViewNoticia.SelectedItems[0].SubItems[0].Text;
 
-                String rota = "http://localhost:3000/noticia";
-                String json = JsonConvert.SerializeObject(noticia);
+                var resultado = MessageBox.Show("Deseja realmente excluir notícia ID: " + noticia.id +"?", "Excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+               
+                if(resultado == DialogResult.Yes)
+                {
+                    String rota = "http://localhost:3000/noticia";
+                    String json = JsonConvert.SerializeObject(noticia);
 
-                Object objectResponse = ConnectionAPI.remove(rota, json, administrador.Token);
-                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
+                    Object objectResponse = ConnectionAPI.remove(rota, json, administrador.Token);
+                    RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
 
-                carregarTabela();               
+                    carregarTabela();
+                }               
             }
         }
     }
