@@ -101,7 +101,7 @@ namespace CapacitaDesk {
                     textBoxSaldoTotal.Text = Convert.ToString(total);
                 }
             }
-            else
+            else if(!(curso.nome_curso == null || curso.nome_curso.Trim().Equals("")))
             {
                 String rota = "http://localhost:3000/financeiro/cursos";
                 String json = JsonConvert.SerializeObject(curso);
@@ -122,6 +122,11 @@ namespace CapacitaDesk {
                     item.SubItems.Add(financ.valor);
                 }
                 textBoxSaldoTotal.Text = Convert.ToString(total);
+
+            }
+            else
+            {
+                encherListView();
             }
               
         }
