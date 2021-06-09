@@ -24,7 +24,7 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroFinanceiro));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -36,7 +36,7 @@ namespace CapacitaDesk {
             this.DataHora = new System.Windows.Forms.ColumnHeader();
             this.Valor = new System.Windows.Forms.ColumnHeader();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxNomeCurso = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnBuscarParceiro = new System.Windows.Forms.Button();
             this.TxtBoxNomedaInstitucao = new System.Windows.Forms.TextBox();
@@ -95,7 +95,7 @@ namespace CapacitaDesk {
             this.ListViewFinanceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ListViewFinanceiro.HideSelection = false;
             this.ListViewFinanceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.ListViewFinanceiro.Location = new System.Drawing.Point(15, 27);
             this.ListViewFinanceiro.Name = "ListViewFinanceiro";
             this.ListViewFinanceiro.Size = new System.Drawing.Size(642, 167);
@@ -130,7 +130,7 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxNomeCurso);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BtnBuscarParceiro);
             this.groupBox1.Controls.Add(this.TxtBoxNomedaInstitucao);
@@ -145,15 +145,15 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // textBox1
+            // textBoxNomeCurso
             // 
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(326, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 14);
-            this.textBox1.TabIndex = 108;
+            this.textBoxNomeCurso.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxNomeCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNomeCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNomeCurso.Location = new System.Drawing.Point(326, 42);
+            this.textBoxNomeCurso.Name = "textBoxNomeCurso";
+            this.textBoxNomeCurso.Size = new System.Drawing.Size(213, 14);
+            this.textBoxNomeCurso.TabIndex = 108;
             // 
             // label2
             // 
@@ -180,6 +180,7 @@ namespace CapacitaDesk {
             this.BtnBuscarParceiro.TabIndex = 107;
             this.BtnBuscarParceiro.Text = "BUSCAR";
             this.BtnBuscarParceiro.UseVisualStyleBackColor = false;
+            this.BtnBuscarParceiro.Click += new System.EventHandler(this.BtnBuscarParceiro_Click);
             // 
             // TxtBoxNomedaInstitucao
             // 
@@ -278,7 +279,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.ColumnHeader NomeDaInstituicao;
         private System.Windows.Forms.ColumnHeader CidadeParceiro;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxNomeCurso;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnBuscarParceiro;
         private System.Windows.Forms.TextBox TxtBoxNomedaInstitucao;

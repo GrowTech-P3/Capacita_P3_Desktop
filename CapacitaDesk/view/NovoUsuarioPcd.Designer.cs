@@ -46,12 +46,13 @@ namespace CapacitaDesk {
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BtnCadastrarUsuario = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxAtivoUser = new System.Windows.Forms.CheckBox();
+            this.checkBoxInativoUser = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.maskedTextBoxBuscarCpf = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBoxInativoUser = new System.Windows.Forms.CheckBox();
-            this.checkBoxAtivoUser = new System.Windows.Forms.CheckBox();
             this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.LabelCidade = new System.Windows.Forms.Label();
             this.labelEstado = new System.Windows.Forms.Label();
@@ -71,15 +72,14 @@ namespace CapacitaDesk {
             this.BtnAtualizar = new System.Windows.Forms.Button();
             this.BtnRemover = new System.Windows.Forms.Button();
             this.buttonResetSenha = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -378,9 +378,47 @@ namespace CapacitaDesk {
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do usuário";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.checkBoxAtivoUser);
+            this.groupBox3.Controls.Add(this.checkBoxInativoUser);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.groupBox3.Location = new System.Drawing.Point(457, 111);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(232, 46);
+            this.groupBox3.TabIndex = 63;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Situção";
+            // 
+            // checkBoxAtivoUser
+            // 
+            this.checkBoxAtivoUser.AutoSize = true;
+            this.checkBoxAtivoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxAtivoUser.Location = new System.Drawing.Point(49, 19);
+            this.checkBoxAtivoUser.Name = "checkBoxAtivoUser";
+            this.checkBoxAtivoUser.Size = new System.Drawing.Size(59, 21);
+            this.checkBoxAtivoUser.TabIndex = 58;
+            this.checkBoxAtivoUser.Text = "Ativo";
+            this.checkBoxAtivoUser.UseVisualStyleBackColor = true;
+            this.checkBoxAtivoUser.Click += new System.EventHandler(this.checkBoxAtivoUser_Click);
+            // 
+            // checkBoxInativoUser
+            // 
+            this.checkBoxInativoUser.AutoSize = true;
+            this.checkBoxInativoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxInativoUser.Location = new System.Drawing.Point(122, 19);
+            this.checkBoxInativoUser.Name = "checkBoxInativoUser";
+            this.checkBoxInativoUser.Size = new System.Drawing.Size(69, 21);
+            this.checkBoxInativoUser.TabIndex = 59;
+            this.checkBoxInativoUser.Text = "Inativo";
+            this.checkBoxInativoUser.UseVisualStyleBackColor = true;
+            this.checkBoxInativoUser.Click += new System.EventHandler(this.checkBoxInativoUser_Click);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label13.Location = new System.Drawing.Point(574, 244);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 20);
@@ -423,30 +461,6 @@ namespace CapacitaDesk {
             this.label12.Size = new System.Drawing.Size(31, 17);
             this.label12.TabIndex = 62;
             this.label12.Text = "CPF";
-            // 
-            // checkBoxInativoUser
-            // 
-            this.checkBoxInativoUser.AutoSize = true;
-            this.checkBoxInativoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxInativoUser.Location = new System.Drawing.Point(122, 19);
-            this.checkBoxInativoUser.Name = "checkBoxInativoUser";
-            this.checkBoxInativoUser.Size = new System.Drawing.Size(69, 21);
-            this.checkBoxInativoUser.TabIndex = 59;
-            this.checkBoxInativoUser.Text = "Inativo";
-            this.checkBoxInativoUser.UseVisualStyleBackColor = true;
-            this.checkBoxInativoUser.Click += new System.EventHandler(this.checkBoxInativoUser_Click);
-            // 
-            // checkBoxAtivoUser
-            // 
-            this.checkBoxAtivoUser.AutoSize = true;
-            this.checkBoxAtivoUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxAtivoUser.Location = new System.Drawing.Point(49, 19);
-            this.checkBoxAtivoUser.Name = "checkBoxAtivoUser";
-            this.checkBoxAtivoUser.Size = new System.Drawing.Size(59, 21);
-            this.checkBoxAtivoUser.TabIndex = 58;
-            this.checkBoxAtivoUser.Text = "Ativo";
-            this.checkBoxAtivoUser.UseVisualStyleBackColor = true;
-            this.checkBoxAtivoUser.Click += new System.EventHandler(this.checkBoxAtivoUser_Click);
             // 
             // textBoxCidade
             // 
@@ -672,19 +686,6 @@ namespace CapacitaDesk {
             this.buttonResetSenha.UseVisualStyleBackColor = false;
             this.buttonResetSenha.Click += new System.EventHandler(this.buttonResetSenha_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.checkBoxAtivoUser);
-            this.groupBox3.Controls.Add(this.checkBoxInativoUser);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.groupBox3.Location = new System.Drawing.Point(457, 111);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(232, 46);
-            this.groupBox3.TabIndex = 63;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Situção";
-            // 
             // NovoUsuarioPcd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -713,10 +714,10 @@ namespace CapacitaDesk {
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

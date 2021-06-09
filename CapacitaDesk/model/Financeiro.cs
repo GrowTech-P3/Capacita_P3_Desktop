@@ -13,5 +13,7 @@ namespace CapacitaDesk.model
         public Instituicao instituicao { get; set; }
         public String dataHora { get; set; }
         public String valor { get; set; }
+        
+
     }
 }
