@@ -45,7 +45,7 @@ namespace CapacitaDesk {
             this.dtpDataInicial = new System.Windows.Forms.DateTimePicker();
             this.BtnBuscarNoticia = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtBoxUsuarioNoticia = new System.Windows.Forms.TextBox();
+            this.TxtBoxEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtBoxTitulo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -114,6 +114,7 @@ namespace CapacitaDesk {
             this.BtnExcluirNoticia.TabIndex = 7;
             this.BtnExcluirNoticia.Text = "EXCLUIR";
             this.BtnExcluirNoticia.UseVisualStyleBackColor = false;
+            this.BtnExcluirNoticia.Click += new System.EventHandler(this.BtnExcluirNoticia_Click);
             // 
             // BtnExibirNoticia
             // 
@@ -195,7 +196,7 @@ namespace CapacitaDesk {
             this.groupBox1.Controls.Add(this.dtpDataInicial);
             this.groupBox1.Controls.Add(this.BtnBuscarNoticia);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TxtBoxUsuarioNoticia);
+            this.groupBox1.Controls.Add(this.TxtBoxEmail);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.TxtBoxTitulo);
             this.groupBox1.Controls.Add(this.label6);
@@ -240,6 +241,7 @@ namespace CapacitaDesk {
             this.BtnBuscarNoticia.TabIndex = 5;
             this.BtnBuscarNoticia.Text = "BUSCAR";
             this.BtnBuscarNoticia.UseVisualStyleBackColor = false;
+            this.BtnBuscarNoticia.Click += new System.EventHandler(this.BtnBuscarNoticia_Click);
             // 
             // label2
             // 
@@ -252,26 +254,26 @@ namespace CapacitaDesk {
             this.label2.TabIndex = 73;
             this.label2.Text = "Data Inicial";
             // 
-            // TxtBoxUsuarioNoticia
+            // TxtBoxEmail
             // 
-            this.TxtBoxUsuarioNoticia.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtBoxUsuarioNoticia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtBoxUsuarioNoticia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxUsuarioNoticia.Location = new System.Drawing.Point(19, 41);
-            this.TxtBoxUsuarioNoticia.Name = "TxtBoxUsuarioNoticia";
-            this.TxtBoxUsuarioNoticia.Size = new System.Drawing.Size(240, 14);
-            this.TxtBoxUsuarioNoticia.TabIndex = 1;
+            this.TxtBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtBoxEmail.Location = new System.Drawing.Point(19, 41);
+            this.TxtBoxEmail.Name = "TxtBoxEmail";
+            this.TxtBoxEmail.Size = new System.Drawing.Size(240, 14);
+            this.TxtBoxEmail.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.label3.Location = new System.Drawing.Point(19, 23);
+            this.label3.Location = new System.Drawing.Point(18, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 17);
+            this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 75;
-            this.label3.Text = "Nome de usuário";
+            this.label3.Text = "Email";
             // 
             // TxtBoxTitulo
             // 
@@ -382,7 +384,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnBuscarNoticia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtBoxUsuarioNoticia;
+        private System.Windows.Forms.TextBox TxtBoxEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtBoxTitulo;
         private System.Windows.Forms.Label label6;

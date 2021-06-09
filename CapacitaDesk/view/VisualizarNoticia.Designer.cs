@@ -46,6 +46,8 @@ namespace CapacitaDesk {
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtBoxEscreverNoticia = new System.Windows.Forms.TextBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,12 +64,13 @@ namespace CapacitaDesk {
             this.BtnExcluirDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExcluirDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExcluirDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExcluirDenuncia.Location = new System.Drawing.Point(179, 567);
+            this.BtnExcluirDenuncia.Location = new System.Drawing.Point(280, 567);
             this.BtnExcluirDenuncia.Name = "BtnExcluirDenuncia";
             this.BtnExcluirDenuncia.Size = new System.Drawing.Size(100, 25);
-            this.BtnExcluirDenuncia.TabIndex = 118;
+            this.BtnExcluirDenuncia.TabIndex = 8;
             this.BtnExcluirDenuncia.Text = "EXCLUIR";
             this.BtnExcluirDenuncia.UseVisualStyleBackColor = false;
+            this.BtnExcluirDenuncia.Click += new System.EventHandler(this.BtnExcluirDenuncia_Click);
             // 
             // BtnEditarDenuncia
             // 
@@ -77,12 +80,13 @@ namespace CapacitaDesk {
             this.BtnEditarDenuncia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditarDenuncia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnEditarDenuncia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnEditarDenuncia.Location = new System.Drawing.Point(285, 567);
+            this.BtnEditarDenuncia.Location = new System.Drawing.Point(174, 567);
             this.BtnEditarDenuncia.Name = "BtnEditarDenuncia";
             this.BtnEditarDenuncia.Size = new System.Drawing.Size(100, 25);
-            this.BtnEditarDenuncia.TabIndex = 117;
+            this.BtnEditarDenuncia.TabIndex = 9;
             this.BtnEditarDenuncia.Text = "EDITAR";
             this.BtnEditarDenuncia.UseVisualStyleBackColor = false;
+            this.BtnEditarDenuncia.Click += new System.EventHandler(this.BtnEditarDenuncia_Click);
             // 
             // groupBox2
             // 
@@ -98,12 +102,13 @@ namespace CapacitaDesk {
             // 
             // TxtBoxDescricaoNoticia
             // 
+            this.TxtBoxDescricaoNoticia.Enabled = false;
             this.TxtBoxDescricaoNoticia.Location = new System.Drawing.Point(12, 24);
             this.TxtBoxDescricaoNoticia.Multiline = true;
             this.TxtBoxDescricaoNoticia.Name = "TxtBoxDescricaoNoticia";
             this.TxtBoxDescricaoNoticia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtBoxDescricaoNoticia.Size = new System.Drawing.Size(298, 155);
-            this.TxtBoxDescricaoNoticia.TabIndex = 0;
+            this.TxtBoxDescricaoNoticia.TabIndex = 6;
             // 
             // groupBox1
             // 
@@ -141,11 +146,12 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxTipoUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTipoUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTipoUsuario.Enabled = false;
             this.TxtBoxTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTipoUsuario.Location = new System.Drawing.Point(9, 122);
             this.TxtBoxTipoUsuario.Name = "TxtBoxTipoUsuario";
             this.TxtBoxTipoUsuario.Size = new System.Drawing.Size(301, 14);
-            this.TxtBoxTipoUsuario.TabIndex = 58;
+            this.TxtBoxTipoUsuario.TabIndex = 4;
             // 
             // label3
             // 
@@ -173,21 +179,23 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxData.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxData.Enabled = false;
             this.TxtBoxData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxData.Location = new System.Drawing.Point(235, 83);
             this.TxtBoxData.Name = "TxtBoxData";
             this.TxtBoxData.Size = new System.Drawing.Size(75, 14);
-            this.TxtBoxData.TabIndex = 56;
+            this.TxtBoxData.TabIndex = 3;
             // 
             // TxtBoxTitulo
             // 
             this.TxtBoxTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxTitulo.Enabled = false;
             this.TxtBoxTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxTitulo.Location = new System.Drawing.Point(9, 164);
             this.TxtBoxTitulo.Name = "TxtBoxTitulo";
             this.TxtBoxTitulo.Size = new System.Drawing.Size(301, 14);
-            this.TxtBoxTitulo.TabIndex = 60;
+            this.TxtBoxTitulo.TabIndex = 5;
             // 
             // label1
             // 
@@ -204,11 +212,12 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxEmail.Enabled = false;
             this.TxtBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxEmail.Location = new System.Drawing.Point(9, 83);
             this.TxtBoxEmail.Name = "TxtBoxEmail";
             this.TxtBoxEmail.Size = new System.Drawing.Size(220, 14);
-            this.TxtBoxEmail.TabIndex = 54;
+            this.TxtBoxEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -225,11 +234,12 @@ namespace CapacitaDesk {
             // 
             this.TxtBoxNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBoxNomeUsuario.Enabled = false;
             this.TxtBoxNomeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TxtBoxNomeUsuario.Location = new System.Drawing.Point(9, 45);
             this.TxtBoxNomeUsuario.Name = "TxtBoxNomeUsuario";
             this.TxtBoxNomeUsuario.Size = new System.Drawing.Size(301, 14);
-            this.TxtBoxNomeUsuario.TabIndex = 52;
+            this.TxtBoxNomeUsuario.TabIndex = 1;
             // 
             // panel3
             // 
@@ -287,12 +297,36 @@ namespace CapacitaDesk {
             // 
             // TxtBoxEscreverNoticia
             // 
+            this.TxtBoxEscreverNoticia.Enabled = false;
             this.TxtBoxEscreverNoticia.Location = new System.Drawing.Point(10, 23);
             this.TxtBoxEscreverNoticia.Multiline = true;
             this.TxtBoxEscreverNoticia.Name = "TxtBoxEscreverNoticia";
             this.TxtBoxEscreverNoticia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtBoxEscreverNoticia.Size = new System.Drawing.Size(306, 351);
-            this.TxtBoxEscreverNoticia.TabIndex = 4;
+            this.TxtBoxEscreverNoticia.TabIndex = 7;
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(63, 149);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(54, 23);
+            this.textBoxId.TabIndex = 125;
+            this.textBoxId.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(68, 567);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 25);
+            this.button1.TabIndex = 126;
+            this.button1.Text = "ATUALIZAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // VisualizarNoticia
             // 
@@ -300,6 +334,8 @@ namespace CapacitaDesk {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 661);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.BtnExcluirDenuncia);
             this.Controls.Add(this.BtnEditarDenuncia);
@@ -322,6 +358,7 @@ namespace CapacitaDesk {
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -348,5 +385,7 @@ namespace CapacitaDesk {
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox TxtBoxEscreverNoticia;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Button button1;
     }
 }

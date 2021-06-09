@@ -234,11 +234,11 @@ namespace CapacitaDesk {
             // 
             // TxtBoxDescricaoDenuncia
             // 
-            this.TxtBoxDescricaoDenuncia.Location = new System.Drawing.Point(15, 24);
+            this.TxtBoxDescricaoDenuncia.Location = new System.Drawing.Point(6, 24);
             this.TxtBoxDescricaoDenuncia.Multiline = true;
             this.TxtBoxDescricaoDenuncia.Name = "TxtBoxDescricaoDenuncia";
             this.TxtBoxDescricaoDenuncia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtBoxDescricaoDenuncia.Size = new System.Drawing.Size(479, 119);
+            this.TxtBoxDescricaoDenuncia.Size = new System.Drawing.Size(488, 119);
             this.TxtBoxDescricaoDenuncia.TabIndex = 0;
             // 
             // BtnEncerrarDenuncia

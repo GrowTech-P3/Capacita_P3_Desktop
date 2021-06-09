@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapacitaDesk.model;
+using System.IO;
+using CapacitaDesk.controller;
+using CapacitaDesk.model;
+using Newtonsoft.Json;
 
 namespace CapacitaDesk {
     public partial class PostarNoticia : Form {
@@ -17,14 +21,52 @@ namespace CapacitaDesk {
             this.administrador = admin;
         }
 
+        public void limparCampos() {
+            TxtBoxTitulo.Clear();
+            textBox1.Clear();
+            txtBoxImagem.Clear();
+            TxtBoxEscreverNoticia.Clear();
+        }
+
+
         private void BtnPostar_Click(object sender, EventArgs e) {
-            MessageBox.Show("Notícia Postada com Sucesso!");
-            DialogResult Resp = MessageBox.Show("Deseja postar outra notícia?", "Capacita Desk", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Noticia noticia = new Noticia();
+            ValidateNoticia validar = new ValidateNoticia();
+            String rota = "http://localhost:3000/noticia";
 
-            if (Resp == DialogResult.No) {
+            noticia.id = administrador.id;
+            noticia.titulo_noticia = TxtBoxTitulo.Text;
+            noticia.descricao = textBox1.Text;
+            noticia.img_publicacao = txtBoxImagem.Text;
+            noticia.txt_noticia = TxtBoxEscreverNoticia.Text;
 
-                this.Dispose();
+            String validate = validar.validateNoticia(noticia);
+            if (validate.Trim().Equals("ok")) {
+                String json = JsonConvert.SerializeObject(noticia);
+                Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+                MessageBox.Show(respUsuario.message);
+               
+                Dispose();
+                GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
+                Gnoticia.ShowDialog();
+
             }
+            else {
+                MessageBox.Show(validate);
+            }
+        }
+
+        private void btnAddFoto_Click(object sender, EventArgs e) {
+            
+            string origemDaImagem = "";
+
+            if(openFileDialog1.ShowDialog() == DialogResult.OK) {
+
+                origemDaImagem = openFileDialog1.SafeFileName;
+                txtBoxImagem.Text = origemDaImagem;
+            }
+                
         }
     }
 }

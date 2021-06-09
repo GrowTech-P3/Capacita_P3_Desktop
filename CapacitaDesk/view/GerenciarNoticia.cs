@@ -39,6 +39,26 @@ namespace CapacitaDesk {
             }
 
         }
+
+        public void carregarTabelaPesquisa(PesquisaNoticia pesquisaNoticia) {
+            List<Noticia> noticias;
+            String rota = "http://localhost:3000/noticia-pesquisa";
+            String json = JsonConvert.SerializeObject(pesquisaNoticia);
+
+            Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
+            noticias = JsonConvert.DeserializeObject<List<Noticia>>(objectResponse.ToString());
+
+            ListViewNoticia.Items.Clear();
+
+            foreach (Noticia noticia in noticias) {
+                ListViewItem item = ListViewNoticia.Items.Add(noticia.id);
+                item.SubItems.Add(Convert.ToDateTime(noticia.data_publicacao).ToString("dd/MM/yy"));
+                item.SubItems.Add(noticia.usuario.email);
+                item.SubItems.Add((noticia.usuario.tipo.Equals("1")) ? "Instituição" : "Administrador");
+                item.SubItems.Add(noticia.titulo_noticia);
+            }
+
+        }
         private void exibirDetalhesNoticia() {
 
             if (ListViewNoticia.SelectedItems.Count > 0) {
@@ -66,6 +86,36 @@ namespace CapacitaDesk {
         private void button1_Click(object sender, EventArgs e) {
             PostarNoticia postNoticia = new PostarNoticia(administrador);
             postNoticia.ShowDialog();
+        }
+
+        private void BtnBuscarNoticia_Click(object sender, EventArgs e) {
+
+            carregarTabelaPesquisa(new PesquisaNoticia() {
+                email = TxtBoxEmail.Text,
+                titulo_noticia = TxtBoxTitulo.Text,
+                //NECESSARIO ADICIONAR -1 DIA E +1 DIA NAS DATAS PARA PROCURAR ENTRE AS DATAS
+                dataInicial = Convert.ToDateTime(dtpDataInicial.Text).ToString("yyyy-MM-dd"),
+                dataFinal = Convert.ToDateTime(dtpDataFinal.Text).AddDays(1).ToString("yyyy-MM-dd")
+            });
+        }
+
+        private void BtnExcluirNoticia_Click(object sender, EventArgs e) {
+
+            
+            if (ListViewNoticia.SelectedItems.Count > 0) {
+
+
+                Noticia noticia = new Noticia();
+                noticia.id = ListViewNoticia.SelectedItems[0].SubItems[0].Text;
+
+                String rota = "http://localhost:3000/noticia";
+                String json = JsonConvert.SerializeObject(noticia);
+
+                Object objectResponse = ConnectionAPI.remove(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
+
+                carregarTabela();               
+            }
         }
     }
 }
