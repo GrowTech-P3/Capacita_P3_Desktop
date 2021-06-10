@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapacitaDesk.model
 {
-    class LogAdministrador
+    public class LogAdministrador
     {
         public String idLog { get; set; }
         public Administrador administrador { get; set; }
