@@ -80,6 +80,7 @@ namespace CapacitaDesk {
         }
 
         private void BtnCadastrarUsuario_Click(object sender, EventArgs e) {
+            
             UsuarioPcd usuarioPcd = new UsuarioPcd();
             ValidateUsuarioPcd validar = new ValidateUsuarioPcd();
             String rota = "http://localhost:3000/usuarioPcd";
@@ -109,6 +110,14 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Usuário PCD Cadastrado com sucesso!")){
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "cadastro de usuário PCD";
+                    logAdministrador.administrador.idAdministrador = admin.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, admin.Token);
+                }
                 limparCampos();
             }
             else { 
@@ -264,6 +273,16 @@ namespace CapacitaDesk {
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Usuário deletado!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Remoção de acesso de usuário PCD";
+                    logAdministrador.administrador.idAdministrador = admin.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, admin.Token);
+                }
+
                 limparCampos();
             }
             else {
@@ -302,6 +321,16 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, admin.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Usuário atualizado!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Atualização de usuário PCD";
+                    logAdministrador.administrador.idAdministrador = admin.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, admin.Token);
+                }
+
                 limparCampos();
             }
             else
@@ -323,6 +352,15 @@ namespace CapacitaDesk {
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Senha resetada com sucesso!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Reset de senha de usuário PCD";
+                    logAdministrador.administrador.idAdministrador = admin.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, admin.Token);
+                }
                 limparCampos();
             }
             else {

@@ -45,7 +45,15 @@ namespace CapacitaDesk {
             RespUsuario respCurso = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
             MessageBox.Show(respCurso.message);
-
+            if (respCurso.message.Trim().Equals("Curso autorizado com sucesso!"))
+            {
+                String rotaLog = "http://localhost:3000/log";
+                LogAdministrador logAdministrador = new LogAdministrador();
+                logAdministrador.logAtividade = "Autorizando Curso";
+                logAdministrador.administrador.idAdministrador = administrador.id;
+                String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+            }
             Dispose();
             ListaDeCurso listaDeCurso = new ListaDeCurso(administrador);
             listaDeCurso.ShowDialog();
