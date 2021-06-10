@@ -12,5 +12,9 @@ namespace CapacitaDesk.model
         public Administrador administrador { get; set; }
         public String logAtividade  { get; set; }
         public String dataHora  { get; set; }
+        public LogAdministrador()
+        {
+            this.administrador = new Administrador();
+        }
     }
 }

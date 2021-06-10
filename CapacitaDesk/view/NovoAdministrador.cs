@@ -53,6 +53,15 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, this.administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Administrador cadastrado com sucesso!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "cadastro de Administrador";
+                    logAdministrador.administrador.idAdministrador = this.administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, this.administrador.Token);
+                }
                 limparCampos();
             } 
             else
@@ -128,6 +137,17 @@ namespace CapacitaDesk {
                 ConnectionAPI.post(rotaSenha, json, administrador.Token);
                 RespUsuario respUsario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsario.message);
+                
+                if (respUsario.message.Trim().Equals("Administrador Atualizado"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Atualização de senha de Administrador";
+                    logAdministrador.administrador.idAdministrador = this.administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, this.administrador.Token);
+                }
+                limparCampos();
             }
             else if (admin.nome != null && !(admin.nome.Trim().Equals("")) && !(admin.email.Trim().Equals("")) && admin.email != null)
             {
@@ -135,6 +155,15 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
                 RespUsuario respUsario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsario.message);
+                if (respUsario.message.Trim().Equals("Administrador Atualizado"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Atualização de nome/email de Administrador";
+                    logAdministrador.administrador.idAdministrador = this.administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, this.administrador.Token);
+                }
             }
             else if (admin.email == null || admin.email.Trim().Equals(""))
             {
@@ -157,6 +186,15 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.remove(rota,json,administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
+                if (respUsuario.message.Trim().Equals("Administrador deletado"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Remoção de acesso de Administrador";
+                    logAdministrador.administrador.idAdministrador = this.administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, this.administrador.Token);
+                }
             }
             else
             {

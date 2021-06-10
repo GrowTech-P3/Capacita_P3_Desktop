@@ -116,7 +116,12 @@ namespace CapacitaDesk {
 
                     Object objectResponse = ConnectionAPI.remove(rota, json, administrador.Token);
                     RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
-
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Removendo Noticia";
+                    logAdministrador.administrador.idAdministrador = administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
                     carregarTabela();
                 }               
             }

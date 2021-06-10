@@ -59,7 +59,15 @@ namespace CapacitaDesk {
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
                 MessageBox.Show(respUsuario.message);
-
+                if (respUsuario.message.Trim().Equals("Notícia deletada!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Removendo Noticia";
+                    logAdministrador.administrador.idAdministrador = administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+                }
                 Dispose();
                 GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
                 Gnoticia.ShowDialog();
@@ -92,7 +100,15 @@ namespace CapacitaDesk {
             RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
             MessageBox.Show(respUsuario.message);
-
+            if (respUsuario.message.Trim().Equals("Notícia atualizada!"))
+            {
+                String rotaLog = "http://localhost:3000/log";
+                LogAdministrador logAdministrador = new LogAdministrador();
+                logAdministrador.logAtividade = "Atualizando Noticia Noticia";
+                logAdministrador.administrador.idAdministrador = administrador.id;
+                String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+            }
             Dispose();
 
             GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);

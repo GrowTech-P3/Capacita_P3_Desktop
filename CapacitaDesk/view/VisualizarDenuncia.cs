@@ -38,7 +38,15 @@ namespace CapacitaDesk {
             RespUsuario respDenunciaCurso = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
             MessageBox.Show(respDenunciaCurso.message);
-
+            if (respDenunciaCurso.message.Trim().Equals("Denuncia de Curso fechada com sucesso!"))
+            {
+                String rotaLog = "http://localhost:3000/log";
+                LogAdministrador logAdministrador = new LogAdministrador();
+                logAdministrador.logAtividade = "Encerrando denuncia curso";
+                logAdministrador.administrador.idAdministrador = administrador.id;
+                String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+            }
             Dispose();
             GerencDenuncia regGerenciarDenuncia = new GerencDenuncia(administrador);
             regGerenciarDenuncia.ShowDialog();
@@ -59,7 +67,15 @@ namespace CapacitaDesk {
             RespUsuario respDenunciaCurso = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
             MessageBox.Show(respDenunciaCurso.message);
-
+            if (respDenunciaCurso.message.Trim().Equals("Denuncia de Curso fechada com sucesso! Curso Inativado!"))
+            {
+                String rotaLog = "http://localhost:3000/log";
+                LogAdministrador logAdministrador = new LogAdministrador();
+                logAdministrador.logAtividade = "Suspendendo curso";
+                logAdministrador.administrador.idAdministrador = administrador.id;
+                String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+            }
             Dispose();
             GerencDenuncia regGerenciarDenuncia = new GerencDenuncia(administrador);
             regGerenciarDenuncia.ShowDialog();

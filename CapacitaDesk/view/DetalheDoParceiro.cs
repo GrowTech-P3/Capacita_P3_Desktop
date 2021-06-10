@@ -42,6 +42,15 @@ namespace CapacitaDesk {
             RespUsuario respInstituicao = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
             MessageBox.Show(respInstituicao.message);
+            if (respInstituicao.message.Trim().Equals("Instituição autorizada com sucesso!"))
+            {
+                String rotaLog = "http://localhost:3000/log";
+                LogAdministrador logAdministrador = new LogAdministrador();
+                logAdministrador.logAtividade = "Autorizando Instituição";
+                logAdministrador.administrador.idAdministrador = administrador.id;
+                String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+            }
 
             Dispose();
             RegistroDeNovoParceiro regNovoParceiro = new RegistroDeNovoParceiro(administrador);

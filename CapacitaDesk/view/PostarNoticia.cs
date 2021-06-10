@@ -56,7 +56,15 @@ namespace CapacitaDesk {
                 Object objResponse = ConnectionAPI.post(rota, json, administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
                 MessageBox.Show(respUsuario.message);
-               
+                if (respUsuario.message.Trim().Equals("Notícia cadastrada com sucesso!"))
+                {
+                    String rotaLog = "http://localhost:3000/log";
+                    LogAdministrador logAdministrador = new LogAdministrador();
+                    logAdministrador.logAtividade = "Postando Noticia";
+                    logAdministrador.administrador.idAdministrador = administrador.id;
+                    String jsonLog = JsonConvert.SerializeObject(logAdministrador);
+                    ConnectionAPI.post(rotaLog, jsonLog, administrador.Token);
+                }
                 Dispose();
                 GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
                 Gnoticia.ShowDialog();
