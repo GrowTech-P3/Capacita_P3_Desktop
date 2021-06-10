@@ -46,8 +46,7 @@ namespace CapacitaDesk {
             this.PictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TxtBoxEscreverNoticia = new System.Windows.Forms.TextBox();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -305,28 +304,22 @@ namespace CapacitaDesk {
             this.TxtBoxEscreverNoticia.Size = new System.Drawing.Size(306, 351);
             this.TxtBoxEscreverNoticia.TabIndex = 7;
             // 
-            // textBoxId
+            // btnAtualizar
             // 
-            this.textBoxId.Location = new System.Drawing.Point(63, 149);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(54, 23);
-            this.textBoxId.TabIndex = 125;
-            this.textBoxId.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(68, 567);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 25);
-            this.button1.TabIndex = 126;
-            this.button1.Text = "ATUALIZAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnAtualizar.Enabled = false;
+            this.btnAtualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAtualizar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAtualizar.Location = new System.Drawing.Point(68, 567);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(100, 25);
+            this.btnAtualizar.TabIndex = 126;
+            this.btnAtualizar.Text = "ATUALIZAR";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // VisualizarNoticia
             // 
@@ -334,8 +327,7 @@ namespace CapacitaDesk {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 661);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.BtnExcluirDenuncia);
             this.Controls.Add(this.BtnEditarDenuncia);
@@ -358,7 +350,6 @@ namespace CapacitaDesk {
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -385,7 +376,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.PictureBox PictureBoxLogo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox TxtBoxEscreverNoticia;
-        private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

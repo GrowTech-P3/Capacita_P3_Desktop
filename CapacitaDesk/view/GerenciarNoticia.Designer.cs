@@ -337,6 +337,7 @@ namespace CapacitaDesk {
             this.btnAlterarNoticia.TabIndex = 8;
             this.btnAlterarNoticia.Text = "ALTERAR";
             this.btnAlterarNoticia.UseVisualStyleBackColor = false;
+            this.btnAlterarNoticia.Click += new System.EventHandler(this.btnAlterarNoticia_Click);
             // 
             // GerenciarNoticia
             // 
