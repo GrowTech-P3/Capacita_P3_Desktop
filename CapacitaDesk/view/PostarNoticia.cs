@@ -16,9 +16,19 @@ using Newtonsoft.Json;
 namespace CapacitaDesk {
     public partial class PostarNoticia : Form {
         AdminLogado administrador = new AdminLogado();
+        private Noticia noticia;
+
         public PostarNoticia(AdminLogado admin) {
             InitializeComponent();
             this.administrador = admin;
+        }
+
+        public PostarNoticia(AdminLogado admin, Noticia noticia) : this(admin)
+        {
+            this.noticia = noticia;
+            TxtBoxEscreverNoticia.Text = noticia.txt_noticia;
+            TxtBoxTitulo.Text = noticia.titulo_noticia;
+            textBox1.Text = noticia.descricao;
         }
 
         public void limparCampos() {

@@ -29,7 +29,6 @@ namespace CapacitaDesk {
             TxtBoxDescricaoNoticia.Text = noticia.descricao;
             TxtBoxTitulo.Text = noticia.titulo_noticia;
             TxtBoxEscreverNoticia.Text = noticia.txt_noticia;
-            textBoxId.Text = noticia.id;
           
         }
 
@@ -46,35 +45,59 @@ namespace CapacitaDesk {
 
         private void BtnExcluirDenuncia_Click(object sender, EventArgs e) {
 
-         
-            String rota = "http://localhost:3000/noticia";
             Noticia noticia = new Noticia();
+            noticia.id = this.noticia.id;
 
-            noticia.id = textBoxId.Text;
+            var resultado = MessageBox.Show("Deseja realmente excluir notícia ID: " + noticia.id + "?", "Excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            String json = JsonConvert.SerializeObject(noticia);
-            Object objResponse = ConnectionAPI.remove(rota, json, administrador.Token);
-            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+            if (resultado == DialogResult.Yes)
+            {
+                String rota = "http://localhost:3000/noticia";
 
-            MessageBox.Show(respUsuario.message);
+                String json = JsonConvert.SerializeObject(noticia);
+                Object objResponse = ConnectionAPI.remove(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
-            Dispose();
-            GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
-            Gnoticia.ShowDialog();
+                MessageBox.Show(respUsuario.message);
+
+                Dispose();
+                GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
+                Gnoticia.ShowDialog();
+            }
 
         }
 
         private void BtnEditarDenuncia_Click(object sender, EventArgs e) {
 
-            TxtBoxData.Enabled = true;
             TxtBoxDescricaoNoticia.Enabled = true;
-            TxtBoxEmail.Enabled = true;
             TxtBoxEscreverNoticia.Enabled = true;
-            TxtBoxNomeUsuario.Enabled = true;
-            TxtBoxTipoUsuario.Enabled = true;
             TxtBoxTitulo.Enabled = true;
+            btnAtualizar.Enabled = true;
+            BtnEditarDenuncia.Enabled = false;
+            BtnExcluirDenuncia.Enabled = false;
 
-           
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            String rota = "http://localhost:3000/noticia";
+            Noticia noticia = this.noticia;
+
+            noticia.titulo_noticia = TxtBoxTitulo.Text;
+            noticia.txt_noticia = TxtBoxEscreverNoticia.Text;
+            noticia.descricao = TxtBoxDescricaoNoticia.Text;
+
+            String json = JsonConvert.SerializeObject(noticia);
+            Object objResponse = ConnectionAPI.put(rota, json, administrador.Token);
+            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+
+            MessageBox.Show(respUsuario.message);
+
+            Dispose();
+
+            GerenciarNoticia Gnoticia = new GerenciarNoticia(administrador);
+            Gnoticia.ShowDialog();
+
         }
     }
 }

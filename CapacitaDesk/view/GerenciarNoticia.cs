@@ -121,5 +121,24 @@ namespace CapacitaDesk {
                 }               
             }
         }
+
+        private void btnAlterarNoticia_Click(object sender, EventArgs e)
+        {
+            if (ListViewNoticia.SelectedItems.Count > 0)
+            {
+                Noticia noticia = new Noticia();
+                noticia.id = ListViewNoticia.SelectedItems[0].SubItems[0].Text;
+
+                String rota = "http://localhost:3000/buscar-noticia";
+                String json = JsonConvert.SerializeObject(noticia);
+
+                Object objectResponse = ConnectionAPI.post(rota, json, administrador.Token);
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objectResponse.ToString());
+
+                this.Dispose();
+                PostarNoticia pNoticia = new PostarNoticia(administrador, respUsuario.noticia);
+                pNoticia.ShowDialog();
+            }
+        }
     }
 }
