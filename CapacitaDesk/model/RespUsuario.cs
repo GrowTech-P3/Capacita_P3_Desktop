@@ -14,16 +14,9 @@ namespace CapacitaDesk.model
         public Administrador admin { get; set; }
         public UsuarioPcd usuarioPCD { get; set; }
         public Instituicao instituicao { get; set; }
-
-        public LogAdministrador logAdministrador { get; set; }
         public AdminLogado administrador { get; set; }
 
-        public List<TipoDeficiencia> tipoDeficiencia { get; set; }
-        public Estado estados { get; set; }
-
         public Curso curso { get; set; }
-     
-        public String token { get; set; }
 
         public DenunciaCurso denunciaCurso { get; set; }
 
