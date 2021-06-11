@@ -51,7 +51,6 @@ namespace CapacitaDesk {
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPostarNoticia = new System.Windows.Forms.Button();
-            this.btnAlterarNoticia = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -108,7 +107,7 @@ namespace CapacitaDesk {
             this.BtnExcluirNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExcluirNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExcluirNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExcluirNoticia.Location = new System.Drawing.Point(276, 481);
+            this.BtnExcluirNoticia.Location = new System.Drawing.Point(320, 476);
             this.BtnExcluirNoticia.Name = "BtnExcluirNoticia";
             this.BtnExcluirNoticia.Size = new System.Drawing.Size(121, 35);
             this.BtnExcluirNoticia.TabIndex = 7;
@@ -124,7 +123,7 @@ namespace CapacitaDesk {
             this.BtnExibirNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExibirNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnExibirNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnExibirNoticia.Location = new System.Drawing.Point(530, 481);
+            this.BtnExibirNoticia.Location = new System.Drawing.Point(447, 476);
             this.BtnExibirNoticia.Name = "BtnExibirNoticia";
             this.BtnExibirNoticia.Size = new System.Drawing.Size(121, 35);
             this.BtnExibirNoticia.TabIndex = 9;
@@ -315,7 +314,7 @@ namespace CapacitaDesk {
             this.btnPostarNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPostarNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPostarNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnPostarNoticia.Location = new System.Drawing.Point(149, 481);
+            this.btnPostarNoticia.Location = new System.Drawing.Point(193, 476);
             this.btnPostarNoticia.Name = "btnPostarNoticia";
             this.btnPostarNoticia.Size = new System.Drawing.Size(121, 35);
             this.btnPostarNoticia.TabIndex = 6;
@@ -323,29 +322,12 @@ namespace CapacitaDesk {
             this.btnPostarNoticia.UseVisualStyleBackColor = false;
             this.btnPostarNoticia.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnAlterarNoticia
-            // 
-            this.btnAlterarNoticia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.btnAlterarNoticia.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnAlterarNoticia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.btnAlterarNoticia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarNoticia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterarNoticia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAlterarNoticia.Location = new System.Drawing.Point(403, 481);
-            this.btnAlterarNoticia.Name = "btnAlterarNoticia";
-            this.btnAlterarNoticia.Size = new System.Drawing.Size(121, 35);
-            this.btnAlterarNoticia.TabIndex = 8;
-            this.btnAlterarNoticia.Text = "ALTERAR";
-            this.btnAlterarNoticia.UseVisualStyleBackColor = false;
-            this.btnAlterarNoticia.Click += new System.EventHandler(this.btnAlterarNoticia_Click);
-            // 
             // GerenciarNoticia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btnAlterarNoticia);
             this.Controls.Add(this.btnPostarNoticia);
             this.Controls.Add(this.BtnExcluirNoticia);
             this.Controls.Add(this.BtnExibirNoticia);
@@ -392,7 +374,6 @@ namespace CapacitaDesk {
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ColumnHeader Titulo;
         private System.Windows.Forms.Button btnPostarNoticia;
-        private System.Windows.Forms.Button btnAlterarNoticia;
         private System.Windows.Forms.DateTimePicker dtpDataFinal;
         private System.Windows.Forms.DateTimePicker dtpDataInicial;
         private System.Windows.Forms.ColumnHeader Email;

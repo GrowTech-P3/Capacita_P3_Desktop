@@ -93,9 +93,9 @@ namespace CapacitaDesk {
             this.groupBox2.Controls.Add(this.ListViewAtividade);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.groupBox2.Location = new System.Drawing.Point(56, 271);
+            this.groupBox2.Location = new System.Drawing.Point(78, 214);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(669, 236);
+            this.groupBox2.Size = new System.Drawing.Size(641, 335);
             this.groupBox2.TabIndex = 109;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registro de atividades";
@@ -112,9 +112,9 @@ namespace CapacitaDesk {
             this.ListViewAtividade.HideSelection = false;
             this.ListViewAtividade.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.ListViewAtividade.Location = new System.Drawing.Point(15, 27);
+            this.ListViewAtividade.Location = new System.Drawing.Point(11, 24);
             this.ListViewAtividade.Name = "ListViewAtividade";
-            this.ListViewAtividade.Size = new System.Drawing.Size(642, 198);
+            this.ListViewAtividade.Size = new System.Drawing.Size(618, 303);
             this.ListViewAtividade.TabIndex = 1;
             this.ListViewAtividade.UseCompatibleStateImageBehavior = false;
             this.ListViewAtividade.View = System.Windows.Forms.View.Details;
@@ -132,12 +132,12 @@ namespace CapacitaDesk {
             // NomeDoAdministrador
             // 
             this.NomeDoAdministrador.Text = "Nome do Administrador";
-            this.NomeDoAdministrador.Width = 250;
+            this.NomeDoAdministrador.Width = 200;
             // 
             // logAtividade
             // 
             this.logAtividade.Text = "Log Atividade";
-            this.logAtividade.Width = 100;
+            this.logAtividade.Width = 250;
             // 
             // groupBox1
             // 
@@ -147,9 +147,9 @@ namespace CapacitaDesk {
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.groupBox1.Location = new System.Drawing.Point(56, 142);
+            this.groupBox1.Location = new System.Drawing.Point(457, 141);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(669, 120);
+            this.groupBox1.Size = new System.Drawing.Size(262, 74);
             this.groupBox1.TabIndex = 108;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -162,7 +162,7 @@ namespace CapacitaDesk {
             this.BtnBuscarAtividade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscarAtividade.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnBuscarAtividade.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnBuscarAtividade.Location = new System.Drawing.Point(548, 68);
+            this.BtnBuscarAtividade.Location = new System.Drawing.Point(142, 29);
             this.BtnBuscarAtividade.Name = "BtnBuscarAtividade";
             this.BtnBuscarAtividade.Size = new System.Drawing.Size(112, 35);
             this.BtnBuscarAtividade.TabIndex = 107;
@@ -175,9 +175,9 @@ namespace CapacitaDesk {
             this.TxtBoxID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtBoxID.Location = new System.Drawing.Point(21, 42);
+            this.TxtBoxID.Location = new System.Drawing.Point(21, 39);
             this.TxtBoxID.Name = "TxtBoxID";
-            this.TxtBoxID.Size = new System.Drawing.Size(288, 14);
+            this.TxtBoxID.Size = new System.Drawing.Size(115, 14);
             this.TxtBoxID.TabIndex = 98;
             this.TxtBoxID.TextChanged += new System.EventHandler(this.TxtBoxID_TextChanged);
             this.TxtBoxID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBoxID_KeyPress);
@@ -187,7 +187,7 @@ namespace CapacitaDesk {
             this.idAtividade.AutoSize = true;
             this.idAtividade.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.idAtividade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
-            this.idAtividade.Location = new System.Drawing.Point(21, 23);
+            this.idAtividade.Location = new System.Drawing.Point(21, 20);
             this.idAtividade.Name = "idAtividade";
             this.idAtividade.Size = new System.Drawing.Size(21, 17);
             this.idAtividade.TabIndex = 73;
