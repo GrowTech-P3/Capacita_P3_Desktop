@@ -96,17 +96,24 @@ namespace CapacitaDesk {
                 String json = JsonConvert.SerializeObject(admin);
                 Object objResponse = ConnectionAPI.getOne(rota, json,administrador.Token);
                 RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
-                TxtBoxNomeUsuario.Text = respUsuario.admin.nome;
-                if (respUsuario.usuario.ativo.Trim().Equals("true"))
+                MessageBox.Show(respUsuario.message);
+                if(!respUsuario.message.Trim().Equals("Administrador não encontrado!"))
                 {
-                    checkBoxAtivo.Checked = true;
-                    checkBoxInativo.Checked = false;
+                    TxtBoxNomeUsuario.Text = respUsuario.admin.nome;
+
+                    if (respUsuario.usuario.ativo.Trim().Equals("true"))
+                    {
+                        checkBoxAtivo.Checked = true;
+                        checkBoxInativo.Checked = false;
+                    }
+                    else
+                    {
+                        checkBoxAtivo.Checked = false;
+                        checkBoxInativo.Checked = true;
+                    }
+                    
                 }
-                else 
-                {
-                    checkBoxAtivo.Checked = false;
-                    checkBoxInativo.Checked = true;
-                }
+                
             }
             else 
             {
