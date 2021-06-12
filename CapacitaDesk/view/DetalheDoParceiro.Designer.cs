@@ -63,7 +63,7 @@ namespace CapacitaDesk {
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -94,7 +94,7 @@ namespace CapacitaDesk {
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 69);
@@ -126,7 +126,7 @@ namespace CapacitaDesk {
             this.TxtBoxDescricaoParceiro.ReadOnly = true;
             this.TxtBoxDescricaoParceiro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtBoxDescricaoParceiro.Size = new System.Drawing.Size(475, 141);
-            this.TxtBoxDescricaoParceiro.TabIndex = 105;
+            this.TxtBoxDescricaoParceiro.TabIndex = 11;
             // 
             // label12
             // 
@@ -148,7 +148,7 @@ namespace CapacitaDesk {
             this.TxtBoxNum.Location = new System.Drawing.Point(443, 119);
             this.TxtBoxNum.Name = "TxtBoxNum";
             this.TxtBoxNum.Size = new System.Drawing.Size(41, 14);
-            this.TxtBoxNum.TabIndex = 126;
+            this.TxtBoxNum.TabIndex = 9;
             // 
             // label11
             // 
@@ -170,7 +170,7 @@ namespace CapacitaDesk {
             this.TxtBoxCep.Location = new System.Drawing.Point(336, 119);
             this.TxtBoxCep.Name = "TxtBoxCep";
             this.TxtBoxCep.Size = new System.Drawing.Size(101, 14);
-            this.TxtBoxCep.TabIndex = 124;
+            this.TxtBoxCep.TabIndex = 8;
             // 
             // label10
             // 
@@ -192,7 +192,7 @@ namespace CapacitaDesk {
             this.TxtBoxBairroParceiro.Location = new System.Drawing.Point(234, 119);
             this.TxtBoxBairroParceiro.Name = "TxtBoxBairroParceiro";
             this.TxtBoxBairroParceiro.Size = new System.Drawing.Size(96, 14);
-            this.TxtBoxBairroParceiro.TabIndex = 122;
+            this.TxtBoxBairroParceiro.TabIndex = 7;
             // 
             // label9
             // 
@@ -214,7 +214,7 @@ namespace CapacitaDesk {
             this.TxtBoxCidadeParceiro.Location = new System.Drawing.Point(6, 119);
             this.TxtBoxCidadeParceiro.Name = "TxtBoxCidadeParceiro";
             this.TxtBoxCidadeParceiro.Size = new System.Drawing.Size(182, 14);
-            this.TxtBoxCidadeParceiro.TabIndex = 120;
+            this.TxtBoxCidadeParceiro.TabIndex = 5;
             // 
             // label7
             // 
@@ -236,7 +236,7 @@ namespace CapacitaDesk {
             this.TxtBoxUfParceiro.Location = new System.Drawing.Point(194, 119);
             this.TxtBoxUfParceiro.Name = "TxtBoxUfParceiro";
             this.TxtBoxUfParceiro.Size = new System.Drawing.Size(34, 14);
-            this.TxtBoxUfParceiro.TabIndex = 118;
+            this.TxtBoxUfParceiro.TabIndex = 6;
             // 
             // label8
             // 
@@ -258,7 +258,7 @@ namespace CapacitaDesk {
             this.TxtBoxEnderecoParceiro.Location = new System.Drawing.Point(6, 83);
             this.TxtBoxEnderecoParceiro.Name = "TxtBoxEnderecoParceiro";
             this.TxtBoxEnderecoParceiro.Size = new System.Drawing.Size(363, 14);
-            this.TxtBoxEnderecoParceiro.TabIndex = 116;
+            this.TxtBoxEnderecoParceiro.TabIndex = 3;
             // 
             // label5
             // 
@@ -280,7 +280,7 @@ namespace CapacitaDesk {
             this.TxtBoxEmailParceiro.Location = new System.Drawing.Point(6, 156);
             this.TxtBoxEmailParceiro.Name = "TxtBoxEmailParceiro";
             this.TxtBoxEmailParceiro.Size = new System.Drawing.Size(478, 14);
-            this.TxtBoxEmailParceiro.TabIndex = 114;
+            this.TxtBoxEmailParceiro.TabIndex = 10;
             // 
             // label4
             // 
@@ -302,7 +302,7 @@ namespace CapacitaDesk {
             this.TxtBoxTelefoneParceiro.Location = new System.Drawing.Point(375, 83);
             this.TxtBoxTelefoneParceiro.Name = "TxtBoxTelefoneParceiro";
             this.TxtBoxTelefoneParceiro.Size = new System.Drawing.Size(109, 14);
-            this.TxtBoxTelefoneParceiro.TabIndex = 112;
+            this.TxtBoxTelefoneParceiro.TabIndex = 4;
             // 
             // label3
             // 
@@ -324,7 +324,7 @@ namespace CapacitaDesk {
             this.TxtBoxCnpj.Location = new System.Drawing.Point(320, 48);
             this.TxtBoxCnpj.Name = "TxtBoxCnpj";
             this.TxtBoxCnpj.Size = new System.Drawing.Size(164, 14);
-            this.TxtBoxCnpj.TabIndex = 110;
+            this.TxtBoxCnpj.TabIndex = 2;
             // 
             // label2
             // 
@@ -346,7 +346,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomeInstituicao.Location = new System.Drawing.Point(6, 48);
             this.TxtBoxNomeInstituicao.Name = "TxtBoxNomeInstituicao";
             this.TxtBoxNomeInstituicao.Size = new System.Drawing.Size(308, 14);
-            this.TxtBoxNomeInstituicao.TabIndex = 108;
+            this.TxtBoxNomeInstituicao.TabIndex = 1;
             // 
             // BtnRecusarParceiro
             // 
@@ -359,7 +359,7 @@ namespace CapacitaDesk {
             this.BtnRecusarParceiro.Location = new System.Drawing.Point(262, 508);
             this.BtnRecusarParceiro.Name = "BtnRecusarParceiro";
             this.BtnRecusarParceiro.Size = new System.Drawing.Size(121, 32);
-            this.BtnRecusarParceiro.TabIndex = 129;
+            this.BtnRecusarParceiro.TabIndex = 12;
             this.BtnRecusarParceiro.Text = "RECUSAR";
             this.BtnRecusarParceiro.UseVisualStyleBackColor = false;
             this.BtnRecusarParceiro.Click += new System.EventHandler(this.BtnRecusarParceiro_Click);
@@ -375,7 +375,7 @@ namespace CapacitaDesk {
             this.BtnAceitarParceiro.Location = new System.Drawing.Point(389, 508);
             this.BtnAceitarParceiro.Name = "BtnAceitarParceiro";
             this.BtnAceitarParceiro.Size = new System.Drawing.Size(121, 32);
-            this.BtnAceitarParceiro.TabIndex = 128;
+            this.BtnAceitarParceiro.TabIndex = 13;
             this.BtnAceitarParceiro.Text = "ACEITAR";
             this.BtnAceitarParceiro.UseVisualStyleBackColor = false;
             this.BtnAceitarParceiro.Click += new System.EventHandler(this.BtnAceitarParceiro_Click);

@@ -72,7 +72,7 @@ namespace CapacitaDesk {
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -93,7 +93,7 @@ namespace CapacitaDesk {
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 69);
@@ -111,7 +111,7 @@ namespace CapacitaDesk {
             this.TxtBoxDescricao.Multiline = true;
             this.TxtBoxDescricao.Name = "TxtBoxDescricao";
             this.TxtBoxDescricao.Size = new System.Drawing.Size(261, 150);
-            this.TxtBoxDescricao.TabIndex = 105;
+            this.TxtBoxDescricao.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -135,7 +135,7 @@ namespace CapacitaDesk {
             this.TxtBoxResumo.Multiline = true;
             this.TxtBoxResumo.Name = "TxtBoxResumo";
             this.TxtBoxResumo.Size = new System.Drawing.Size(264, 150);
-            this.TxtBoxResumo.TabIndex = 105;
+            this.TxtBoxResumo.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -169,7 +169,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomeInstituicao.Location = new System.Drawing.Point(126, 43);
             this.TxtBoxNomeInstituicao.Name = "TxtBoxNomeInstituicao";
             this.TxtBoxNomeInstituicao.Size = new System.Drawing.Size(431, 16);
-            this.TxtBoxNomeInstituicao.TabIndex = 108;
+            this.TxtBoxNomeInstituicao.TabIndex = 1;
             // 
             // label3
             // 
@@ -192,7 +192,7 @@ namespace CapacitaDesk {
             this.TxtBoxNomeCurso.Location = new System.Drawing.Point(126, 90);
             this.TxtBoxNomeCurso.Name = "TxtBoxNomeCurso";
             this.TxtBoxNomeCurso.Size = new System.Drawing.Size(431, 16);
-            this.TxtBoxNomeCurso.TabIndex = 110;
+            this.TxtBoxNomeCurso.TabIndex = 2;
             // 
             // TxtBoxDuracao
             // 
@@ -203,7 +203,7 @@ namespace CapacitaDesk {
             this.TxtBoxDuracao.Location = new System.Drawing.Point(11, 141);
             this.TxtBoxDuracao.Name = "TxtBoxDuracao";
             this.TxtBoxDuracao.Size = new System.Drawing.Size(109, 16);
-            this.TxtBoxDuracao.TabIndex = 112;
+            this.TxtBoxDuracao.TabIndex = 3;
             // 
             // label4
             // 
@@ -236,7 +236,7 @@ namespace CapacitaDesk {
             this.TxtBoxCargaHoraria.Location = new System.Drawing.Point(126, 141);
             this.TxtBoxCargaHoraria.Name = "TxtBoxCargaHoraria";
             this.TxtBoxCargaHoraria.Size = new System.Drawing.Size(109, 16);
-            this.TxtBoxCargaHoraria.TabIndex = 114;
+            this.TxtBoxCargaHoraria.TabIndex = 4;
             // 
             // label6
             // 
@@ -258,7 +258,7 @@ namespace CapacitaDesk {
             this.TxtBoxHoraio.Location = new System.Drawing.Point(240, 141);
             this.TxtBoxHoraio.Name = "TxtBoxHoraio";
             this.TxtBoxHoraio.Size = new System.Drawing.Size(84, 16);
-            this.TxtBoxHoraio.TabIndex = 116;
+            this.TxtBoxHoraio.TabIndex = 5;
             // 
             // label7
             // 
@@ -280,7 +280,7 @@ namespace CapacitaDesk {
             this.TxtBoxTipoDeficiencia.Location = new System.Drawing.Point(330, 141);
             this.TxtBoxTipoDeficiencia.Name = "TxtBoxTipoDeficiencia";
             this.TxtBoxTipoDeficiencia.Size = new System.Drawing.Size(120, 16);
-            this.TxtBoxTipoDeficiencia.TabIndex = 118;
+            this.TxtBoxTipoDeficiencia.TabIndex = 6;
             // 
             // pictureBox1
             // 
@@ -303,7 +303,7 @@ namespace CapacitaDesk {
             this.BtnAceitarCurso.Location = new System.Drawing.Point(383, 510);
             this.BtnAceitarCurso.Name = "BtnAceitarCurso";
             this.BtnAceitarCurso.Size = new System.Drawing.Size(121, 32);
-            this.BtnAceitarCurso.TabIndex = 121;
+            this.BtnAceitarCurso.TabIndex = 11;
             this.BtnAceitarCurso.Text = "ACEITAR";
             this.BtnAceitarCurso.UseVisualStyleBackColor = false;
             this.BtnAceitarCurso.Click += new System.EventHandler(this.BtnAceitarCurso_Click);
@@ -319,7 +319,7 @@ namespace CapacitaDesk {
             this.BtnRecusarCurso.Location = new System.Drawing.Point(256, 510);
             this.BtnRecusarCurso.Name = "BtnRecusarCurso";
             this.BtnRecusarCurso.Size = new System.Drawing.Size(121, 32);
-            this.BtnRecusarCurso.TabIndex = 122;
+            this.BtnRecusarCurso.TabIndex = 10;
             this.BtnRecusarCurso.Text = "RECUSAR";
             this.BtnRecusarCurso.UseVisualStyleBackColor = false;
             this.BtnRecusarCurso.Click += new System.EventHandler(this.BtnRecusarCurso_Click);
@@ -344,7 +344,7 @@ namespace CapacitaDesk {
             this.TxtBoxValor.Location = new System.Drawing.Point(456, 141);
             this.TxtBoxValor.Name = "TxtBoxValor";
             this.TxtBoxValor.Size = new System.Drawing.Size(101, 16);
-            this.TxtBoxValor.TabIndex = 123;
+            this.TxtBoxValor.TabIndex = 7;
             // 
             // groupBox3
             // 
