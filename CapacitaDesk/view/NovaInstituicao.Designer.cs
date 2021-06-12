@@ -292,6 +292,7 @@ namespace CapacitaDesk {
             // 
             // PictureBoxLogo
             // 
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
             this.PictureBoxLogo.Location = new System.Drawing.Point(33, 12);
             this.PictureBoxLogo.Name = "PictureBoxLogo";
@@ -303,6 +304,8 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_blue9;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -334,6 +337,7 @@ namespace CapacitaDesk {
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
             this.label6.Location = new System.Drawing.Point(66, 418);
@@ -374,6 +378,7 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.checkBoxInativoInst);
             this.groupBox1.Controls.Add(this.checkBoxAtivoInst);
             this.groupBox1.Controls.Add(this.textBoxPassword);
@@ -551,6 +556,8 @@ namespace CapacitaDesk {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_white10;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(866, 561);
             this.Controls.Add(this.buttonResetSenha);
             this.Controls.Add(this.buttonRemover);

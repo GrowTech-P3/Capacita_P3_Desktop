@@ -55,6 +55,8 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_blue10;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -64,6 +66,7 @@ namespace CapacitaDesk {
             // 
             // PictureBoxLogo
             // 
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
             this.PictureBoxLogo.Location = new System.Drawing.Point(33, 12);
             this.PictureBoxLogo.Name = "PictureBoxLogo";
@@ -74,7 +77,7 @@ namespace CapacitaDesk {
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.panel3.Controls.Add(this.label13);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.Color.White;
@@ -117,6 +120,7 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtBoxNomeCursoDenuncia);
             this.groupBox1.Controls.Add(this.label4);
@@ -222,6 +226,7 @@ namespace CapacitaDesk {
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.TxtBoxDescricaoDenuncia);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
@@ -234,6 +239,7 @@ namespace CapacitaDesk {
             // 
             // TxtBoxDescricaoDenuncia
             // 
+            this.TxtBoxDescricaoDenuncia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.TxtBoxDescricaoDenuncia.Location = new System.Drawing.Point(6, 24);
             this.TxtBoxDescricaoDenuncia.Multiline = true;
             this.TxtBoxDescricaoDenuncia.Name = "TxtBoxDescricaoDenuncia";
@@ -294,6 +300,8 @@ namespace CapacitaDesk {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_white10;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.BtnSuspenderCurso);
             this.Controls.Add(this.BtnAvaliarDenuncia);

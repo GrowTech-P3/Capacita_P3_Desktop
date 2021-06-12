@@ -133,8 +133,14 @@
   <data name="ImgInsituicaoAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgInsituicaoAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg blue5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconePostarNoticia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconePostarNoticia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconeNovaInstituicao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeNovaInstituicao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +151,20 @@
   <data name="BtnRegistroDeNovosParceiros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnRegistroDeNovosParceiros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg white10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImgUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ImgAdministrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgAdministrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,20 +181,32 @@
   <data name="IconeRgDeParceiros" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeRgDeParceiros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg blue2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tela de login 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tela de login 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BtnNovaInstituicao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnNovaInstituicao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cópia de logo_capacita" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cópia de logo_capacita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconeGerNoticia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconeGerNoticia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconeGerNoticia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconeGerNoticia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg blue8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconeNovoAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeNovoAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,17 +214,38 @@
   <data name="BtnGerenciarDenuncia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnGerenciarDenuncia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg white5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tela de login 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tela de login 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4853433" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4853433.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cópia de logo_capacita" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cópia de logo_capacita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconeNovoUser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconeNovoUser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tela de login 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tela de login 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg white9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ImgCurso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ImgCurso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4931029" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4931029.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg white6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconeLogDeAtividades" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeLogDeAtividades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,34 +253,55 @@
   <data name="BtnGerenciarNoticia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnGerenciarNoticia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BtnLogDeAtividade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BtnLogDeAtividade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4931029" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4931029.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconeNovoUser1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconeNovoUser1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg blue10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg white3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconeListaDeCursos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeListaDeCursos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImgUsuarioAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImgUsuarioAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnLogDeAtividade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BtnLogDeAtividade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BtnPostarNoticia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnPostarNoticia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ImgUsuarioAzul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImgUsuarioAzul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg blue7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BtnNovoAdministrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BtnNovoAdministrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconeNovoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeNovoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tela de login 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tela de login 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg white10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg white20.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

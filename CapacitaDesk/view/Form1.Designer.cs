@@ -38,11 +38,11 @@ namespace CapacitaDesk {
             this.BtnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEntrar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnEntrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BtnEntrar.Location = new System.Drawing.Point(400, 358);
+            this.BtnEntrar.Location = new System.Drawing.Point(335, 358);
             this.BtnEntrar.Name = "BtnEntrar";
-            this.BtnEntrar.Size = new System.Drawing.Size(90, 32);
+            this.BtnEntrar.Size = new System.Drawing.Size(214, 32);
             this.BtnEntrar.TabIndex = 2;
-            this.BtnEntrar.Text = "ENTRAR";
+            this.BtnEntrar.Text = "LOGIN";
             this.BtnEntrar.UseVisualStyleBackColor = false;
             this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
             // 
@@ -50,23 +50,23 @@ namespace CapacitaDesk {
             // 
             this.TxtSenha.BackColor = System.Drawing.Color.White;
             this.TxtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtSenha.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtSenha.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(170)))));
-            this.TxtSenha.Location = new System.Drawing.Point(359, 312);
+            this.TxtSenha.Location = new System.Drawing.Point(359, 313);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '*';
-            this.TxtSenha.Size = new System.Drawing.Size(183, 16);
+            this.TxtSenha.Size = new System.Drawing.Size(183, 15);
             this.TxtSenha.TabIndex = 1;
             // 
             // TxtUsuario
             // 
             this.TxtUsuario.BackColor = System.Drawing.Color.White;
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TxtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(170)))));
-            this.TxtUsuario.Location = new System.Drawing.Point(359, 264);
+            this.TxtUsuario.Location = new System.Drawing.Point(359, 265);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(183, 20);
+            this.TxtUsuario.Size = new System.Drawing.Size(183, 18);
             this.TxtUsuario.TabIndex = 0;
             // 
             // login

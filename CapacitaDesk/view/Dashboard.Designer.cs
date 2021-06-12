@@ -55,6 +55,8 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_blue2;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.labelEmailAdmin);
@@ -68,6 +70,7 @@ namespace CapacitaDesk {
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::CapacitaDesk.Properties.Resources.usuer;
             this.pictureBox1.Location = new System.Drawing.Point(1055, 26);
             this.pictureBox1.Name = "pictureBox1";
@@ -87,6 +90,7 @@ namespace CapacitaDesk {
             // labelEmailAdmin
             // 
             this.labelEmailAdmin.AutoSize = true;
+            this.labelEmailAdmin.BackColor = System.Drawing.Color.Transparent;
             this.labelEmailAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelEmailAdmin.ForeColor = System.Drawing.Color.White;
             this.labelEmailAdmin.Location = new System.Drawing.Point(1079, 34);
@@ -98,6 +102,7 @@ namespace CapacitaDesk {
             // labelData
             // 
             this.labelData.AutoSize = true;
+            this.labelData.BackColor = System.Drawing.Color.Transparent;
             this.labelData.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelData.ForeColor = System.Drawing.Color.White;
             this.labelData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,6 +115,7 @@ namespace CapacitaDesk {
             // 
             // PictureBoxLogo
             // 
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
             this.PictureBoxLogo.Location = new System.Drawing.Point(33, 21);
             this.PictureBoxLogo.Name = "PictureBoxLogo";
@@ -310,6 +316,7 @@ namespace CapacitaDesk {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_white4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel4);

@@ -88,7 +88,7 @@ namespace CapacitaDesk {
             
             Administrador admin = new Administrador();
             
-            admin.email = TxtBoxEmailUsuario.Text;
+            admin.email = txtBuscarAdmin.Text;
             
             if (!(admin.email.Trim().Equals("") || admin.email == null))
             {

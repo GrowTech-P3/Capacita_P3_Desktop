@@ -24,7 +24,7 @@ namespace CapacitaDesk {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroFinanceiro));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@ namespace CapacitaDesk {
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBoxSaldoTotal);
             this.groupBox2.Controls.Add(this.ListViewFinanceiro);
@@ -77,6 +78,7 @@ namespace CapacitaDesk {
             // 
             // textBoxSaldoTotal
             // 
+            this.textBoxSaldoTotal.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBoxSaldoTotal.Enabled = false;
             this.textBoxSaldoTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBoxSaldoTotal.Location = new System.Drawing.Point(548, 201);
@@ -86,6 +88,7 @@ namespace CapacitaDesk {
             // 
             // ListViewFinanceiro
             // 
+            this.ListViewFinanceiro.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ListViewFinanceiro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Curso,
             this.NomeUsuario,
@@ -95,7 +98,7 @@ namespace CapacitaDesk {
             this.ListViewFinanceiro.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ListViewFinanceiro.HideSelection = false;
             this.ListViewFinanceiro.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.ListViewFinanceiro.Location = new System.Drawing.Point(15, 27);
             this.ListViewFinanceiro.Name = "ListViewFinanceiro";
             this.ListViewFinanceiro.Size = new System.Drawing.Size(642, 167);
@@ -130,6 +133,7 @@ namespace CapacitaDesk {
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.textBoxNomeCurso);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BtnBuscarParceiro);
@@ -205,7 +209,7 @@ namespace CapacitaDesk {
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 69);
@@ -227,6 +231,8 @@ namespace CapacitaDesk {
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(161)))), ((int)(((byte)(193)))));
+            this.panel1.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_blue10;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.PictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -236,6 +242,7 @@ namespace CapacitaDesk {
             // 
             // PictureBoxLogo
             // 
+            this.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.PictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxLogo.Image")));
             this.PictureBoxLogo.Location = new System.Drawing.Point(33, 12);
             this.PictureBoxLogo.Name = "PictureBoxLogo";
@@ -249,6 +256,8 @@ namespace CapacitaDesk {
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapacitaDesk.Properties.Resources.bg_white10;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
