@@ -50,7 +50,7 @@ namespace CapacitaDesk {
             Usuario usuarioPesquisa = new Usuario();
 
             deficienciaPesquisa.nome += checkBoxAuditivo.Checked    ? " auditivo"    : "";
-            deficienciaPesquisa.nome += checkBoxFisico.Checked      ? " fisico"      : "";
+            deficienciaPesquisa.nome += checkBoxFisico.Checked      ? " física"      : "";
             deficienciaPesquisa.nome += checkBoxMental.Checked      ? " mental"      : "";
             deficienciaPesquisa.nome += checkBoxMudez.Checked       ? " mudez"       : "";
             deficienciaPesquisa.nome += checkBoxVisual.Checked      ? " visual"      : "";

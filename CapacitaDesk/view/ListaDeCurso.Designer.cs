@@ -177,9 +177,9 @@ namespace CapacitaDesk {
             this.checkBoxFisico.ForeColor = System.Drawing.Color.White;
             this.checkBoxFisico.Location = new System.Drawing.Point(177, 31);
             this.checkBoxFisico.Name = "checkBoxFisico";
-            this.checkBoxFisico.Size = new System.Drawing.Size(53, 27);
+            this.checkBoxFisico.Size = new System.Drawing.Size(52, 27);
             this.checkBoxFisico.TabIndex = 36;
-            this.checkBoxFisico.Text = "Físico";
+            this.checkBoxFisico.Text = "Física";
             this.checkBoxFisico.UseVisualStyleBackColor = true;
             this.checkBoxFisico.CheckedChanged += new System.EventHandler(this.checkBoxFisico_CheckedChanged);
             // 
