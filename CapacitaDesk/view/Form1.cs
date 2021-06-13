@@ -30,19 +30,23 @@ namespace CapacitaDesk {
 
             String json = JsonConvert.SerializeObject(admin);
             Object objResponse = ConnectionAPI.login(rota, json);
-            RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
+            if (objResponse != null)
+            {
+                RespUsuario respUsuario = JsonConvert.DeserializeObject<RespUsuario>(objResponse.ToString());
 
 
-            if (respUsuario.administrador != null && respUsuario.administrador.ativo.Trim().Equals("true"))
-            {
-                //MessageBox.Show("Login efetuado com sucesso!");
-                this.Hide();
-                Dashboard home = new Dashboard(respUsuario.administrador);
-                home.Show();
-            } else
-            {
-                MessageBox.Show(respUsuario.message);
-            }  
+                if (respUsuario.administrador != null && respUsuario.administrador.ativo.Trim().Equals("true"))
+                {
+                    //MessageBox.Show("Login efetuado com sucesso!");
+                    this.Hide();
+                    Dashboard home = new Dashboard(respUsuario.administrador);
+                    home.Show();
+                }
+                else
+                {
+                    MessageBox.Show(respUsuario.message, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void login_Load(object sender, EventArgs e) {

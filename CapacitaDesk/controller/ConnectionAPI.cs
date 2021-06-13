@@ -115,6 +115,11 @@ namespace CapacitaDesk.controller
 
                 return objResponse;
             }
+            catch (WebException)
+            {
+                MessageBox.Show("Erro ao Conectar! Servidor está OFF-LINE.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return objResponse;
+            }
             catch (Exception err)
             {
                 MessageBox.Show("Erro ao exportar lista: " + err.Message);
