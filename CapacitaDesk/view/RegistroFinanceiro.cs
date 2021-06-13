@@ -22,7 +22,7 @@ namespace CapacitaDesk {
         public void encherListView()
         {
             List<Financeiro> financeiro;
-            String[] formatDate = new string[2];
+            //String[] formatDate = new string[2];
             TxtBoxNomedaInstitucao.Clear();
             textBoxNomeCurso.Clear();
             double total = 0;
@@ -38,8 +38,9 @@ namespace CapacitaDesk {
                     ListViewItem item = ListViewFinanceiro.Items.Add(financ.curso.nome_curso);
                     item.SubItems.Add(financ.usuarioPCD.nome);
                     item.SubItems.Add(financ.instituicao.nome);
-                    formatDate = financ.dataHora.Split("T");
-                    item.SubItems.Add(formatDate[0]);
+                    //formatDate = financ.dataHora.Split("T");
+                    //item.SubItems.Add(formatDate[0]);
+                    item.SubItems.Add(Convert.ToDateTime(financ.dataHora).ToString("dd/MM/yy"));
                     total = total + Convert.ToInt32(financ.valor) * 0.5;
                     item.SubItems.Add(financ.valor);
                 }

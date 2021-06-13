@@ -23,7 +23,7 @@ namespace CapacitaDesk {
 
         private void BtnBuscarAtividade_Click(object sender, EventArgs e)
         {
-            String[] formatDate = new string[2];
+            //String[] formatDate = new string[2];
             Administrador admin = new Administrador();
             admin.idAdministrador = TxtBoxID.Text;
             if(!(admin.idAdministrador == null || admin.idAdministrador.Trim().Equals(""))) {
@@ -37,8 +37,9 @@ namespace CapacitaDesk {
                     foreach (LogAdministrador log in logAdmin)
                     {
                         ListViewItem item = ListViewAtividade.Items.Add(log.administrador.idAdministrador);
-                        formatDate = log.dataHora.Split("T");
-                        item.SubItems.Add(formatDate[0]);
+                        //formatDate = log.dataHora.Split("T");
+                        //item.SubItems.Add(formatDate[0]);
+                        item.SubItems.Add(Convert.ToDateTime(log.dataHora).ToString("dd/MM/yy"));
                         item.SubItems.Add(log.administrador.nome);
                         item.SubItems.Add(log.logAtividade);
                     }
@@ -57,7 +58,7 @@ namespace CapacitaDesk {
         }
         public void encherListView()
         {
-            String[] formatDate = new string[2];
+            //String[] formatDate = new string[2];
             List<LogAdministrador> logAdm;
             String rota = "http://localhost:3000/log";
             Object objectResponse = ConnectionAPI.getLista(rota, this.administrador.Token);
@@ -67,8 +68,9 @@ namespace CapacitaDesk {
                 foreach (LogAdministrador log in logAdm)
                 {
                     ListViewItem item = ListViewAtividade.Items.Add(log.administrador.idAdministrador);
-                    formatDate = log.dataHora.Split("T");
-                    item.SubItems.Add(formatDate[0]);
+                    //formatDate = log.dataHora.Split("T");
+                    //item.SubItems.Add(formatDate[0]);
+                    item.SubItems.Add(Convert.ToDateTime(log.dataHora).ToString("dd/MM/yy"));
                     item.SubItems.Add(log.administrador.nome);
                     item.SubItems.Add(log.logAtividade);
                 }
