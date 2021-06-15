@@ -169,7 +169,7 @@ namespace CapacitaDesk {
         {
             Instituicao inst = new Instituicao();
 
-            inst.cnpj = maskedTextBoxCnpj.Text;
+            inst.cnpj = mtbCnpj.Text;
 
             String rota = "http://localhost:3000/instituicao/cnpj";
 
@@ -316,6 +316,10 @@ namespace CapacitaDesk {
             else {
                 MessageBox.Show("Informe ao menos o CNPJ para resetar senha!");
             }
+        }
+
+        private void label15_Click(object sender, EventArgs e) {
+            limparCampos();
         }
     }
 }
